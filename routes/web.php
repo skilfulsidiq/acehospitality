@@ -1,5 +1,9 @@
 <?php
 
+use App\Livewire\Frontend\Pages\AboutPage;
+use App\Livewire\Frontend\Pages\ContactPage;
+use App\Livewire\Frontend\Pages\HomePage;
+use App\Livewire\Frontend\Pages\HotelListPage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::get("/",HomePage::class)->name('home');
+Route::get("/about",AboutPage::class)->name('about');
+Route::get("/contact",ContactPage::class)->name('contact');
+Route::get("/hotels",HotelListPage::class)->name('hotel-list');
