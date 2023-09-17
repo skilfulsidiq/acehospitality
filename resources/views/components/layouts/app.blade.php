@@ -29,12 +29,17 @@
             <link href="images/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
             <link href="images/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
             <link href="images/apple-touch-icon-180x180.png" sizes="180x180" rel="apple-touch-icon">
-
+   @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
     <body>
         <div class="wrapper ovh">
             <div class="preloader"></div>
-            <livewire:frontend.components.header/>
+            {{-- @if (Route::currentRouteName()=='home') --}}
+            <livewire:frontend.components.header type="nav-homepage-style stricky"/>
+           {{-- @else --}}
+            {{-- <livewire:frontend.components.header type="nav-innerpage-style stricky"/> --}}
+
+
             <div class="hiddenbar-body-ovelay"></div>
             <livewire:frontend.components.mobile-nav/>
 

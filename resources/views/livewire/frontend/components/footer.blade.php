@@ -3,7 +3,7 @@
         <div class="row">
           <div class="col-lg-5">
             <div class="footer-widget mb-4 mb-lg-5">
-              <a class="footer-logo" href="index-2.html"><img class="mb40" src="images/header-logo.svg" alt=""></a>
+             <x-logo.logo-two type="footer-logo" src="images/header-logo.svg"/>
               <div class="row mb-4 mb-lg-5">
                 <div class="col-auto">
                   <div class="contact-info">
@@ -18,37 +18,7 @@
                   </div>
                 </div>
               </div>
-              <div class="app-widget">
-                <h5 class="title text-white mb10">Apps</h5>
-                <div class="row mb-4 mb-lg-5">
-                  <div class="col-auto">
-                    <a href="#">
-                      <div class="app-info d-flex align-items-center mb10">
-                        <div class="flex-shrink-0">
-                          <i class="fab fa-apple fz30 text-white"></i>
-                        </div>
-                        <div class="flex-grow-1 ml20">
-                          <p class="app-text fz13 mb0">Download on the</p>
-                          <h6 class="app-title text-white fz14">Apple Store</h6>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-auto">
-                    <a href="#">
-                      <div class="app-info d-flex align-items-center mb10">
-                        <div class="flex-shrink-0">
-                          <i class="fab fa-google-play fz30 text-white"></i>
-                        </div>
-                        <div class="flex-grow-1 ml20">
-                          <p class="app-text fz13 mb0">Get in on</p>
-                          <h6 class="app-title text-white fz14">Google Play</h6>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
+              
               <div class="social-widget">
                 <h6 class="text-white mb20">Follow us on social media</h6>
                 <div class="social-style1">
