@@ -1,10 +1,10 @@
-   <section class="pt-0 pb10 bgc-f7 pb50-md" id="availability-check">
+   <section class="pt-0 pb10 bgc-f7 pb50-md" id="avaibility-form">
       <div class="container">
         <div class="row" >
           <div class="col-lg-12" >
             <div class="advance-style4 at-home5 mt-100 mt50-lg mb10 mx-auto animate-up-2" >
               <ul class="nav nav-tabs p-0 m-0" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
+                <li class="nav-item" role="presentation"  id="availability-check">
                   <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Check Availability</button>
                 </li>
                 {{-- <li class="nav-item" role="presentation">
@@ -55,7 +55,7 @@
                         </div>
                       </div>
 
-                      <div class="col-md-12 col-lg-12 col-xl-12">
+                      <div class="col-md-12 col-lg-12 col-xl-12 mt-4">
                         <div class="d-flex align-items-center justify-content-end  mt-2 mt-md-0">
                           {{-- <button class="advance-search-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="flaticon-settings"></span> Advanced</button> --}}
                           <button class="ud-btn btn-thm ms-2" type="button"><span class="flaticon-search pe-2"></span> Check</button>

@@ -7,7 +7,7 @@
               <h2 class="title text-white">Ace Hospitality</h2>
               <div class="breadcumb-list">
                 <a class="text-white" href="#">Home</a>
-                <a class="text-white" href="#">Hotels/a>
+                <a class="text-white" href="#">Hotels</a>
               </div>
             </div>
           </div>

@@ -17,7 +17,7 @@
         <li><a href="{{ route('home') }}"><span>Home</span></a></li>
         <li><a href="{{ route('hotel-list') }}"><span>Hotels</span></a></li>
         <li><a href="{{ route('about') }}"><span>About Us</span></a></li>
-        <li><a href="{{ route('hotel-list') }}"><span>Rooms</span></a></li>
+        <li><a href="{{ route('reservation-page') }}"><span>Rooms</span></a></li>
         <li><a href="{{ route('contact') }}"><span>Contact Us</span></a></li>
           {{-- <ul>
             <li><a href="index-2.html">Home V1</a></li>

@@ -53,7 +53,7 @@
                 <li class="visible_list2"> <a class="list-item2" href="{{ route('about') }}"><span class="title">About Us</span></a>
 
                 </li>
-                <li class="visible_list2"> <a class="list-item2" href="#"><span class="title">Rooms</span></a>
+                <li class="visible_list2"> <a class="list-item2" href="{{ route('reservation-page') }}"><span class="title">Rooms</span></a>
 
                 </li>
                 <li class="visible_list2"> <a class="list-item2" href="{{ route('contact') }}"><span class="title">Contact Us</span></a>

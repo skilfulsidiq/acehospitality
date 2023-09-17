@@ -19,6 +19,7 @@
             <link rel="stylesheet" href="{{ asset('css/ud-custom-spacing.css')}}">
             <!-- Responsive stylesheet -->
             <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
+             <link rel="stylesheet" href="{{ asset('css/hotel-datepicker.css') }}">
             <!-- Title -->
 
             <!-- Favicon -->
@@ -47,6 +48,9 @@
 
             <div class="body_content_wrapper">
             {{ $slot }}
+
+
+
             <livewire:frontend.components.footer/>
             <a class="scrollToHome" href="#"><i class="fas fa-angle-up"></i></a>
             </div>
@@ -65,8 +69,13 @@
         <script src="{{ asset('js/wow.min.js')}}"></script>
         <script src="{{ asset('js/owl.js')}}"></script>
         <script src="{{ asset('js/parallax.js')}}"></script>
-        <script src="{{ asset('js/pricing-slider.js')}}"></script>
+        {{-- <script src="{{ asset('js/pricing-slider.js')}}"></script> --}}
+        {{-- Hotel pivk --}}
+         <script src="{{ asset('js/fecha.min.js') }}"></script>
+         <script src="{{ asset('js/hotel-datepicker.min.js') }}"></script>
         <!-- Custom script for all pages -->
         <script src="{{ asset('js/script.js') }}"></script>
+
+         @stack('script')
     </body>
 </html>

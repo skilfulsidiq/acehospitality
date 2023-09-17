@@ -35,7 +35,7 @@
                                   <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-3.png" title="Protea Hotel" location="Abuja"  wire:key="2"/>
                             </div>
                             <div class="owl-item cloned" style="width: 279px; margin-right: 30px;">
-                                  <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-1.png" title="Pro Hotel" location="Lagos" wire:key="3"/>
+                                  <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-4.png" title="Pro Hotel" location="Lagos" wire:key="3"/>
                             </div>
                             <div class="owl-item cloned" style="width: 279px; margin-right: 30px;">
                                   <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-4.png" title="Ace Resort" location="Lagos" wire:key="4"/>
