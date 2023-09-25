@@ -1,62 +1,31 @@
-<section class="pb40-md pb90">
-    <div class="container">
-        <div class="row align-items-center wow fadeInUp" data-wow-delay="300ms"
-            style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
-            <div class="col-lg-9">
-                <div class="main-title2">
-                    <h2 class="title">Our Locations</h2>
-                    <p class="paragraph">We are visible in the cities</p>
+<div>
+
+
+      <section id="rooms" class="pt-14 pb-14 bg-body" data-bs-theme="dark">
+            <div class="container">
+                <!-- Description -->
+                <div class="mb-8 text-center" data-cue="fadeIn">
+                    <h2 class="text-uppercase ff-heading">Our Locations</h2>
+                    <h4 class="h5 fw-normal text-body-secondary">Sed diam constituam erat probo dissentiet volutpat, pri cu errem purto summo.</h4>
                 </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="text-start text-lg-end mb-3">
-                    <a class="ud-btn2" href="page-property-single-v1.html">View all<i
-                            class="fal fa-arrow-right-long"></i></a>
+                <!-- /Description -->
+                <!-- Rooms List -->
+                <div class="room-luxury-slider" data-cue="fadeIn">
+                     <livewire:frontend.components.property-cards.version-two image="assets/img/rooms/r4.jpg" title="Pro Hotel" location="Lagos" />
+
+                         <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-1.png" title="Protea Hotel" location="Abuja"  wire:key="1"/>
+                     <livewire:frontend.components.property-cards.version-two image="assets/img/rooms/r4.jpg" title="Pro Hotel" location="Lagos" />
+
+                        <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-4.png" title="Pro Hotel" location="Lagos" wire:key="3"/>
+
+                           <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-4.png" title="Pro Hotel" location="Lagos" wire:key="3"/>
+                    <!-- Room item -->
+
+                  
+                    <!-- /Room item -->
                 </div>
+                <!-- /Rooms List -->
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 wow fadeInUp" data-wow-delay="300ms"
-                style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
-                <div
-                    class="property-city-slider dots_none slider-dib-sm slider-4-grid2 vam_nav_style owl-theme owl-carousel owl-loaded owl-drag">
+        </section>
+</div>
 
-
-
-
-                    <div class="owl-stage-outer">
-                        <div class="owl-stage"
-                            style="transform: translate3d(-1236px, 0px, 0px); transition: all 0s ease 0s; width: 3708px;">
-
-                            <div class="owl-item cloned" style="width: 279px; margin-right: 30px;">
-                                  <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-1.png" title="Protea Hotel" location="Abuja"  wire:key="1"/>
-                            </div>
-                            <div class="owl-item cloned" style="width: 279px; margin-right: 30px;">
-                                  <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-3.png" title="Protea Hotel" location="Abuja"  wire:key="2"/>
-                            </div>
-                            <div class="owl-item cloned" style="width: 279px; margin-right: 30px;">
-                                  <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-4.png" title="Pro Hotel" location="Lagos" wire:key="3"/>
-                            </div>
-                            <div class="owl-item cloned" style="width: 279px; margin-right: 30px;">
-                                  <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-4.png" title="Ace Resort" location="Lagos" wire:key="4"/>
-                            </div>
-                            <div class="owl-item cloned" style="width: 279px; margin-right: 30px;">
-                                  <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-2.png" title="Dan Kudi" location="Kano" wire:key="5"/>
-                            </div>
-                            <div class="owl-item cloned" style="width: 279px; margin-right: 30px;">
-                                  <livewire:frontend.components.property-cards.version-two image="images/listings/city-listing-3.png" title="Luxury Home" location="Abuja" wire:key="6"/>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i
-                                class="far fa-chevron-left"></i></button><button type="button" role="presentation"
-                            class="owl-next"><i class="far fa-chevron-right"></i></button></div>
-                    <div class="owl-dots disabled"><button role="button"
-                            class="owl-dot active"><span></span></button></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>

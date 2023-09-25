@@ -1,134 +1,104 @@
-<section class="pb30-md bgc-dark">
-    <div class="container">
-        <div class="row wow fadeInUp" data-wow-delay="300ms"
-            style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
-            <div class="col-lg-9">
-                <div class="main-title2">
-                    <h2 class="title text-white">Our Services</h2>
-                    <p class="paragraph text-white">All our facilities and amenities are high standard</p>
+ <section id="facilitiesAmenities" class="pt-14 pb-10">
+            <div class="container">
+                <!-- Heading -->
+                <div class="mb-8" data-cue="fadeIn">
+                    <h2 class="text-uppercase ff-heading">Facilities & amenities</h2>
+                    <p class="fs-5 fw-normal text-body-secondary">An quis eligendi atomorum duo latine veritus vituperata vim no</p>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 wow fadeInUp" data-wow-delay="300ms"
-                style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
-                <div
-                    class="property-city-slider dots_nav_light navi_pagi_top_right slider-dib-sm slider-5-grid owl-theme owl-carousel owl-loaded owl-drag">
-
-
-                    <div class="owl-stage-outer">
-                        <div class="owl-stage"
-                            style="transform: translate3d(-1483px, 0px, 0px); transition: all 0s ease 0s; width: 5686px;">
-                            <div class="owl-item cloned" style="width: 217.2px; margin-right: 30px;">
-                                <div class="item">
-                                    <a href="page-grid-default-v1.html">
-                                        <div class="feature-style2 text-center mb30">
-                                            <div class="feature-img rounded-circle"><img class="rounded-circle"
-                                                    src="{{ asset('icons/concierge.jpeg') }}" alt=""></div>
-                                            <div class="feature-content pt20">
-                                                <h6 class="title mb-1 text-white">Concierge Service</h6>
-                                                {{-- <p class="text fz15 text-white">Broker</p> --}}
-                                            </div>
-                                        </div>
-                                    </a>
+                <!-- /Heading -->
+                <!-- List -->
+                <div class="row" data-cues="fadeIn">
+                    <div class="col-12 col-xl-4 col-md-6">
+                        <!-- Item -->
+                        <div class="mb-5">
+                            <div class="d-flex align-items-start">
+                                <div class="fs-1 text-primary pe-5 lh-sm">
+                                    <i class="hicon hicon-wifi"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h6 text-uppercase ff-sub ls-1">High Speed Wifi</h3>
+                                    <p>Vix placerat no, eam cu bonorum sententiae, adipisci atomorum duo noster ad vel</p>
                                 </div>
                             </div>
-                            <div class="owl-item cloned" style="width: 217.2px; margin-right: 30px;">
-                                <div class="item">
-                                    <a href="page-grid-default-v1.html">
-                                        <div class="feature-style2 text-center mb30">
-                                            <div class="feature-img rounded-circle"><img class="rounded-circle"
-                                                     src="{{ asset('icons/spa.png') }}"alt=""></div>
-                                            <div class="feature-content pt20">
-                                                <h6 class="title mb-1 text-white">SPA</h6>
-                                                {{-- <p class="text fz15">Broker</p> --}}
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item cloned" style="width: 217.2px; margin-right: 30px;">
-                                <div class="item">
-                                    <a href="page-grid-default-v1.html">
-                                        <div class="feature-style2 text-center mb30">
-                                            <div class="feature-img rounded-circle"><img class="rounded-circle"
-                                                    src="{{ asset('icons/golf.png') }}" alt=""></div>
-                                            <div class="feature-content pt20">
-                                                <h6 class="title mb-1 text-white">Golf</h6>
-                                                {{-- <p class="text fz15">Broker</p> --}}
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item cloned" style="width: 217.2px; margin-right: 30px;">
-                                <div class="item">
-                                    <a href="page-grid-default-v1.html">
-                                        <div class="feature-style2 text-center mb30">
-                                            <div class="feature-img rounded-circle"><img class="rounded-circle"
-                                                    src="{{ asset('icons/kids.png') }}" alt=""></div>
-                                            <div class="feature-content pt20">
-                                                <h6 class="title mb-1 text-white">Kids Area</h6>
-                                                {{-- <p class="text fz15">Broker</p> --}}
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item cloned" style="width: 217.2px; margin-right: 30px;">
-                                <div class="item">
-                                    <a href="page-grid-default-v1.html">
-                                        <div class="feature-style2 text-center mb30">
-                                            <div class="feature-img rounded-circle"><img class="rounded-circle"
-                                                    src="{{ asset('icons/lounge.png') }}" alt=""></div>
-                                            <div class="feature-content pt20">
-                                                <h6 class="title mb-1 text-white">Lounge & Bar</h6>
-                                                {{-- <p class="text fz15">Broker</p> --}}
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item cloned" style="width: 217.2px; margin-right: 30px;">
-                                <div class="item">
-                                    <a href="page-grid-default-v1.html">
-                                        <div class="feature-style2 text-center mb30">
-                                            <div class="feature-img rounded-circle"><img class="rounded-circle"
-                                                    src="{{ asset('icons/power.png') }}" alt=""></div>
-                                            <div class="feature-content pt20">
-                                                <h6 class="title mb-1 text-white">24/7 Power</h6>
-                                                {{-- <p class="text fz15">Broker</p> --}}
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="owl-item active" style="width: 217.2px; margin-right: 30px;">
-                                <div class="item">
-                                    <a href="page-grid-default-v1.html">
-                                        <div class="feature-style2 text-center mb30">
-                                            <div class="feature-img rounded-circle"><img class="rounded-circle"
-                                                    src="{{ asset('icons/member.png') }}" alt=""></div>
-                                            <div class="feature-content pt20">
-                                                <h6 class="title mb-1 text-white">Membership</h6>
-                                                {{-- <p class="text fz15">Broker</p> --}}
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                           
                         </div>
+                        <!-- /Item -->
                     </div>
-                    <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i
-                                class="far fa-arrow-left-long"></i></button><button type="button"
-                            role="presentation" class="owl-next"><i class="far fa-arrow-right-long"></i></button>
+                    <div class="col-12 col-xl-4 col-md-6">
+                        <!-- Item -->
+                        <div class="mb-5">
+                            <div class="d-flex align-items-start">
+                                <div class="fs-1 text-primary pe-5 lh-sm">
+                                    <i class="hicon hicon-reception"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h6 text-uppercase ff-sub ls-1">Front desk 24H</h3>
+                                    <p>Scripta apeirian in his. Quo accusa complect eu, errem adipisci ocurreret an per</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Item -->
                     </div>
-                    <div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button
-                            role="button" class="owl-dot"><span></span></button><button role="button"
-                            class="owl-dot"><span></span></button></div>
+                    <div class="col-12 col-xl-4 col-md-6">
+                        <!-- Item -->
+                        <div class="mb-5">
+                            <div class="d-flex align-items-start">
+                                <div class="fs-1 text-primary pe-5 lh-sm">
+                                    <i class="hicon hicon-car-park-onsite"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h6 text-uppercase ff-sub ls-1">Parking Space</h3>
+                                    <p>An quis eligendi duo, placerat latine veritus vim placerat. Duo errem latine scribentur</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Item -->
+                    </div>
+                    <div class="col-12 col-xl-4 col-md-6">
+                        <!-- Item -->
+                        <div class="mb-5">
+                            <div class="d-flex align-items-start">
+                                <div class="fs-1 text-primary pe-5 lh-sm">
+                                    <i class="hicon hicon-pool"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h6 text-uppercase ff-sub ls-1"> Swimming Pool</h3>
+                                    <p>Has et magna dolore dicit. No placerat essent inermis nec prima homero similique pri at.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Item -->
+                    </div>
+                    <div class="col-12 col-xl-4 col-md-6">
+                        <!-- Item -->
+                        <div class="mb-5">
+                            <div class="d-flex align-items-start">
+                                <div class="fs-1 text-primary pe-5 lh-sm">
+                                    <i class="hicon hicon-spas"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h6 text-uppercase ff-sub ls-1">Spa center</h3>
+                                    <p>Mel graece consequ cu, ex dicunt appareat duo, vim errem adipisci augue placerat.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Item -->
+                    </div>
+                    <div class="col-12 col-xl-4 col-md-6">
+                        <!-- Item -->
+                        <div class="mb-5">
+                            <div class="d-flex align-items-start">
+                                <div class="fs-1 text-primary pe-5 lh-sm">
+                                    <i class="hicon hicon-fitness-center"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h6 text-uppercase ff-sub ls-1">Fitness Center</h3>
+                                    <p>Ne ius assentior, te soluta facilisis mel placerat appareat duo dicunt splendide quo no.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Item -->
+                    </div>
                 </div>
+                <!-- /List -->
             </div>
-        </div>
-    </div>
-</section>
+        </section>

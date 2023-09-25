@@ -1,50 +1,37 @@
-<section class="our-about pb90 bgc-f7">
-      <div class="container">
-        <div class="row align-items-md-center wow fadeInRight" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInRight;">
-          <div class="col-md-6 col-lg-6">
-            <div class="position-relative mb30-md">
-              <img class="w-100" src="images/about/why-chose-1.png" alt="">
-              {{-- <a href="page-property-single-v1.html">
-                <div class="iconbox-style5 d-flex align-items-center">
-                  <span class="icon flaticon-home flex-shrink-0"></span>
-                  <div class="iconbox-content flex-shrink-1 ms-2">
-                    <p class="text mb-0">Total Rent</p>
-                    <h4 class="title mb-0">4,382 Unit</h4>
-                  </div>
+  <section id="about" class="pt-14 pb-14">
+            <div class="container">
+                <div class="row align-items-start align-items-md-stretch" data-cues="fadeIn">
+                    <div class="col-12 col-lg-6 order-1 order-lg-0">
+                        <!-- Image -->
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <figure class="mb-0 pe-3 pe-md-4 pe-lg-5">
+                                    <img src="assets/img/about/a2.jpg" srcset="./assets/img/about/a2@2x.jpg 2x" class="img-fluid w-100 rounded shadow-sm" alt="">
+                                </figure>
+                            </div>
+                            <div class="col-6">
+                                <figure class="mb-0 pt-9">
+                                    <img src="assets/img/about/a1.jpg" srcset="./assets/img/about/a1@2x.jpg 2x" class="img-fluid w-100 rounded shadow-sm" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- /Image -->
+                    </div>
+                    <div class="col-12 col-lg-6 order-0 order-lg-1">
+                        <!-- Description -->
+                        <div class="bg-white h-100 d-flex align-items-center">
+                            <div class="p-lg-5 mb-8">
+                                <span class="mb-2 fw-medium text-secondary ff-sub text-uppercase ls-1 d-block">Welcome to</span>
+                                <h2 class="text-uppercase ff-heading">Ace Hospitality</h2>
+                                <p class="mb-6">Id vel nostrud maiorum, quo ad quidam perfecto. Mea justo dicta accusata no, te has aeque dolores repudiare, his etiam pericula id. Utinam quaestio philosophia eos in, eu eam offendit laboramus intellegebat, cu est quis officiis. Est dictas legendos scribentur an. Vis ei tation iisque suscipit, vim id tota dolores hendrerit.</p>
+                                <a href="{{ route('about') }}" class="scroll-to btn btn-primary">
+                                    <span>Read More</span>
+                                    <i class="hicon hicon-flights-one-ways"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /Description -->
+                    </div>
                 </div>
-              </a> --}}
             </div>
-          </div>
-          <div class="col-md-6 col-lg-5 offset-lg-1 wow fadeInLeft" data-wow-delay="500ms" style="visibility: visible; animation-delay: 500ms; animation-name: fadeInLeft;">
-            <div class="main-title2">
-              <h2 class="title">Why Choose Us</h2>
-              <p class="paragraph fz15">As the complexity of buildings to increase, the <br class="d-none d-lg-block"> field of architecture.</p>
-            </div>
-            <div class="why-chose-list">
-              <div class="list-one d-flex align-items-start mb30">
-                <span class="list-icon flex-shrink-0 flaticon-security"></span>
-                <div class="list-content flex-grow-1 ml20">
-                  <h6 class="mb-1">Property Management</h6>
-                  <p class="text mb-0 fz15">Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.</p>
-                </div>
-              </div>
-              <div class="list-one d-flex align-items-start mb30">
-                <span class="list-icon flex-shrink-0 flaticon-keywording"></span>
-                <div class="list-content flex-grow-1 ml20">
-                  <h6 class="mb-1">Mortgage Services</h6>
-                  <p class="text mb-0 fz15">Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.</p>
-                </div>
-              </div>
-              <div class="list-one d-flex align-items-start">
-                <span class="list-icon flex-shrink-0 flaticon-investment"></span>
-                <div class="list-content flex-grow-1 ml20">
-                  <h6 class="mb-1">Currency Services</h6>
-                  <p class="text mb-0 fz15">Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-   
-    </section>
+        </section>

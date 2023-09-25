@@ -1,66 +1,84 @@
- <div class="banner-wrapper position-relative">
-      <section class="thumbimg-countnumber-carousel owl-theme owl-carousel p-0">
-        <div class="item" >
-          <div class="slider-slide-item" style="background-image: url(images/home/home-5-1.jpg);" data-thumb="images/home/home-5-1.jpg">
-            <div class="container">
-              <div class="row">
-                {{-- <div class="col-lg-12 text-left">
-                  <h4 class="h1 slider-subtitle text-white">$986,00</h4>
-                  <h3 class="h6 slider-title text-white">Studio on Grand Avenue</h3>
-                  <p class="mb30 slider-text text-white">32 Beds  -  91 Baths  -  1500 sq ft</p>
-                  <div class="slider-btn-block"><a href="#" class="ud-btn btn-white slider-btn">View Details<i class="fal fa-arrow-right-long"></i></a></div>
-                </div> --}}
-              </div>
+<div>
+     <section class="hero-carousel">
+            <div id="heroCarousel" class="carousel slide carousel-fade">
+                <!-- Carousel indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <!-- /Carousel indicators -->
+                <!-- Slide list -->
+                <div class="carousel-inner">
+                    <!-- Slide -->
+                    <div class="carousel-item active">
+                        <div class="image-wrapper hero-image bg-image bg-overlay bg-overlay-700" data-image-src="assets/img/hero/h4.jpg">
+                            <div class="bg-content">
+                                <div class="carousel-caption top-50 start-50 translate-middle w-100">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-11 col-xl-7 col-lg-9">
+                                                <h4 class="display-4 fw-semibold ff-heading text-uppercase">Paris Bilury Hotel</h4>
+                                                <p class="fs-4 mb-0">Lorem ipsum dolor sit amet, ei mel debet probatus, vim ad malis docendi corpora, no numquam corrumpit prodesset pri.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide -->
+                    <!-- /Slide -->
+                    <div class="carousel-item">
+                        <div class="image-wrapper bg-image bg-overlay bg-overlay-700" data-image-src="assets/img/hero/h1.jpg">
+                            <div class="bg-content">
+                                <div class="carousel-caption top-50 start-50 translate-middle w-100">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-11 col-xl-7 col-lg-9">
+                                                <h4 class="display-4 fw-semibold ff-heading text-uppercase">Luxurious Design</h4>
+                                                <p class="fs-4 mb-0">Ei nec choro doctus, an esse postea mel, tamquam intellegam mei no. Vis ne incorrupte conclu sionemque ne his.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Slide -->
+                    <!-- /Slide -->
+                    <div class="carousel-item">
+                        <div class="image-wrapper bg-image bg-overlay bg-overlay-700" data-image-src="assets/img/hero/h6.jpg">
+                            <div class="bg-content">
+                                <div class="carousel-caption z-1 top-50 start-50 translate-middle w-100">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-11 col-xl-7 col-lg-9">
+                                                <h4 class="display-4 fw-semibold ff-heading text-uppercase">Exquisite Space</h4>
+                                                <p class="fs-4 mb-0">Vel ut mutat inani contentiones. Ea dico purto sit, sale consulatu et sea. Sale pertinax temporibus an sea, ius an.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide -->
+                </div>
+                <!-- /Slide list -->
+                <!-- Carousel navs -->
+                <button class="carousel-control-prev d-none d-lg-inline-block" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next d-none d-lg-inline-block" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <!-- /Carousel navs -->
             </div>
-          </div>
-        </div>
-        <div class="item" >
-          <div class="slider-slide-item" style="background-image: url(images/home/home-5-2.jpg);" data-thumb="images/home/home-5-2.jpg">
-            <div class="container">
-              <div class="row">
-                {{-- <div class="col-lg-12 text-left">
-                  <h4 class="h1 slider-subtitle text-white">$986,00</h4>
-                  <h3 class="h6 slider-title text-white">Studio on Grand Avenue</h3>
-                  <p class="mb30 slider-text text-white">32 Beds  -  91 Baths  -  1500 sq ft</p>
-                  <div class="slider-btn-block"><a href="#" class="ud-btn btn-white slider-btn">View Details<i class="fal fa-arrow-right-long"></i></a></div>
-                </div> --}}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item" >
-          <div class="slider-slide-item" style="background-image: url(images/home/home-5-3.jpg);" data-thumb="images/home/home-5-3.jpg">
-            <div class="container">
-              <div class="row">
-                {{-- <div class="col-lg-12 text-left">
-                  <h4 class="h1 slider-subtitle text-white">$986,00</h4>
-                  <h3 class="h6 slider-title text-white">Studio on Grand Avenue</h3>
-                  <p class="mb30 slider-text text-white">32 Beds  -  91 Baths  -  1500 sq ft</p>
-                  <div class="slider-btn-block"><a href="#" class="ud-btn btn-white slider-btn">View Details<i class="fal fa-arrow-right-long"></i></a></div>
-                </div> --}}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item" >
-          <div class="slider-slide-item" style="background-image: url(images/home/home-5-4.jpg);" data-thumb="images/home/home-5-4.jpg">
-            <div class="container">
-              <div class="row">
-                {{-- <div class="col-lg-12 text-left">
-                  <h4 class="h1 slider-subtitle text-white">$986,00</h4>
-                  <h3 class="h6 slider-title text-white">Studio on Grand Avenue</h3>
-                  <p class="mb30 slider-text text-white">32 Beds  -  91 Baths  -  1500 sq ft</p>
-                  <div class="slider-btn-block"><a href="#" class="ud-btn btn-white slider-btn">View Details<i class="fal fa-arrow-right-long"></i></a></div>
-                </div> --}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {{-- <div class="carousel-control-block d-flex d-md-none">
-        <div class="carousel-btn-block slider-navigation-btn"> <span class="carousel-btn left-btn"><i class="fa fa-angle-up"></i></span> <span class="carousel-btn right-btn"><i class="fa fa-angle-down"></i></span> </div>
-        <div class="slider-number-count"></div>
-      </div> --}}
-      {{-- <div ></div> --}}
-    </div>
-
+            <!-- Check rooms -->
+               <livewire:frontend.components.frontend-availability-form />
+            <!-- /Check rooms -->
+        </section>
+</div>

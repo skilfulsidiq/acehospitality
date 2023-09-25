@@ -1,321 +1,203 @@
 <div>
-     <header class="header-nav nav-homepage-style  stricky main-menu">
-    <!-- Ace Responsive Menu -->
-    <nav class="posr">
-      <div class="container posr menu_bdrt1">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-auto">
-            <div class="d-flex align-items-center justify-content-between">
-              <div class="logos mr40">
-                <x-logo.main-logo type="header-logo" />
-              </div>
-              <!-- Responsive Menu Structure-->
-              <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
-                <li class="visible_list2"> <a class="list-item2" href="{{ route('home')}}"><span class="title">Home</span></a>
-                  <!-- Level Two-->
+      <header id="header" class="header transition-base fixed-top z-1030  " data-bs-theme="dark">
+        <nav class="navbar navbar-expand-xl fw-medium pt-5 pb-5 fs-6">
+            <div class="container justify-content-end">
+                <!-- Brand -->
+                  <x-logo.main-logo type="header-logo" />
+                <!-- /Brand -->
+                <!-- offcanvas Navbar -->
+                <div class="offcanvas offcanvas-navbar offcanvas-end border-start-0" tabindex="-1" id="offcanvasNavbar">
+                    <!-- Offcanvas header -->
+                    <div class="offcanvas-header border-bottom">
+                        <h3 class="offcanvas-title text-uppercase ff-heading" id="bdSidebarOffcanvasLabel">ACE</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <!-- /Offcanvas header -->
+                    <div class="offcanvas-body justify-content-end">
+                        <!-- Navbar nav-->
+                        <ul class="navbar-nav align-items-xl-center me-xl-3 mb-3 mb-xl-0">
+                            <li class="nav-item ">
+                                <a class="nav-link  text-uppercase active" href="{{ route('home')}}" data-bs-display="static">
+                                    <span>Home</span>
+                                    {{-- <i class="hicon hicon-thin-arrow-down dropdown-toggle-icon"></i> --}}
+                                </a>
 
-                </li>
-                <li class="megamenu_style2"> <a   href="{{ route('hotel-list') }}"><span class="title">Hotels</span></a>
-                  {{-- <ul class="row dropdown-megamenu">
-                    <li class="col mega_menu_list">
-                      <h4 class="title">Grid View</h4>
-                      <ul>
-                        <li><a href="page-grid-default-v1.html">Grid Default v1</a></li>
-                        <li><a href="page-grid-default-v2.html">Grid Default v2</a></li>
-                        <li><a href="page-property-3-col.html">Grid Full Width 3 Cols</a></li>
-                        <li><a href="page-property-4-col.html">Grid Full Width 4 Cols</a></li>
-                        <li><a href="page-property-2-col.html">Grid Full Width 2 Cols</a></li>
-                        <li><a href="page-property-1-col-v1.html">Grid Full Width 1 Cols v1</a></li>
-                        <li><a href="page-property-1-col-v2.html">Grid Full Width 1 Cols v2</a></li>
-                        <li><a href="page-property-banner-v1.html">Banner Search v1</a></li>
-                        <li><a href="page-property-banner-v2.html">Banner Search v2</a></li>
-                      </ul>
-                    </li>
-                    <li class="col mega_menu_list">
-                      <h4 class="title">Map Style</h4>
-                      <ul>
-                        <li><a href="page-property-header-map-style.html">Header Map Style</a></li>
-                        <li><a href="page-property-half-map-v1.html">Map V1</a></li>
-                        <li><a href="page-property-half-map-v2.html">Map V2</a></li>
-                        <li><a href="page-property-half-map-v3.html">Map V3</a></li>
-                        <li><a href="page-property-half-map-v4.html">Map V4</a></li>
-                      </ul>
-                    </li>
-                    <li class="col mega_menu_list">
-                      <h4 class="title">List View</h4>
-                      <ul>
-                        <li><a href="page-property-list.html">List v1</a></li>
-                        <li><a href="page-property-list-all.html">List All Style</a></li>
-                      </ul>
-                    </li>
-                  </ul> --}}
-                </li>
-                <li class="visible_list2"> <a class="list-item2" href="{{ route('about') }}"><span class="title">About Us</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                  <a class="nav-link  text-uppercase " href="{{ route('hotel-list') }}" data-bs-display="static">
+                                    <span>Hotels</span>
+                                    {{-- <i class="hicon hicon-thin-arrow-down dropdown-toggle-icon"></i> --}}
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                  <a class="nav-link  text-uppercase " href="{{ route('about') }}" data-bs-display="static">
+                                    <span>About Us</span>
+                                    {{-- <i class="hicon hicon-thin-arrow-down dropdown-toggle-icon"></i> --}}
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                  <a class="nav-link  text-uppercase active" href="{{ route('reservation-page') }}" data-bs-display="static">
+                                    <span>Rooms</span>
+                                    {{-- <i class="hicon hicon-thin-arrow-down dropdown-toggle-icon"></i> --}}
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                  <a class="nav-link  text-uppercase active" href="{{ route('contact') }}" data-bs-display="static">
+                                    <span>Contact Us</span>
+                                    {{-- <i class="hicon hicon-thin-arrow-down dropdown-toggle-icon"></i> --}}
+                                </a>
+                            </li>
 
-                </li>
-                <li class="visible_list2"> <a class="list-item2" href="{{ route('reservation-page') }}"><span class="title">Rooms</span></a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#ocRightInfo">
+                                    <i class="hicon hicon-bold hicon-instant"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /Navbar nav -->
+                        <!-- Sub Links -->
+                        <div class="d-flex flex-column flex-xl-row align-items-xl-center small">
+                            <!-- Language & Currency -->
 
-                </li>
-                <li class="visible_list2"> <a class="list-item2" href="{{ route('contact') }}"><span class="title">Contact Us</span></a>
+                            <!-- /Language & Currency -->
+                            <!-- Reservation -->
+                            <div class="mt-2 mt-xl-0 order-0 order-xl-1">
+                                <a  href="{{ route('home') }}#availability-check" class="btn btn-primary">
+                                    <i class="hicon hicon-24hour-room-service"></i>
+                                    <span>Reservation</span>
+                                </a>
+                            </div>
+                            <!-- /Reservation -->
+                        </div>
+                        <!-- /Sub Links -->
+                    </div>
+                </div>
+                <!-- /offcanvas Navbar -->
+                <!-- Account link -->
 
-                </li>
-
-              </ul>
+                <!-- /Account link -->
+                <!-- Nav toggler -->
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- /Nav toggler -->
             </div>
-          </div>
-          <div class="col-auto">
-            <div class="d-flex align-items-center">
-              {{-- <a class="login-info d-flex align-items-center" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><i class="far fa-user-circle fz16 me-2"></i> <span class="d-none d-xl-block">Login / Register</span></a> --}}
-              <a class="ud-btn add-property menu-btn bdrs60 mx-2 mx-xl-4" href="{{ route('home') }}#availability-check">Check Availability<i class="fal fa-arrow-right-long"></i></a>
-              {{-- <a class="sidemenu-btn filter-btn-right" href="#"><img class="img-1" src="images/icon/nav-icon-white.svg" alt=""><img class="img-2" src="images/icon/nav-icon-dark.svg" alt=""></a> --}}
-            </div>
-          </div>
+        </nav>
+    </header>
+
+
+    <div class="offcanvas offcanvas-end border-start-0 text-body-tertiary" tabindex="-1" id="ocRightInfo" aria-labelledby="ocRightInfo" data-bs-theme="dark">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-      </div>
-    </nav>
-  </header>
-
-
-  <!--End Menu In Hiddn SideBar -->
-  <!-- Advance Feature Modal Start -->
- <div class="advance-feature-modal">
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header pl30 pr30">
-            <h5 class="modal-title" id="exampleModalLabel">More Filter</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body pb-0">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="widget-wrapper">
-                  <h6 class="list-title">Price Range</h6>
-                  <!-- Range Slider Mobile Version -->
-                  <div class="range-slider-style modal-version">
-                    <div class="range-wrapper">
-                      <div class="mb30 mt35" id="slider"></div>
-                      <div class="d-flex align-items-center">
-                        <span id="slider-range-value1"></span><i class="fa-sharp fa-solid fa-minus mx-2 dark-color icon"></i>
-                        <span id="slider-range-value2"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div class="offcanvas-body">
+            <!-- Brand -->
+            <div class="mb-10">
+                <a href="index-2.html">
+                    <img class="logo-light" src="assets/img/logos/logo-light.png" srcset="./assets/img/logos/logo-light@2x.png 2x" alt="Bilury Hotel" title="Bilury Hotel">
+                </a>
             </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="widget-wrapper">
-                  <h6 class="list-title">Type</h6>
-                  <div class="form-style2 input-group">
-                    <select class="selectpicker" data-live-search="true" data-width="100%">
-                      <option>Property</option>
-                      <option data-tokens="Apartments">Apartments</option>
-                      <option data-tokens="Bungalow">Bungalow</option>
-                      <option data-tokens="Houses">Houses</option>
-                      <option data-tokens="Loft">Loft</option>
-                      <option data-tokens="Office">Office</option>
-                      <option data-tokens="Townhome">Townhome</option>
-                      <option data-tokens="Villa">Villa</option>
-                    </select>
-                  </div>
+            <!-- /Brand -->
+            <!-- Contact Info -->
+            <div class="mb-10">
+                <h6 class="text-uppercase ls-1 ff-sub">Contact Info</h6>
+                <div class="d-flex mb-5">
+                    <span class="me-3 flex-shrink-0">
+                        <i class="hicon hicon-flights-pin"></i>
+                    </span>
+                    <span class="flex-grow-1">610 Placer Loquen, Paris, France.</span>
                 </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="widget-wrapper">
-                  <h6 class="list-title">Property ID</h6>
-                  <div class="form-style2">
-                    <input type="text" class="form-control" placeholder="RT04949213">
-                  </div>
+                <div class="d-flex mb-5">
+                    <span class="me-3 flex-shrink-0">
+                        <i class="hicon hicon-telephone"></i>
+                    </span>
+                    <span>+33 (0) 1 89 78 67 56</span>
                 </div>
-              </div>
+                <div class="d-flex mb-5">
+                    <span class="me-3 flex-shrink-0">
+                        <i class="hicon hicon-email-envelope"></i>
+                    </span>
+                    <span>Booking@example.com</span>
+                </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="widget-wrapper">
-                  <h6 class="list-title">Bedrooms</h6>
-                  <div class="d-flex">
-                    <div class="selection">
-                      <input id="xany" name="xbeds" type="radio" checked>
-                      <label for="xany">any</label>
-                    </div>
-                    <div class="selection">
-                      <input id="xoneplus" name="xbeds" type="radio">
-                      <label for="xoneplus">1+</label>
-                    </div>
-                    <div class="selection">
-                      <input id="xtwoplus" name="xbeds" type="radio">
-                      <label for="xtwoplus">2+</label>
-                    </div>
-                    <div class="selection">
-                      <input id="xthreeplus" name="xbeds" type="radio">
-                      <label for="xthreeplus">3+</label>
-                    </div>
-                    <div class="selection">
-                      <input id="xfourplus" name="xbeds" type="radio">
-                      <label for="xfourplus">4+</label>
-                    </div>
-                    <div class="selection">
-                      <input id="xfiveplus" name="xbeds" type="radio">
-                      <label for="xfiveplus">5+</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="widget-wrapper">
-                  <h6 class="list-title">Bathrooms</h6>
-                  <div class="d-flex">
-                    <div class="selection">
-                      <input id="yany" name="ybath" type="radio" checked>
-                      <label for="yany">any</label>
-                    </div>
-                    <div class="selection">
-                      <input id="yoneplus" name="ybath" type="radio">
-                      <label for="yoneplus">1+</label>
-                    </div>
-                    <div class="selection">
-                      <input id="ytwoplus" name="ybath" type="radio">
-                      <label for="ytwoplus">2+</label>
-                    </div>
-                    <div class="selection">
-                      <input id="ythreeplus" name="ybath" type="radio">
-                      <label for="ythreeplus">3+</label>
-                    </div>
-                    <div class="selection">
-                      <input id="yfourplus" name="ybath" type="radio">
-                      <label for="yfourplus">4+</label>
-                    </div>
-                    <div class="selection">
-                      <input id="yfiveplus" name="ybath" type="radio">
-                      <label for="yfiveplus">5+</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <!-- /Contact Info -->
+            <!-- Learn more -->
+            <div class="mb-10">
+                <h6 class="text-uppercase ls-1 ff-sub">Learn more</h6>
+                <ul class="list-unstyled">
+                    <li><a class="text-body link-hover-primary d-inline-block mb-2" href="about.html">Bilury's Story</a></li>
+                    <li><a class="text-body link-hover-primary d-inline-block mb-2" href="#">Terms of Use</a></li>
+                    <li><a class="text-body link-hover-primary d-inline-block mb-2" href="#">Privacy Policy</a></li>
+                </ul>
             </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="widget-wrapper">
-                  <h6 class="list-title">Location</h6>
-                  <div class="form-style2 input-group">
-                    <select class="selectpicker" data-live-search="true" data-width="100%">
-                      <option>All Cities</option>
-                      <option data-tokens="California">California</option>
-                      <option data-tokens="Chicago">Chicago</option>
-                      <option data-tokens="LosAngeles">Los Angeles</option>
-                      <option data-tokens="Manhattan">Manhattan</option>
-                      <option data-tokens="NewJersey">New Jersey</option>
-                      <option data-tokens="NewYork">New York</option>
-                      <option data-tokens="SanDiego">San Diego</option>
-                      <option data-tokens="SanFrancisco">San Francisco</option>
-                      <option data-tokens="Texas">Texas</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="widget-wrapper">
-                  <h6 class="list-title">Square Feet</h6>
-                  <div class="space-area">
-                    <div class="d-flex align-items-center justify-content-between">
-                      <div class="form-style1">
-                        <input type="text" class="form-control" placeholder="Min.">
-                      </div>
-                      <span class="dark-color">-</span>
-                      <div class="form-style1">
-                        <input type="text" class="form-control" placeholder="Max">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <!-- /Learn more -->
+            <!-- Follow Us -->
+            <div>
+                <h6 class="text-uppercase ls-1 ff-sub">Follow Us</h6>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" class="text-body link-hover-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-body link-hover-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-body link-hover-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                                <path d="M10 9l5 3l-5 3z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-body link-hover-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M8 20l4 -9"></path>
+                                <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7"></path>
+                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-body link-hover-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tripadvisor" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M6.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
+                                <path d="M17.5 13.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"></path>
+                                <path d="M17.5 9a4.5 4.5 0 1 0 3.5 1.671l1 -1.671h-4.5z"></path>
+                                <path d="M6.5 9a4.5 4.5 0 1 1 -3.5 1.671l-1 -1.671h4.5z"></path>
+                                <path d="M10.5 15.5l1.5 2l1.5 -2"></path>
+                                <path d="M9 6.75c2 -.667 4 -.667 6 0"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="widget-wrapper mb0">
-                  <h6 class="list-title mb10">Amenities</h6>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="widget-wrapper mb20">
-                  <div class="checkbox-style1">
-                    <label class="custom_checkbox">Attic
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="custom_checkbox">Basketball court
-                      <input type="checkbox" checked="checked">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="custom_checkbox">Air Conditioning
-                      <input type="checkbox" checked="checked">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="custom_checkbox">Lawn
-                      <input type="checkbox" checked="checked">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="widget-wrapper mb20">
-                  <div class="checkbox-style1">
-                    <label class="custom_checkbox">TV Cable
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="custom_checkbox">Dryer
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="custom_checkbox">Outdoor Shower
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="custom_checkbox">Washer
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="widget-wrapper mb20">
-                  <div class="checkbox-style1">
-                    <label class="custom_checkbox">Lake view
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="custom_checkbox">Wine cellar
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="custom_checkbox">Front yard
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="custom_checkbox">Refrigerator
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer justify-content-between">
-            <a class="reset-button" href="#"><span class="flaticon-turn-back"></span><u>Reset all filters</u></a>
-            <div class="btn-area">
-              <button class="ud-btn btn-thm"><span class="flaticon-search align-text-top pr10"></span>Search</button>
-            </div>
-          </div>
+            <!-- /Follow Us -->
         </div>
-      </div>
     </div>
-  </div>
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+

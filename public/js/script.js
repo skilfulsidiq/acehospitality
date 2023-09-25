@@ -1,6 +1,6 @@
 (function($) {
-    
-    "use strict";
+
+ "use strict";
     function preloaderLoad() {
         if($('.preloader').length){
             $('.preloader').delay(200).fadeOut(300);
@@ -40,7 +40,7 @@
             animationSpeed: 'fast', //slow, medium, fast
             accoridonExpAll: false //Expands all the accordion menu on click
         });
-    });    
+    });
 
     function mobileNavToggle() {
         if ($('#main-nav-bar .navbar-nav .sub-menu').length) {
@@ -80,14 +80,14 @@
             }
         };
     });
-    
+
     $(".mouse_scroll").on('click', function() {
         $('html, body').animate({
             scrollTop: $("#feature-property, #property-city").offset().top
         }, 1000);
     });
     /** Main Menu Custom Script End **/
-    
+
     /* ----- Blog innerpage sidebar according ----- */
     $(document).on('ready', function() {
         $('.collapse').on('show.bs.collapse', function () {
@@ -96,7 +96,7 @@
         $('.collapse').on('hide.bs.collapse', function () {
             $(this).siblings('.card-header').removeClass('active');
         });
-        
+
     });
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
@@ -119,18 +119,23 @@
 
     /* ----- Mobile Nav ----- */
     document.addEventListener('DOMContentLoaded', () => {
-      new Mmenu("#menu", {
-        navbar: {
-        title: "Menu"
-      },
-      searchfield: {
-        add: false,
-        addTo: "#contacts"
-      },
-      offCanvas: {
-        position: "left-front"
-      }},
-      {});        
+      new Mmenu(
+          "#ace_mobile_menu",
+        //   {
+        //       navbar: {
+        //           title: "Menu",
+        //       },
+        //       searchfield: {
+        //           add: false,
+        //           addTo: "#contacts",
+        //       },
+        //       offCanvas: {
+        //           position: "left-front",
+        //       },
+        //   },
+        //   {}
+      );
+    //   })
     });
 
     /* ----- Custom Search Dropdown Script Start ----- */
@@ -164,7 +169,7 @@
       showSuggestions();
     });
     /* ----- Custom Search Dropdown Script End ----- */
-    
+
 
     /* ----- Price Range Slider Desktop Style ----- */
     $(document).on('ready', function() {
@@ -270,7 +275,7 @@
 
           // Container isn't manipulated, only child elements within
           updateElement($item.children($animate_thumb));
-      }); 
+      });
       // Move element around
       function updateElement(modifyLayer) {
           modifyLayer.css({
@@ -313,7 +318,7 @@
           scrollTop: $("#explore-property").offset().top
       }, 1200);
     });
-    
+
     /* ----- Mega Dropdown Content ----- */
     $(document).on('ready', function(){
         $(".drop_btn").on('click',function(){
@@ -324,12 +329,12 @@
         });
         $(".drop_btn3").on('click',function(){
             $(".drop_content3").toggle();
-        }); 
+        });
         $(".drop_btn4").on('click',function(){
             $(".drop_content4").toggle();
-        });        
+        });
     });
-    
+
 
     /*----------- Addclass Remove Class for Home 2 Accordion ----------*/
     (function( $ ) {
@@ -348,7 +353,7 @@
         scrollToTop();
         mobileNavToggle();
     });
-    
+
 /* ======
    When document is loading, do
    ====== */
