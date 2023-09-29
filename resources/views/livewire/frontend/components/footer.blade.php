@@ -95,26 +95,26 @@
                                 <div class="col-6">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="about.html">Bilury's Story</a>
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="{{ route('about') }}">Ace's Story</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="team.html">Team</a>
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="{{ route('about') }}#team">Team</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="news.html">News</a>
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="{{ route('hotel-list') }}">hotels</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="contact.html">Contact Us</a>
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="{{ route('contact') }}">Contact Us</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="dashboard.html">My Account</a>
-                                        </li>
+                                        {{-- <li class="nav-item">
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="{{ route('rooms') }}">Rooms</a>
+                                        </li> --}}
                                     </ul>
                                 </div>
                                 <div class="col-6">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="rooms-1.html">Rooms & Suites</a>
+                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="{{ route('reservation-page') }}">Rooms & Suites</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="spa-wellness.html">Spa & Wellness</a>
@@ -137,7 +137,7 @@
                     <div class="col-12 col-xl-3 col-lg-4 col-md-6">
                         <div class="mb-8">
                             <!-- Mobile App -->
-                            <div class="mb-6">
+                            {{-- <div class="mb-6">
                                 <h5 class="h6 mb-3 text-uppercase ff-sub ls-1">Get the app</h5>
                                 <div class="pt-4">
                                     <ul class="list-inline">
@@ -157,7 +157,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> --}}
                             <!-- /Mobile App -->
                             <!-- Social -->
                             <div class="mb-6">
@@ -223,7 +223,7 @@
             <div class="mt-9">
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <p>© 2023 Bilury Hotel. All rights reserved.</p>
+                        <p>© 2023 Ace Hospitality. All rights reserved.</p>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="text-start text-md-end">

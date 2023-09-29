@@ -15,34 +15,38 @@
             <link href="images/apple-touch-icon-180x180.png" sizes="180x180" rel="apple-touch-icon">
 
             <!-- css file -->
+
+            <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
+
             <link rel="stylesheet" href="{{ asset('assets/css/bundle.min.css')}}">
-            {{-- <link rel="stylesheet" href="{{ asset('css/jquery-ui.min.css')}}">
-            <link rel="stylesheet" href="{{ asset('css/ace-responsive-menu.css')}}">
-            <link rel="stylesheet" href="{{ asset('css/menu.css')}}">
-            <link rel="stylesheet" href="{{ asset('css/fontawesome.css')}}">
-            <link rel="stylesheet" href="{{ asset('css/flaticon.css')}}">
-            <link rel="stylesheet" href="{{ asset('css/bootstrap-select.min.css')}}">
-            <link rel="stylesheet" href="{{ asset('css/animate.css')}}">
-            <link rel="stylesheet" href="{{ asset('css/slider.css')}}">
-            <link rel="stylesheet" href="{{ asset('css/style.css')}}">
-            <link rel="stylesheet" href="{{ asset('css/ud-custom-spacing.css')}}">
-            <!-- Responsive stylesheet -->
-            <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
-             <link rel="stylesheet" href="{{ asset('css/hotel-datepicker.css') }}"> --}}
+            <link rel="stylesheet" href="{{asset('assets/css/preloader.css')}}">
+            <link rel="stylesheet" href="{{asset('assets/css/meanmenu.css')}}">
+            {{-- <link rel="stylesheet" href="assets/css/animate.min.css"> --}}
+            <link rel="stylesheet" href="{{asset('assets/css/swiper-bundle.css')}}">
+            <link rel="stylesheet" href="{{asset('assets/css/backToTop.css')}}">
+            <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
+            <link rel="stylesheet" href="{{asset('assets/css/nice-select.css')}}">
+            <link rel="stylesheet" href="{{asset('assets/css/fontAwesome5Pro.css')}}">
+            {{-- <link rel="stylesheet" href="{{asset('assets/css/vanilla-calendar-min.css')}}"> --}}
+            <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
+            <link rel="stylesheet" href="{{asset('assets/css/default.css')}}">
+            <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+            <link rel="stylesheet" href="{{ asset('assets/css/hotel-datepicker.css') }}">
+
+
             <!-- Title -->
 
 
    {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
    @vite(['resources/sass/app.scss'])
 </head>
-    <body class="vh-100 vw-100 overflow-hidden">
-    <!-- Header -->
-    <!-- Preloader -->
-    <div class="position-fixed top-0 bottom-0 bg-white vw-100 z-1100 d-flex align-items-center justify-content-center" id="preloader">
-        <div class="spinner-grow text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
+    <body >
+     <div id="loading">
+    <div id="preloader">
+      <div id="loader"></div>
     </div>
+  </div>
+
         <livewire:frontend.components.header type="nav-homepage-style stricky"/>
     <main>
          {{ $slot }}
@@ -51,42 +55,42 @@
 
 
 
-<script src="{{ asset('js/jquery-3.6.4.min.js')}}"></script>
-      <script src="{{ asset('js/popper.min.js')}}"></script>
-      <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-      {{-- <script src="{{ asset('js/jquery-3.6.4.min.js')}}"></script>
-        <script src="{{ asset('js/jquery-migrate-3.0.0.min.js')}}"></script>
-        <script src="{{ asset('js/popper.min.js')}}"></script>
-        <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-        <script src="{{ asset('js/bootstrap-select.min.js')}}"></script>
-        <script src="{{ asset('js/jquery.mmenu.all.js')}}"></script>
-        <script src="{{ asset('js/ace-responsive-menu.js')}}"></script>
-        <script src="{{ asset('js/jquery-scrolltofixed-min.js')}}"></script>
-        <script src="{{ asset('js/wow.min.js')}}"></script>
-        <script src="{{ asset('js/owl.js')}}"></script>
-        <script src="{{ asset('js/parallax.js')}}"></script> --}}
+            <script src="{{ asset('js/jquery-3.6.4.min.js')}}"></script>
+                <script src="{{ asset('js/popper.min.js')}}"></script>
+                <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+                  <script src="{{ asset('assets/js/bundle.min.js') }}"></script>
 
-        {{-- <script src="{{ asset('js/pricing-slider.js')}}"></script> --}}
+        <script src="{{ asset('assets/js/vendor/waypoints.min.js')}}"></script>
+        <script src="{{ asset('assets/js/meanmenu.js')}}"></script>
+        <script src="{{ asset('assets/js/swiper-bundle.js')}}"></script>
+        <script src="{{ asset('assets/js/magnific-popup.min.js')}}"></script>
+        <script src="{{ asset('assets/js/parallax.min.js')}}"></script>
+        <script src="{{ asset('assets/js/backToTop.js')}}"></script>
+        <script src="{{ asset('assets/js/nice-select.min.js')}}"></script>
+        <script src="{{ asset('assets/js/counterup.min.js')}}"></script>
+        {{-- <script src="{{ asset('assets/js/ajax-form.js')}}"></script> --}}
+        <script src="{{ asset('assets/js/slick.min.js')}}"></script>
+        <script src="{{ asset('assets/js/wow.min.js')}}"></script>
+        <script src="{{ asset('assets/js/isotope.pkgd.min.js')}}"></script>
+        <script src="{{ asset('assets/js/vanilla-calendar-min.js')}}"></script>
+        <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js')}}"></script>
+        <script src="{{ asset('assets/js/slick-animation.min.js')}}"></script>
+        <script src="{{ asset('assets/js/main.js')}}"></script>
+        <script src="{{ asset('assets/js/fecha.min.js') }}"></script>
 
-         {{-- <script src="{{ asset('js/fecha.min.js') }}"></script>
-         <script src="{{ asset('js/hotel-datepicker.min.js') }}"></script> --}}
-        {{-- Hotel pivk --}}
-
-        <!-- Custom script for all pages -->
-        {{-- <script src="{{ asset('js/script.js') }}"></script> --}}
+         <script src="{{ asset('assets/js/hotel-datepicker.min.js') }}"></script>
 
 
-        <script src="{{ asset('assets/js/bundle.min.js') }}"></script>
-        <script>
-            $('ul.tabs li').click(function () {
-        var tab_id = $(this).attr('href');
 
-        $('ul.tabs li').removeClass('current');
-        $('.tab-content').removeClass('current');
-
-        $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
-    })
+       <script>
+                var demo2 = new HotelDatepicker(
+                    document.querySelector("#hotel-picker"),
+                    {
+                        inline: false,
+                           topbarPosition: "top",
+                    }
+                );
+        </script>
         </script>
          @stack('script')
     </body>

@@ -1,104 +1,204 @@
- <section id="facilitiesAmenities" class="pt-14 pb-10">
-            <div class="container">
-                <!-- Heading -->
-                <div class="mb-8" data-cue="fadeIn">
-                    <h2 class="text-uppercase ff-heading">Facilities & amenities</h2>
-                    <p class="fs-5 fw-normal text-body-secondary">An quis eligendi atomorum duo latine veritus vituperata vim no</p>
-                </div>
-                <!-- /Heading -->
-                <!-- List -->
-                <div class="row" data-cues="fadeIn">
-                    <div class="col-12 col-xl-4 col-md-6">
-                        <!-- Item -->
-                        <div class="mb-5">
-                            <div class="d-flex align-items-start">
-                                <div class="fs-1 text-primary pe-5 lh-sm">
-                                    <i class="hicon hicon-wifi"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h6 text-uppercase ff-sub ls-1">High Speed Wifi</h3>
-                                    <p>Vix placerat no, eam cu bonorum sententiae, adipisci atomorum duo noster ad vel</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Item -->
-                    </div>
-                    <div class="col-12 col-xl-4 col-md-6">
-                        <!-- Item -->
-                        <div class="mb-5">
-                            <div class="d-flex align-items-start">
-                                <div class="fs-1 text-primary pe-5 lh-sm">
-                                    <i class="hicon hicon-reception"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h6 text-uppercase ff-sub ls-1">Front desk 24H</h3>
-                                    <p>Scripta apeirian in his. Quo accusa complect eu, errem adipisci ocurreret an per</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Item -->
-                    </div>
-                    <div class="col-12 col-xl-4 col-md-6">
-                        <!-- Item -->
-                        <div class="mb-5">
-                            <div class="d-flex align-items-start">
-                                <div class="fs-1 text-primary pe-5 lh-sm">
-                                    <i class="hicon hicon-car-park-onsite"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h6 text-uppercase ff-sub ls-1">Parking Space</h3>
-                                    <p>An quis eligendi duo, placerat latine veritus vim placerat. Duo errem latine scribentur</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Item -->
-                    </div>
-                    <div class="col-12 col-xl-4 col-md-6">
-                        <!-- Item -->
-                        <div class="mb-5">
-                            <div class="d-flex align-items-start">
-                                <div class="fs-1 text-primary pe-5 lh-sm">
-                                    <i class="hicon hicon-pool"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h6 text-uppercase ff-sub ls-1"> Swimming Pool</h3>
-                                    <p>Has et magna dolore dicit. No placerat essent inermis nec prima homero similique pri at.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Item -->
-                    </div>
-                    <div class="col-12 col-xl-4 col-md-6">
-                        <!-- Item -->
-                        <div class="mb-5">
-                            <div class="d-flex align-items-start">
-                                <div class="fs-1 text-primary pe-5 lh-sm">
-                                    <i class="hicon hicon-spas"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h6 text-uppercase ff-sub ls-1">Spa center</h3>
-                                    <p>Mel graece consequ cu, ex dicunt appareat duo, vim errem adipisci augue placerat.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Item -->
-                    </div>
-                    <div class="col-12 col-xl-4 col-md-6">
-                        <!-- Item -->
-                        <div class="mb-5">
-                            <div class="d-flex align-items-start">
-                                <div class="fs-1 text-primary pe-5 lh-sm">
-                                    <i class="hicon hicon-fitness-center"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h6 text-uppercase ff-sub ls-1">Fitness Center</h3>
-                                    <p>Ne ius assentior, te soluta facilisis mel placerat appareat duo dicunt splendide quo no.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Item -->
-                    </div>
-                </div>
-                <!-- /List -->
+<section class="glo-room-facility pt-120 pb-120">
+      <div class="container">
+        {{-- <div class="row">
+          <div class="col-12">
+            <div class="intro-title-wrapper text-center">
+              <div class="intro-subtitle mb-50 revealed" data-reveal="">
+                <img src="assets/img/facilities/facilities-icon.png" alt="Image not found">
+              </div>
+              <div class="intro-title mb-75 revealed" data-reveal="">
+                <h2>Some<br>Amenities</h2>
+              </div>
             </div>
-        </section>
+          </div>
+        </div> --}}
+        <div class="row">
+          <div class="col-12">
+            <div class="intro-title-wrapper text-center mb-60" data-reveal>
+              <div class="intro-subtitle">
+                <span>Facilities</span>
+              </div>
+              <div class="intro-title">
+                <h2>Our Amenities</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="facilities-slider swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events revealed" data-reveal="">
+        <div class="swiper-wrapper" id="swiper-wrapper-1de218544b384907" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-1323.91px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="5 / 12" style="width: 265.217px; margin-right: 50px;" data-swiper-slide-index="0">
+            <div class="glo-facility">
+              <div class="glo-facility-thumb">
+                <img src="assets/img/facilities/1.png" alt="Image not found">
+              </div>
+              <div class="glo-facility-content">
+                <h4 class="glo-facility-title">Family Size Room</h4>
+                <span>Available: 10 Room</span>
+              </div>
+              <div class="glo-facility-btn p-relative">
+                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
+                    Availability</span></a>
+              </div>
+            </div>
+          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" role="group" aria-label="6 / 12" data-swiper-slide-index="1" style="width: 265.217px; margin-right: 50px;">
+            <div class="glo-facility">
+              <div class="glo-facility-thumb">
+                <img src="assets/img/facilities/3.png" alt="Image not found">
+              </div>
+              <div class="glo-facility-content">
+                <h4 class="glo-facility-title">Speedy Wifi Zone</h4>
+                <span>Available 24/7</span>
+              </div>
+              <div class="glo-facility-btn p-relative">
+                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
+                    Availability</span></a>
+              </div>
+            </div>
+          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" role="group" aria-label="7 / 12" data-swiper-slide-index="2" style="width: 265.217px; margin-right: 50px;">
+            <div class="glo-facility">
+              <div class="glo-facility-thumb">
+                <img src="assets/img/facilities/4.png" alt="Image not found">
+              </div>
+              <div class="glo-facility-content">
+                <h4 class="glo-facility-title">Pools &amp; Sports Zone</h4>
+                <span>AvaIable In 7AM-10PM</span>
+              </div>
+              <div class="glo-facility-btn p-relative">
+                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
+                    Availability</span></a>
+              </div>
+            </div>
+          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" role="group" aria-label="8 / 12" style="width: 265.217px; margin-right: 50px;" data-swiper-slide-index="3">
+            <div class="glo-facility">
+              <div class="glo-facility-thumb">
+                <img src="assets/img/facilities/5.png" alt="Image not found">
+              </div>
+              <div class="glo-facility-content">
+                <h4 class="glo-facility-title">Customer Support</h4>
+                <span>Available: 10 Room</span>
+              </div>
+              <div class="glo-facility-btn p-relative">
+                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
+                    Availability</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="5 / 12" style="width: 265.217px; margin-right: 50px;" data-swiper-slide-index="0">
+            <div class="glo-facility">
+              <div class="glo-facility-thumb">
+                <img src="assets/img/facilities/1.png" alt="Image not found">
+              </div>
+              <div class="glo-facility-content">
+                <h4 class="glo-facility-title">Family Size Room</h4>
+                <span>Available: 10 Room</span>
+              </div>
+              <div class="glo-facility-btn p-relative">
+                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
+                    Availability</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-prev" role="group" aria-label="6 / 12" data-swiper-slide-index="1" style="width: 265.217px; margin-right: 50px;">
+            <div class="glo-facility">
+              <div class="glo-facility-thumb">
+                <img src="assets/img/facilities/3.png" alt="Image not found">
+              </div>
+              <div class="glo-facility-content">
+                <h4 class="glo-facility-title">Speedy Wifi Zone</h4>
+                <span>Available 24/7</span>
+              </div>
+              <div class="glo-facility-btn p-relative">
+                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
+                    Availability</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-active" role="group" aria-label="7 / 12" data-swiper-slide-index="2" style="width: 265.217px; margin-right: 50px;">
+            <div class="glo-facility">
+              <div class="glo-facility-thumb">
+                <img src="assets/img/facilities/4.png" alt="Image not found">
+              </div>
+              <div class="glo-facility-content">
+                <h4 class="glo-facility-title">Pools &amp; Sports Zone</h4>
+                <span>AvaIable In 7AM-10PM</span>
+              </div>
+              <div class="glo-facility-btn p-relative">
+                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
+                    Availability</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-next" role="group" aria-label="8 / 12" style="width: 265.217px; margin-right: 50px;" data-swiper-slide-index="3">
+            <div class="glo-facility">
+              <div class="glo-facility-thumb">
+                <img src="assets/img/facilities/5.png" alt="Image not found">
+              </div>
+              <div class="glo-facility-content">
+                <h4 class="glo-facility-title">Customer Support</h4>
+                <span>Available: 10 Room</span>
+              </div>
+              <div class="glo-facility-btn p-relative">
+                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
+                    Availability</span></a>
+              </div>
+            </div>
+          </div>
+        <div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="5 / 12" style="width: 265.217px; margin-right: 50px;" data-swiper-slide-index="0">
+            <div class="glo-facility">
+              <div class="glo-facility-thumb">
+                <img src="assets/img/facilities/1.png" alt="Image not found">
+              </div>
+              <div class="glo-facility-content">
+                <h4 class="glo-facility-title">Family Size Room</h4>
+                <span>Available: 10 Room</span>
+              </div>
+              <div class="glo-facility-btn p-relative">
+                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
+                    Availability</span></a>
+              </div>
+            </div>
+          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" role="group" aria-label="6 / 12" data-swiper-slide-index="1" style="width: 265.217px; margin-right: 50px;">
+            <div class="glo-facility">
+              <div class="glo-facility-thumb">
+                <img src="assets/img/facilities/3.png" alt="Image not found">
+              </div>
+              <div class="glo-facility-content">
+                <h4 class="glo-facility-title">Speedy Wifi Zone</h4>
+                <span>Available 24/7</span>
+              </div>
+              <div class="glo-facility-btn p-relative">
+                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
+                    Availability</span></a>
+              </div>
+            </div>
+          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" role="group" aria-label="7 / 12" data-swiper-slide-index="2" style="width: 265.217px; margin-right: 50px;">
+            <div class="glo-facility">
+              <div class="glo-facility-thumb">
+                <img src="assets/img/facilities/4.png" alt="Image not found">
+              </div>
+              <div class="glo-facility-content">
+                <h4 class="glo-facility-title">Pools &amp; Sports Zone</h4>
+                <span>AvaIable In 7AM-10PM</span>
+              </div>
+              <div class="glo-facility-btn p-relative">
+                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
+                    Availability</span></a>
+              </div>
+            </div>
+          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" role="group" aria-label="8 / 12" style="width: 265.217px; margin-right: 50px;" data-swiper-slide-index="3">
+            <div class="glo-facility">
+              <div class="glo-facility-thumb">
+                <img src="assets/img/facilities/5.png" alt="Image not found">
+              </div>
+              <div class="glo-facility-content">
+                <h4 class="glo-facility-title">Customer Support</h4>
+                <span>Available: 10 Room</span>
+              </div>
+              <div class="glo-facility-btn p-relative">
+                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
+                    Availability</span></a>
+              </div>
+            </div>
+          </div></div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+    </section>

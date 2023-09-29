@@ -1,4 +1,4 @@
-  <section id="about" class="pt-14 pb-14">
+  {{-- <section id="about" class="pt-14 pb-14">
             <div class="container">
                 <div class="row align-items-start align-items-md-stretch" data-cues="fadeIn">
                     <div class="col-12 col-lg-6 order-1 order-lg-0">
@@ -34,4 +34,74 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
+<section class="glo-about-area pt-110 pb-60">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-6 col-lg-6 col-sm-12">
+            <div class="glo-about-thumb-wrapper p-relative ">
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-sm-6">
+                  <div class="glo-about-thumb revealed" data-reveal="left">
+                    <div class="img-hover overlay mb-6">
+                      <img src="{{ asset('assets/img/about/about-1.jpg')}}" alt="img-about">
+                    </div>
+                    <div class="img-hover overlay mb-6">
+                      <img src="{{ asset('assets/img/about/about-2.jpg')}}" alt="img-about">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-sm-6">
+                  <div class="glo-about-thumb  revealed" data-reveal="right">
+                    <div class="img-hover overlay mb-6 mt-10">
+                      <img src="{{ asset('assets/img/about/about-3.jpg')}}" alt="img-about">
+                    </div>
+                    <div class="img-hover overlay mb-6">
+                      <img src="{{ asset('assets/img/about/about-4.jpg')}}" alt="img-about">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="glo-about-batch">
+                <span><img src="{{ asset('assets/img/about/batch.png')}}" alt="batch"></span>
+              </div>
+            </div>
+          </div>
+         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+            <div class="glo-features-content-2 mb-60 revealed" data-reveal="">
+              <div class="intro-title-wrapper">
+                <div class="intro-subtitle">
+                  <span>Welcome to</span>
+                </div>
+                <div class="intro-title mb-40">
+                  <h2>ACE HOSPITALITY</h2>
+                </div>
+              </div>
+              <p data-reveal="" class="revealed">
+                A Luxury Hotel is considered a hotel that provides a luxurious
+                accommodation experience to the guest. There are no set with
+                standards (such as stars) for luxury hotels.
+              </p>
+              <blockquote class="glo-features-blockquote pt-5 pb-5 revealed" data-reveal="">
+                <span>Five-star hotels are properties that offer their guest
+                  the highest levels of luxury.</span>
+                <div class="align-items-md-center d-md-flex  mt-15">
+                  {{-- <h4 class="mb-0">Kenneth Campbell</h4>
+                  <span class="mb-0 ml-5 d-inline-block">-Head Of Idea</span> --}}
+                </div>
+              </blockquote>
+              <div class="glo-features-mission revealed" data-reveal="">
+                <h3>Our Mission</h3>
+                <p class="mb-0">Welcomed every pain avoided but in certain circumstances
+                  owing to the claims of duty or the obligations</p>
+              </div>
+              {{-- <div class="glo-features-mission revealed" data-reveal="">
+                <h3>Our Vission</h3>
+                <p class="mb-0">Welcomed every pain avoided but in certain circumstances
+                  owing to the claims of duty or the obligations</p>
+              </div> --}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

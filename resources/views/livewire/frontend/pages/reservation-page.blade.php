@@ -1,120 +1,148 @@
 <div>
-    <livewire:frontend.components.image-breadcrumb />
-    <livewire:frontend.components.frontend-availability-form />
+    <livewire:frontend.components.image-breadcrumb title="Rooms" />
+     {{-- <livewire:frontend.components.date-picker.white class="card card-check-room check-room-hero" /> --}}
 
-    {{-- <input type="text" id="my-input-id" class="form-control"> --}}
-     
 
-    <section class="pt0 pb90 bgc-f7">
+
+    <section id="pageTitle" class="pt-24">
         <div class="container">
-            <div class="row gx-xl-5">
-                <div class="col-lg-7">
-                    <div class="row align-items-center mb20">
-                        <div class="col-sm-6">
-                            <div class="text-center text-sm-start">
-                                <p class="pagination_page_count mb-0">Showing 1–10 of 13 results</p>
+            <div class="row g-0 align-items-end">
+                <div class="col-12 col-xl-6">
+                    <h1 class="mb-8 display-5 text-uppercase ff-heading fw-semibold">Reservation</h1>
+                </div>
+                <div class="col-12 col-xl-6">
+                    <div class="pb-8 ps-xl-8">
+                        <div class="position-relative m-4">
+                            <div class="progress bg-dark-subtle" role="progressbar" aria-label="Progress"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 1px;">
+                                <div class="progress-bar" style="width: 0%"></div>
                             </div>
+                            <a href="javascript:void(0);"
+                                class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-square btn-primary rounded-circle">1</a>
+                            <a href="javascript:void(0);"
+                                class="position-absolute top-0 start-33 translate-middle btn btn-sm btn-square btn-secondary rounded-circle">2</a>
+                            <a href="javascript:void(0);"
+                                class="position-absolute top-0 start-66 translate-middle btn btn-sm btn-square btn-secondary rounded-circle">3</a>
+                            <a href="javascript:void(0);"
+                                class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-square btn-secondary rounded-circle">4</a>
                         </div>
-                        <div class="col-sm-6">
-                            <div
-                                class="page_control_shorting d-flex align-items-center justify-content-center justify-content-sm-end">
-                                <div class="pcs_dropdown pr10"><span>Sort by</span>
-                                    <div class="dropdown bootstrap-select show-tick"><select
-                                            class="selectpicker show-tick">
-                                            <option>Newest</option>
-                                            <option>Best Seller</option>
-                                            <option>Best Match</option>
-                                            <option>Price Low</option>
-                                            <option>Price High</option>
-                                        </select><button type="button" tabindex="-1"
-                                            class="btn dropdown-toggle btn-light" data-bs-toggle="dropdown"
-                                            role="combobox" aria-owns="bs-select-3" aria-haspopup="listbox"
-                                            aria-expanded="false" title="Newest">
-                                            <div class="filter-option">
-                                                <div class="filter-option-inner">
-                                                    <div class="filter-option-inner-inner">Newest</div>
-                                                </div>
-                                            </div>
-                                        </button>
-                                        <div class="dropdown-menu ">
-                                            <div class="inner show" role="listbox" id="bs-select-3" tabindex="-1">
-                                                <ul class="dropdown-menu inner show" role="presentation"></ul>
-                                            </div>
-                                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="reservation" class="pt-10 pb-10">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-12 col-xl-9 pe-xl-8" data-cue="fadeIn" data-show="true"
+                    style="animation-name: fadeIn; animation-duration: 1000ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+                    <!-- Check date -->
+                    <div class="mb-6">
+                         <livewire:frontend.components.date-picker.white class="card card-check-room check-room-hero" />
+
+                    </div>
+                    <!-- /Check date -->
+                    <div class="mb-8 mt-10">
+                          <livewire:frontend.components.property-cards.version-one />
+                        <!-- Room -->
+
+                        <!-- /Room -->
+                        <!-- Room -->
+
+                        <!-- /Room -->
+                    </div>
+                </div>
+                <div class="col-12 col-xl-3">
+                    <!-- Booking details -->
+                    <div class="sticky-top sticky-top-120 mb-10" data-cue="fadeIn" data-show="true"
+                        style="animation-name: fadeIn; animation-duration: 1000ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+                        <div class="card shadow-sm" data-aos-delay="300" data-aos="fade-up">
+                            <div class="card-body small">
+                                <h2 class="h4 text-uppercase ff-sub ls-1">Booking details</h2>
+                                <hr>
+                                <!-- Book Date -->
+                                <div>
+                                    <div>
+                                        <i class="hicon hicon-menu-calendar"></i>
+                                        <span>Check-In: <strong>19 Jul 2022</strong></span>
+                                    </div>
+                                    <div>
+                                        <i class="hicon hicon-menu-calendar"></i>
+                                        <span>Check-Out: <strong>20 Jul 2022</strong></span>
+                                    </div>
+                                    <em>(Duration of stay: <strong>1 Night</strong>)</em>
+                                    <div class="mt-3">
+                                        <span>
+                                            <i class="hicon hicon-adults-line"></i><span>Adults:
+                                            </span><strong>1</strong>
+                                        </span>
+                                        <span>-</span>
+                                        <span>
+                                            <i class="hicon hicon-child-line"></i><span>Children:
+                                            </span><strong>0</strong>
+                                        </span>
                                     </div>
                                 </div>
-                                <a class="pl15 pr15 bdrl1 bdrr1 d-none d-md-block" href="#">Grid</a>
-                                <a class="pl15 d-none d-md-block" href="#">List</a>
+                                <!-- Book Date -->
+                                <hr>
+                                <!-- Room list -->
+                                <div>
+                                    <!-- Room Item -->
+                                    <div class="mb-3">
+                                        <h3 class="h6 mb-0 d-flex align-items-center">
+                                            <span>Imperial Suite Balcony</span>
+                                            <a href="#" class="text-danger fs-6 ms-2"><i
+                                                    class="hicon hicon-line-close hicon-60 hicon-bold"></i></a>
+                                        </h3>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Quantity <strong>1</strong>: </span>
+                                            <strong class="fw-semibold fs-6"><sup>$</sup>169.00</strong>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Extra bed: </span>
+                                            <strong class="fw-semibold fs-6"><sup>$</sup>15.00</strong>
+                                        </div>
+                                    </div>
+                                    <!-- Room Item -->
+                                    <!-- Room Item -->
+                                    <div class="mb-3">
+                                        <h3 class="h6 mb-0 d-flex align-items-center">
+                                            <span>Deluxe Double or Twin</span>
+                                            <a href="#" class="text-danger fs-6 ms-2"><i
+                                                    class="hicon hicon-line-close hicon-60 hicon-bold"></i></a>
+                                        </h3>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Quantity <strong>2</strong>: </span>
+                                            <strong class="fw-semibold fs-6"><sup>$</sup>269.00</strong>
+                                        </div>
+                                    </div>
+                                    <!-- Room Item -->
+                                </div>
+                                <!-- Room list -->
+                                <hr>
+                                <!-- Total Amount-->
+                                <div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h3 class="h4 mb-0">Total Amount:</h3>
+                                        <strong class="fw-bold fs-4"><sup>$</sup>699.00</strong>
+                                    </div>
+                                    <p><em>*All taxes and fees included</em></p>
+                                </div>
+                                <!-- Total Amount-->
+                                <hr>
+                                <!-- Next step -->
+                                <div class="text-end pt-2 pb-2">
+                                    <a class="btn btn-primary" href="your-info.html">
+                                        <span>Next step</span>
+                                        <i class="hicon hicon-flights-one-ways"></i>
+                                    </a>
+                                </div>
+                                <!-- Next step -->
                             </div>
                         </div>
                     </div>
-                    <div class="row mt15">
-                        <div class="col-lg-12">
-                            <livewire:frontend.components.property-cards.list-card image="images/listings/list-2.jpg"
-                                title="Classic Room" location="Im" />
-                        </div>
-                        <div class="col-lg-12">
-                            <livewire:frontend.components.property-cards.list-card image="images/listings/list-3.jpg"
-                                title="Deluxe Room" location="Im" />
-                        </div>
-
-                        <div class="col-lg-12">
-                            <livewire:frontend.components.property-cards.list-card image="images/listings/list-4.jpg"
-                                title="Partial View Room" location="Im" />
-                        </div>
-                        <div class="col-lg-12">
-                            <livewire:frontend.components.property-cards.list-card image="images/listings/list-5.jpg"
-                                title="Classic Partial View Room" location="Im" />
-                        </div>
-                        <div class="col-lg-12">
-                            <livewire:frontend.components.property-cards.list-card image="images/listings/list-4.jpg"
-                                title="Luxury location="Im" />
-                        </div>
-
-
-                    </div>
-                    <div class="row">
-                        <div class="mbp_pagination text-center">
-                            <ul class="page_navigation">
-                                <li class="page-item">
-                                    <a class="page-link" href="#"> <span class="fas fa-angle-left"></span></a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item active" aria-current="page">
-                                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                <li class="page-item"><a class="page-link" href="#">...</a></li>
-                                <li class="page-item"><a class="page-link" href="#">20</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#"><span class="fas fa-angle-right"></span></a>
-                                </li>
-                            </ul>
-                            <p class="mt10 pagination_page_count text-center">1 – 20 of 300+ property available</p>
-                        </div>
-                    </div>
+                    <!-- /Booking details -->
                 </div>
-                <div class="col-lg-5 d-none d-lg-block">
-                    <div class="list-sidebar-style1">
-                        <div class="widget-wrapper">
-                            <h6 class="list-title">Find your home</h6>
-                            <div class="search_area">
-                                <input type="text" class="form-control" placeholder="What are you looking for?">
-                                <label><span class="flaticon-search"></span></label>
-                            </div>
-                        </div>
-
-                        <div class="reset-area d-flex align-items-center justify-content-between">
-                            <a class="reset-button" href="#"><span class="flaticon-turn-back"></span><u>Reset
-                                    all filters</u></a>
-                            <a class="reset-button" href="#"><span class="flaticon-favourite"></span><u>Save
-                                    Search</u></a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
