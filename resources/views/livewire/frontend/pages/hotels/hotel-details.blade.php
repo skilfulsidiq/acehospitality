@@ -1,56 +1,148 @@
 <div>
-    <livewire:frontend.components.hotel-detail.hero-section />
+
+     <livewire:frontend.components.image-breadcrumb title="Ace Hotel Abuja" />
+    {{-- <livewire:frontend.components.hotel-detail.hero-section /> --}}
     <livewire:frontend.components.frontend-availability-form />
-    <div class="activate-scrol-fix" style="height: 30px">
 
-    </div>
-
-
-    {{-- <div class="sticky-top p-5 mt-5">
-        <ul class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-  </li>
-</ul>
-    </div> --}}
-        <div class="sticky-top2 hotel-info-tab  navtab-style1 mb-4 mb-lg-5 mt50">
-            <nav>
-                <div class="nav justify-content-center" nav-tabs mb20" id="nav-tab2" role="tablist">
-                    <button class="nav-link active fw600" id="nav-item1-tab" data-bs-toggle="tab"
-                        data-bs-target="#nav-item1" type="button" role="tab" aria-controls="nav-item1"
-                        aria-selected="true">Introduction</button>
-                    <button class="nav-link fw600" id="nav-item2-tab" data-bs-toggle="tab" data-bs-target="#nav-item2"
-                        type="button" role="tab" aria-controls="nav-item2" aria-selected="false">Rooms</button>
-                    <button class="nav-link fw600" id="nav-item3-tab" data-bs-toggle="tab" data-bs-target="#nav-item3"
-                        type="button" role="tab" aria-controls="nav-item3" aria-selected="false">Contact</button>
-                </div>
-            </nav>
-            <div class="tab-content " id="nav-tabContent">
-                <div class="tab-pane fade show active fz15" id="nav-item1" role="tabpanel"
-                    aria-labelledby="nav-item1-tab">
-                       <livewire:frontend.components.hotel-detail.about-section />
-
-                </div>
-                <div class="tab-pane fade fz15" id="nav-item2" role="tabpanel" aria-labelledby="nav-item2-tab">
-                     <livewire:frontend.components.feature-properties />
-                     <livewire:frontend.components.feature-properties style="margin-top:-5rem"/>
-                     <livewire:frontend.components.feature-properties/>
-                </div>
-                <div class="tab-pane fade fz15" id="nav-item3" role="tabpanel" aria-labelledby="nav-item3-tab">Pharetra
-                    nulla ullamcorper sit lectus. Fermentum mauris pellentesque nec nibh sed et, vel diam, massa.
-                    Placerat quis vel fames interdum urna lobortis sagittis sed pretium. Aliquam eget posuere sit enim
-                    elementum.</div>
+    <section class="glo-features-3">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-9">
+            <div class="intro-title-wrapper-3 mb-70">
+                <span class="intro-subtitle-3 revealed" data-reveal="">About</span>
+                <h2 class="intro-title-3 revealed" data-reveal="">Ace Hotel <br>WAbuja</h2>
             </div>
+          </div>
+          <div class="col-md-3">
+            <div class="glo-features-shape-wrapper mb-70 revealed" data-reveal="right">
+              <div class="glo-features-shape text-md-end">
+                <img src="assets/img/features/features-3/shape-2.png" alt="Image not found">
+              </div>
+            </div>
+          </div>
         </div>
-    {{-- </div> --}}
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="glo-features-thumb revealed" data-reveal="">
+              <img src="assets/img/features/features-3/1.jpg" alt="Image not found">
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="glo-feature">
+              <div class="glo-feature-content revealed" data-reveal="">
+                <p>Our mission at Agoda is to make affordable travel accessible to more people, and to deliver
+                  affordable and enjoyable travel experiences that are seamless from end to end. By seamless,
+                  we mean hassle-free from the moment you start planning your trip.</p>
+                <p>To get to our goal, we’ve spent the last 16 years building agoda.com and the Agoda app to
+                  make searching and booking travel as easy and stress-free as it ought to be.</p>
+              </div>
+              <div class="glo-feature-thumb-wrapper revealed" data-reveal="">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="glo-features-thumb">
+                      <img src="assets/img/features/features-3/2.jpg" alt="Image not found">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="glo-features-thumb glo-features-thumb-3">
+                      <img src="assets/img/features/features-3/3.jpg" alt="Image not found">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{-- PAckges --}}
+    <section class="glo-deals-area pt-115 pb-90">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+              <div class="intro-title-wrapper text-center mb-60 revealed" data-reveal="">
+                <div class="intro-subtitle">
+                  <span>packages</span>
+                </div>
+                <div class="intro-title">
+                  <h2>Best Deals &amp; Packages</h2>
+                </div>
+              </div>
+          </div>
+        </div>
+        <!-- 2nd row start here -->
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="glo-deals-card  mb-10  revealed" data-reveal="left" data-background="assets/img/deals/deal-1.jpg" style="background-image: url(&quot;assets/img/deals/deal-1.jpg&quot;);">
+              <div class="glo-deals-content p-relative">
+                <span class="glo-deals-subtitle">Restaurant</span>
+                <h3 class="glo-deals-title">Service</h3>
+                <div class="glo-deals-btn">
+                    {{-- <a href="event.html" class="glo-btn-anim"><span>See More</span></a> --}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="glo-deals-card mb-10 revealed" data-reveal="right" data-background="assets/img/deals/deal-2.jpg" style="background-image: url(&quot;assets/img/deals/deal-2.jpg&quot;);">
+              <div class="glo-deals-content p-relative">
+                <span class="glo-deals-subtitle">Event</span>
+                <h3 class="glo-deals-title">Weeding</h3>
+                <div class="glo-deals-btn">
+                    {{-- <a href="event.html" class="glo-btn-anim"><span>See More</span></a> --}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="glo-deals-card  mb-10  revealed" data-reveal="left" data-background="assets/img/deals/deal-3.jpg" style="background-image: url(&quot;assets/img/deals/deal-3.jpg&quot;);">
+              <div class="glo-deals-content p-relative">
+                <span class="glo-deals-subtitle">Meditaion</span>
+                <h3 class="glo-deals-title">Yoga</h3>
+                <div class="glo-deals-btn">
+                    {{-- <a href="event.html" class="glo-btn-anim"><span>See More</span></a> --}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="glo-deals-card  mb-10  revealed" data-reveal="right" data-background="assets/img/deals/deal-4.jpg" style="background-image: url(&quot;assets/img/deals/deal-4.jpg&quot;);">
+              <div class="glo-deals-content p-relative">
+                <span class="glo-deals-subtitle">Package</span>
+                <h3 class="glo-deals-title">Spa</h3>
+                <div class="glo-deals-btn">
+                    {{-- <a href="event.html" class="glo-btn-anim"><span>See More</span></a> --}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+   <div class="container">
+     <div class="service-features mb-60">
+                <h4 data-reveal="" class="revealed">Core Amenities</h4>
+                <div class="service-feature-list revealed" data-reveal="">
+                  <span>Flower arrangement</span>
+                  <span>Dry cleaning</span>
+                  <span>Room service</span>
+                  <span>Ticket service</span>
+                  <span>Ironing service</span>
+                  <span>Interaction between</span>
+                  <span>Car rental services</span>
+                  <span>Turndown service</span>
+                  <span>Catering services</span>
+                </div>
+              </div>
+   </div>
 
 </div>

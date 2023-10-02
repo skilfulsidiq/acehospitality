@@ -1,4 +1,4 @@
-<div>
+<div style="z-index:3000">
 
     <div class="col-12 col-xl-12 pe-xl-8" data-cue="fadeIn">
         <!-- Check date -->
@@ -7,7 +7,7 @@
 
                 <div class="col-12 col-md-4">
                     <label for="" class="t">Location</label>
-                    <div class="glo-reservation-select p-relative ">
+                    <div class="glo-reservation-select special-select  p-relative ">
                         {{-- <i class="fas fa-location"></i> --}}
                         <select name="glo-booking-select" id="glo-booking-select-2" style="display: none;">
                             <option value="" selected="">Select</option>

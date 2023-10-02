@@ -2,7 +2,8 @@
     <div class="container">
         <h2 class="d-none">Check rooms</h2>
         <div class="row justify-content-center">
-            <div class="col-12 col-xxl-9 col-xl-10">
+            {{-- col-xxl-9 col-xl-10" --}}
+            <div class="col-12 ">
                 <div class="{{ $class }}  border-0">
                     <div class="card-body ps-3 pe-3 ps-sm-6 pe-sm-6 pb-3">
                         <div class="row g-2">
@@ -63,7 +64,7 @@
                             <div class="">
                                 <!-- Button -->
                                 <div class="mb-3">
-                                    <a href="reservation.html" class="btn btn-primary w-10">
+                                    <a href="{{ route('reservation-page') }}" class="btn btn-primary w-10">
                                         <i class="hicon hicon-mmb-my-booking mr-1"></i>
                                         <span>Check Rooms</span>
                                     </a>
