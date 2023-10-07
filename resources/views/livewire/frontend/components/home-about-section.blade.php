@@ -78,13 +78,14 @@
                 </div>
               </div>
               <p data-reveal="" class="revealed">
-                A Luxury Hotel is considered a hotel that provides a luxurious
-                accommodation experience to the guest. There are no set with
-                standards (such as stars) for luxury hotels.
+                Incorporated in Year 2016 Ace Hospitality® is a recognised Hotel Management, Acquisition, and Development Company in Nigeria.
+
+
+
               </p>
+              <p>With a diversified portfolio in Training, Management of Hotels/ Conference centres, Procurement, we offer outstanding Products and services thoughtfully and independently developed to meet not only the needs of a vibrant sector but ensure maximum return on investment to owners and investors we work with.</p>
               <blockquote class="glo-features-blockquote pt-5 pb-5 revealed" data-reveal="">
-                <span>Five-star hotels are properties that offer their guest
-                  the highest levels of luxury.</span>
+                <span>We Design, Own, Manage and Market hospitality properties for a Fee either on a Management or Franchise agreement.</span>
                 <div class="align-items-md-center d-md-flex  mt-15">
                   {{-- <h4 class="mb-0">Kenneth Campbell</h4>
                   <span class="mb-0 ml-5 d-inline-block">-Head Of Idea</span> --}}
@@ -92,8 +93,7 @@
               </blockquote>
               <div class="glo-features-mission revealed" data-reveal="">
                 <h3>Our Mission</h3>
-                <p class="mb-0">Welcomed every pain avoided but in certain circumstances
-                  owing to the claims of duty or the obligations</p>
+                <p class="mb-0">To drive Best Global hospitality Management practices that delivers exceptional Service experience & Profitable standards to Businesses we Manage or Market.</p>
               </div>
               {{-- <div class="glo-features-mission revealed" data-reveal="">
                 <h3>Our Vission</h3>
