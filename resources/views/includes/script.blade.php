@@ -9,7 +9,7 @@
         <script src="{{ asset('assets/js/magnific-popup.min.js')}}"></script>
         <script src="{{ asset('assets/js/parallax.min.js')}}"></script>
         <script src="{{ asset('assets/js/backToTop.js')}}"></script>
-        <script src="{{ asset('assets/js/nice-select.min.js')}}"></script>
+        {{-- <script src="{{ asset('assets/js/nice-select.min.js')}}"></script> --}}
         <script src="{{ asset('assets/js/counterup.min.js')}}"></script>
         {{-- <script src="{{ asset('assets/js/ajax-form.js')}}"></script> --}}
         <script src="{{ asset('assets/js/slick.min.js')}}"></script>
@@ -18,20 +18,11 @@
         <script src="{{ asset('assets/js/vanilla-calendar-min.js')}}"></script>
         <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js')}}"></script>
         <script src="{{ asset('assets/js/slick-animation.min.js')}}"></script>
+        <script src="{{ asset('assets/js/select2.js')}}"></script>
         <script src="{{ asset('assets/js/main.js')}}"></script>
-        <script src="{{ asset('assets/js/fecha.min.js') }}"></script>
-
-         <script src="{{ asset('assets/js/hotel-datepicker.min.js') }}"></script>
-
+        {{-- <script src="{{ asset('assets/js/fecha.min.js') }}"></script> --}}
+         {{-- <script src="{{ asset('assets/js/hotel-datepicker.min.js') }}"></script> --}}
 
 
-       <script>
-                var demo2 = new HotelDatepicker(
-                    document.querySelector("#hotel-picker"),
-                    {
-                        inline: false,
-                           topbarPosition: "top",
-                    }
-                );
-        </script>
-        </script>
+
+

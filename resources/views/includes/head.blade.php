@@ -16,20 +16,23 @@
 
             <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
 
+
             <link rel="stylesheet" href="{{ asset('assets/css/bundle.min.css')}}">
             <link rel="stylesheet" href="{{asset('assets/css/preloader.css')}}">
             <link rel="stylesheet" href="{{asset('assets/css/meanmenu.css')}}">
+            <link rel="stylesheet" href="{{asset('assets/css/select2.css')}}">
             {{-- <link rel="stylesheet" href="assets/css/animate.min.css"> --}}
             <link rel="stylesheet" href="{{asset('assets/css/swiper-bundle.css')}}">
             <link rel="stylesheet" href="{{asset('assets/css/backToTop.css')}}">
             <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
-            <link rel="stylesheet" href="{{asset('assets/css/nice-select.css')}}">
+            {{-- <link rel="stylesheet" href="{{asset('assets/css/nice-select.css')}}"> --}}
             <link rel="stylesheet" href="{{asset('assets/css/fontAwesome5Pro.css')}}">
             {{-- <link rel="stylesheet" href="{{asset('assets/css/vanilla-calendar-min.css')}}"> --}}
             <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
             <link rel="stylesheet" href="{{asset('assets/css/default.css')}}">
             <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-            <link rel="stylesheet" href="{{ asset('assets/css/hotel-datepicker.css') }}">
+
+            {{-- <link rel="stylesheet" href="{{ asset('assets/css/hotel-datepicker.css') }}"> --}}
 
 
             <!-- Title -->

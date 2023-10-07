@@ -15,6 +15,7 @@
     {{-- <livewire:frontend.components.header type="nav-homepage-style stricky"/> --}}
     <main>
         {{ $slot }}
+         @livewire('wire-elements-modal')
     </main>
     @includeIf('includes.footer')
     {{-- <livewire:frontend.components.footer/> --}}

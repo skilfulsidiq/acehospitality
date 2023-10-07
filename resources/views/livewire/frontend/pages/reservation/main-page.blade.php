@@ -191,8 +191,8 @@
 @push('script')
 <script>
         // Toggle the bottom sheet when the button is clicked
-        document.getElementById('toggleBottomSheet').addEventListener('click', function() {
-            $('#bottomSheet').modal('toggle');
-        });
+        // document.getElementById('toggleBottomSheet').addEventListener('click', function() {
+        //     $('#bottomSheet').modal('toggle');
+        // });
     </script>
 @endpush

@@ -7,11 +7,16 @@
 
         </div>
         <div class="row d-flex justify-content-center">
-            <div class="col-md-10">
+            @forelse ($available_rooms as $room )
+                 <div class="col-md-10">
                 <livewire:frontend.components.property-cards.version-one />
             </div>
+            @empty
+
+            @endforelse
+
             <div class="col-md-10">
-                <livewire:frontend.components.property-cards.version-one />
+                {{-- <livewire:frontend.components.property-cards.version-one /> --}}
             </div>
 
         </div>

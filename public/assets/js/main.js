@@ -562,7 +562,7 @@ Wow Js
 
     ////////////////////////////////////////////////////
     // 09. Nice Select Js
-    $("select").niceSelect();
+    // $("select").niceSelect();
 
     /*======================================
 	Masonary Js

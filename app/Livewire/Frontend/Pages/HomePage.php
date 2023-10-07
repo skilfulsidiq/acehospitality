@@ -8,6 +8,10 @@ use Livewire\Component;
 class HomePage extends Component
 {
     use SeoTrait;
+
+    public function mount(){
+        // session()->flush();
+    }
     public function render()
     {
 

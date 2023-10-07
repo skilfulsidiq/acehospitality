@@ -1,7 +1,13 @@
-.form-btn-lg
-{
-    min-width:20rem;
+.error-booking-form{
+    color:rgb(222, 89, 22)
 }
-.form-btn-md {
-    min-width: 12rem;
+.booking-form .form-control{
+    height: 60px;
+    background-color: transparent;
+    color: #fff;
+}
+.booking-form .form-control:focus{
+
+    background-color: transparent;
+    color: #fff;
 }
