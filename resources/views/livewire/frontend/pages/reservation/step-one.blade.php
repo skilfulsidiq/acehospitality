@@ -9,7 +9,9 @@
         <div class="row d-flex justify-content-center">
             @forelse ($available_rooms as $room )
                  <div class="col-md-10">
-                <livewire:frontend.components.property-cards.version-one />
+                @includeIf('includes.room-cards.booking_card',[
+                    'room'=>$room
+                ])
             </div>
             @empty
 

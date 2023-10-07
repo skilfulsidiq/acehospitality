@@ -10,7 +10,9 @@ class RoomGroup extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['hotel_id', 'name', 'slider_images', 'price', 'bed', 'bath', 'guest', 'status', 'no_of_rooms', 'no_of_reserved', 'slug'];
+    protected $fillable = ['hotel_id', 'name', 'slider_images', 'price', 'bed', 'bath', 'guest', 'status', 'no_of_rooms', 'no_of_reserved',
+    'desc','amenities',
+     'slug'];
 
     public function setNameAttribute($value)
     {
