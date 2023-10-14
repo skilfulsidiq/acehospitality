@@ -35,7 +35,7 @@
           <div class="header-right justify-content-end align-items-center">
             <div class="header-button d-none d-xl-block">
               <div class="d-none d-md-flex glo-header-btn-2">
-                <a class="glo-btn-anim btn-theme-3" href="{{ route('reservation-page') }}"><span>Check Availability
+                <a class="glo-btn-anim btn-theme-3" href="{{ route('reservation-page') }}"><span>Reservation
                   <i class="far fa-long-arrow-right"></i></span></a>
               </div>
             </div>

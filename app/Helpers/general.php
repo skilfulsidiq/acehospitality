@@ -1,6 +1,6 @@
 <?php
 use Carbon\Carbon;
-
+use Illuminate\Support\Str;
 if (!function_exists('routeIsInGroup')) {
     function getRouteName()
     {
@@ -70,5 +70,12 @@ if (!function_exists('formatDateToDMY')) {
     function formatDateToDMY($date)
     {
         return Carbon::parse($date)->format("d-m-Y");
+    }
+}
+
+if (!function_exists('limitStr')) {
+    function limitStr($v,$l)
+    {
+        return Str::limit($v,$l);
     }
 }

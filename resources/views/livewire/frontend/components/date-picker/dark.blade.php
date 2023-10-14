@@ -68,7 +68,7 @@
                                     <div class="mb-3">
                                         <button type="submit" class="btn btn-primary w-10">
                                             <i class="hicon hicon-mmb-my-booking mr-1"></i>
-                                            <span>Check Rooms</span>
+                                            <span>Check Availability</span>
                                             <span wire:loading> checking... </span>
                                         </button>
                                     </div>
@@ -85,7 +85,7 @@
 @push('script')
 <script>
        var input = document.querySelector("#hotel-picker");
-     
+
                 var demo2 = new HotelDatepicker(input,{
                          inline: false,
                         topbarPosition: "top",

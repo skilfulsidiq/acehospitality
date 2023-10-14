@@ -1,4 +1,13 @@
  <div class="card card-selected mb-5 shadow-sm">
+      @php
+        $amenities = explode(',',$room->amenities);
+            $booked_count = countBookedRooms($room->id, $date);
+    $available_room_count = $room->no_of_rooms - $room->no_reserved_room - $booked_count;
+    $item = getRoomCartItem($room->id);
+
+
+
+    @endphp
      <div class="card-body pb-2">
          <!-- Room name -->
          <h3 class="card-title h4">
@@ -25,16 +34,31 @@
                  <div class="small">
                      <div class="mb-4">
                          <h4 class="mb-1 h6 fw-semibold">Featured Amenities</h4>
-                         <div class="row">
-                            @php
-                                $amenities = explode(',',$room->amenities)
-                            @endphp
-                            @forelse ($amenities as $a)
-                             <div class="col-12 col-md-6"> {{ $a }}
-                             </div>
-                            @empty
+                         <div class="glo-price-features mb-40">
+
+
+                                <ul>
+                                     @forelse ($amenities as $a)
+                                    <li>{{ $a }}</li>
+
+                                     @empty
 
                             @endforelse
+                                </ul>
+                                </div>
+                         <div class="row">
+                            <div class="col-md-10">
+                                {{ limitStr($room->desc, 100) }} <button data-bs-toggle="modal" data-bs-target="#{{ $room->id }}"  class="text-primary">read more</button>
+
+                                @includeIf('includes.room-cards.room_details',['room'=>$room])
+
+
+                            </div>
+
+                            {{-- @forelse ($amenities as $a)
+                             <div class="col-6 col-md-4"> {{ $a }}
+                             </div> --}}
+
 
                              {{-- <div class="col-12 col-md-6"> Area: 30 m²/323 ft²
                              </div>
@@ -44,7 +68,7 @@
                          </div>
                      </div>
                      <div class="mb-4">
-                         <h4 class="mb-1 h6 fw-semibold">Price includes</h4>
+                         {{-- <h4 class="mb-1 h6 fw-semibold">Price includes</h4>
                          <div class="row">
                              <div class="col-12 col-md-6">
                                  <span class="text-success fw-medium">Free
@@ -59,7 +83,7 @@
                              <input class="form-check-input shadow-sm" type="checkbox" value="" id="chkExtraBed2">
                              <label class="form-check-label" for="chkExtraBed2">Extra bed
                                  (<sup>$</sup>15.00)</label>
-                         </div>
+                         </div> --}}
                      </div>
                  </div>
                  <!-- /Room info -->
@@ -77,20 +101,36 @@
                  </div>
                  <!-- /Room price -->
                  <!-- Select/Remove-->
+
                  <div class="mb-5">
-                     <select class="form-select dselect mb-3 shadow-sm" data-dselect-size="sm"
-                         data-dselect-position="end">
-                         <option>Quantity</option>
-                         <option value="1" selected>1</option>
-                         <option value="2">2</option>
-                         <option value="3">3</option>
-                         <option value="4">4</option>
-                         <option value="5">5</option>
+                     <select class="form-select  mb-3 shadow-sm"
+                         data-dselect-position="end" wire:model='selectedRoom'>
+                          <option value="" >Select Quantity</option>
+                          @for ($i = 1; $i < $available_room_count; $i++)
+
+                            {{-- @if(!is_null($item) && $item['quantity']==$i ) --}}
+                            {{-- @if(array_key_exists($room->id, $all_qty) && $all_qty[$room->id] == $i ) --}}
+
+                             <option value="{{ $i }}-{{ $room->id }}" @if(array_key_exists($room->id, $all_qty) && $all_qty[$room->id] == $i ) selected @endif>  {{ $i }}</option>
+                             {{-- <option  value="{{ $i }}-{{ $room->id }}" @if(!is_null($item) && $item['quantity']==$i ) selected @endif>  {{ $i }}</option> --}}
+                             {{-- @else
+
+                             <option value="{{ $i }}-{{ $room->id }}" >  {{ $i }}</option>
+                             @endif --}}
+
+                                    {{-- <option value="{{ $i }}-{{ $room->id }}"> {{ $i }} </option> --}}
+
+                                        @endfor
+
+
                      </select>
-                     <a class="btn btn-sm btn-outline-light bg-light d-block shadow-sm" href="javascript:;" data-bs-toggle="modal" data-bs-target="#booking-details-modal">
-                         <i class="hicon hicon-80 hicon-line-close"></i>
-                         <span>Add</span>
+                        @if(!is_null($item))
+{{-- btn btn-sm btn-outline-light bg-light --}}
+                        <a class=" d-block shadow-sm" href="javascript:;" data-bs-toggle="modal" data-bs-target="#booking-details-modal"> <span class="text-success">Selected</span>
+                         <i class="hicon hicon-80 hicon-line-eye"></i>
+                         <span class="text-primary">View Details</span>
                      </a>
+                     @endif
                  </div>
                  <!-- /Select/Remove-->
              </div>

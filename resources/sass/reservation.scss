@@ -12,7 +12,7 @@
 
 .reservation-bottom{
     position: fixed;
-        bottom: -100%;
+        bottom: 0;
         /* Start with the sheet hidden */
         left: 0;
         right: 0;
@@ -22,17 +22,7 @@
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         transition: bottom 0.3s ease-in-out;
-        height: 10rem;
+        height: 8rem;
         overflow: scroll;
 }
 
-// .my-select-input{
-//     background-color: transparent;
-//     border: solid 1px #fff;
-//     width:100%;
-//     color:#fff;
-// }
-// .nice-select {
-//     border: solid 1px #fff;
-//     background-color: none !important;
-// }

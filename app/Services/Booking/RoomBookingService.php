@@ -2,6 +2,7 @@
 
 namespace App\Services\Booking;
 
+use App\Mail\ReservationMail;
 use App\Models\Booking;
 use App\Models\Hotel;
 use App\Models\Room;
@@ -10,13 +11,14 @@ use App\Models\RoomGroup;
 use App\Models\User;
 use App\Services\BaseService;
 use App\Traits\RoomAvailabilityChecking;
+use App\Traits\SendMailTrait;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
 class RoomBookingService extends BaseService
 {
 
-    use RoomAvailabilityChecking;
+    use RoomAvailabilityChecking,SendMailTrait;
     public function __construct(RoomBooking $r)
     {
         parent::__construct($r);
@@ -29,7 +31,7 @@ class RoomBookingService extends BaseService
         $app_vat = 0;
         $item_count = 0;
         foreach ($carts as $cart) {
-            $sub = $cart['price'] * $cart['quantity'];
+            $sub = $cart['price'] * $cart['quantity']*$cart['attributes']['night'];
             $total += $sub;
             $app_tax += getPercentageValue($tax, $sub);
             $app_vat += getPercentageValue($vat, $sub);
@@ -41,48 +43,61 @@ class RoomBookingService extends BaseService
     {
         $carts = $arr['carts'];
         unset($arr['carts']);
-        $hotel_id = 1;
-        //save user
-        $user = User::updateOrCreate(['email'=>$arr['email']],$arr);
-        $user_id = $user->id;
-        //get vat,tax,
+        $hotel_id = $arr['hotel_id'];
 
-        if(!empty($carts)){
-            $booking =Booking::create([
-                'booking_ref' => generateBookingRef($user_id),
-                'hotel_id' => $hotel_id,
-                'user_id' => $user_id,
-                'tax' => $this->calculateTotalAndVat($carts)['app_tax'],
-                'vat' =>$this->calculateTotalAndVat($carts)['app_vat'],
-                'item_count' => $this->calculateTotalAndVat($carts)['item_count'],
-                'grand_total' => $this->calculateTotalAndVat($carts)['total'],
+        try {
+            DB::beginTransaction();
+            //save user
+            $user = User::updateOrCreate(['email' => $arr['email']], $arr);
+            $user_id = $user->id;
+            //get vat,tax,
 
-            ]);
-            foreach($carts as $cart){
-
-                $room_group_id = $cart['id'];
-                $arrival = toCarbon($cart['attributes']['arrival']);
-                $departure = toCarbon($cart['attributes']['departure']);
-                $night = $departure->diffInDays($arrival);
-
-
-                $r = DB::table('room_bookings')->insert([
-                    'booking_id'=>$booking->id,
+            if (!empty($carts)) {
+                $booking = Booking::create([
+                    'booking_ref' => generateBookingRef($user_id),
                     'hotel_id' => $hotel_id,
-                    'user_id'=>$user_id,
-                    'room_group_id'=>$room_group_id,
-                    'name'=>$cart['name'],
-                    'arrival_date'=>$arrival,
-                    'departure_date'=>$departure,
-                    'night'=>$night,
-                    'quantity'=>$cart['quantity'],
-                    'price'=>$cart['price'],
+                    'user_id' => $user_id,
+                    'tax' => $this->calculateTotalAndVat($carts)['app_tax'],
+                    'vat' => $this->calculateTotalAndVat($carts)['app_vat'],
+                    'item_count' => $this->calculateTotalAndVat($carts)['item_count'],
+                    'grand_total' => $this->calculateTotalAndVat($carts)['total'],
+                    'payment_status'=>1
+
                 ]);
+                foreach ($carts as $cart) {
+
+                    $room_group_id = $cart['id'];
+                    $arrival = toCarbon($cart['attributes']['arrival']);
+                    $departure = toCarbon($cart['attributes']['departure']);
+                    $night = $departure->diffInDays($arrival);
+
+
+                    $r = DB::table('room_bookings')->insert([
+                        'booking_id' => $booking->id,
+                        'hotel_id' => $hotel_id,
+                        'user_id' => $user_id,
+                        'room_group_id' => $room_group_id,
+                        'name' => $cart['name'],
+                        'arrival_date' => $arrival,
+                        'departure_date' => $departure,
+                        'night' => $night,
+                        'quantity' => $cart['quantity'],
+                        'price' => $cart['price'],
+                    ]);
+                }
             }
+
+            DB::commit();
+            $this->sendReservationMail($user->email,$booking->id);
+
+            return $this->success("created", true);
+        } catch (\Exception $th) {
+            //throw $th;
+            DB::rollBack();
         }
 
 
-        return $this->success("created", true);
+
     }
     public function getFieldsSearchable(){
         return [];
