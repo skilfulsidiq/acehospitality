@@ -21,7 +21,7 @@
               <nav id="mobile-menu">
                 <ul>
                     <li><a href="{{ route('home') }}">Home</a></li>
-                    <li><a href="{{ route('hotel-list') }}">Hotel</a></li>
+                    <li><a href="{{ route('hotel-list') }}">Hotels</a></li>
                     <li><a href="{{ route('about') }}">About Us</a></li>
                     <li><a href="{{ route('reservation-page') }}">Rooms</a></li>
                     <li><a href="{{ route('contact') }}">Contact Us</a></li>
