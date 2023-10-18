@@ -2,7 +2,7 @@
 
      <livewire:frontend.components.image-breadcrumb title="Ace Hotel Abuja" />
     {{-- <livewire:frontend.components.hotel-detail.hero-section /> --}}
-    <livewire:frontend.components.frontend-availability-form />
+    <livewire:frontend.components.frontend-availability-form  />
 
     <section class="glo-features-3">
       <div class="container">
@@ -10,13 +10,13 @@
           <div class="col-md-9">
             <div class="intro-title-wrapper-3 mb-70">
                 <span class="intro-subtitle-3 revealed" data-reveal="">About</span>
-                <h2 class="intro-title-3 revealed" data-reveal="">Ace Hotel <br>WAbuja</h2>
+                <h2 class="intro-title-3 revealed" data-reveal="">{{ $hotel->hotel_name }} <br></h2>
             </div>
           </div>
           <div class="col-md-3">
             <div class="glo-features-shape-wrapper mb-70 revealed" data-reveal="right">
               <div class="glo-features-shape text-md-end">
-                <img src="assets/img/features/features-3/shape-2.png" alt="Image not found">
+                <img src="{{ asset('assets/img/features/features-3/shape-2.png') }}" alt="Image not found">
               </div>
             </div>
           </div>
@@ -24,7 +24,7 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="glo-features-thumb revealed" data-reveal="">
-              <img src="assets/img/features/features-3/1.jpg" alt="Image not found">
+              <img src="{{ asset('assets/img/features/features-3/1.jpg') }} alt="Image not found">
             </div>
           </div>
           <div class="col-lg-8">
@@ -40,12 +40,12 @@
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="glo-features-thumb">
-                      <img src="assets/img/features/features-3/2.jpg" alt="Image not found">
+                      <img src="{{ asset('assets/img/features/features-3/2.jpg') }}" alt="Image not found">
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="glo-features-thumb glo-features-thumb-3">
-                      <img src="assets/img/features/features-3/3.jpg" alt="Image not found">
+                      <img src="{{ asset('assets/img/features/features-3/3.jpg') }}" alt="Image not found">
                     </div>
                   </div>
                 </div>
@@ -75,7 +75,7 @@
         <div class="row">
 
           <div class="col-lg-6">
-            <div class="glo-deals-card  mb-10  revealed" data-reveal="left" data-background="assets/img/deals/deal-1.jpg" style="background-image: url(&quot;assets/img/deals/deal-1.jpg&quot;);">
+            <div class="glo-deals-card  mb-10  revealed" data-reveal="left" data-background="{{ asset('assets/img/deals/deal-1.jpg') }}" style="background-image: url(&quot;{{ asset('assets/img/deals/deal-1.jpg') }}&quot;);">
               <div class="glo-deals-content p-relative">
                 <span class="glo-deals-subtitle">Restaurant</span>
                 <h3 class="glo-deals-title">Service</h3>
@@ -87,7 +87,7 @@
           </div>
 
           <div class="col-lg-6">
-            <div class="glo-deals-card mb-10 revealed" data-reveal="right" data-background="assets/img/deals/deal-2.jpg" style="background-image: url(&quot;assets/img/deals/deal-2.jpg&quot;);">
+            <div class="glo-deals-card mb-10 revealed" data-reveal="right" data-background="{{ asset('assets/img/deals/deal-2.jpg') }}" style="background-image: url(&quot;{{ asset('assets/img/deals/deal-2.jpg') }}&quot;);">
               <div class="glo-deals-content p-relative">
                 <span class="glo-deals-subtitle">Event</span>
                 <h3 class="glo-deals-title">Weeding</h3>
@@ -99,7 +99,7 @@
           </div>
 
           <div class="col-lg-6">
-            <div class="glo-deals-card  mb-10  revealed" data-reveal="left" data-background="assets/img/deals/deal-3.jpg" style="background-image: url(&quot;assets/img/deals/deal-3.jpg&quot;);">
+            <div class="glo-deals-card  mb-10  revealed" data-reveal="left" data-background="{{ asset('assets/img/deals/deal-3.jpg') }}" style="background-image: url(&quot;{{ asset('assets/img/deals/deal-3.jpg') }}&quot;);">
               <div class="glo-deals-content p-relative">
                 <span class="glo-deals-subtitle">Meditaion</span>
                 <h3 class="glo-deals-title">Yoga</h3>

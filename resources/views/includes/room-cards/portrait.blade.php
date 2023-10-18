@@ -17,12 +17,12 @@
                     <span>1200 sq ft</span>
                   </div>
                 </div> --}}
-                <h3 class="glo-reservation-title"><a href="room-details.html">Single Luxury Room</a></h3>
+                <h3 class="glo-reservation-title"><a href="room-details.html">{{ $hotel->hotel_name }}</a></h3>
                 {{-- <p class="mb-15">You’ll love falling asleep to the waves crashing beyond your private pool.&nbsp;
                 </p> --}}
                 <div class="glo-reservation-price d-flex justify-content-between align-items-center">
                   <div class="glo-reservation-btn">
-                    <a class="glo-btn-anim" href="{{ route('hotel-details') }}"><span>View Details</span></a>
+                    <a class="glo-btn-anim" href="{{ route('hotel-details',$hotel->slug) }}"><span>View Details</span></a>
                   </div>
                   {{-- <h4>from $100<span> / night</span></h4> --}}
                 </div>

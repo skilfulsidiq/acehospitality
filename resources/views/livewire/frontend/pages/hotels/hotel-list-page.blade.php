@@ -4,17 +4,30 @@
     <section class="glo-reservation-area pt-120 pb-90">
         <div class="container">
 
-            <div class="location">
-                @includeIf('includes.room-cards.room-list-title', ['title' => 'Abuja'])
+            @forelse ($locations as $loc )
+             <div class="location">
+                @includeIf('includes.room-cards.room-list-title', ['title' => $loc->location_name])
 
                 <div class="row justify-content-center">
+                     @forelse ($loc->hotels as $hotel )
                     <div class="col-xxl-4 col-xl-4 col-lg-4 mb-10 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"
                         style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                        @include('includes.room-cards.portrait')
+                        @include('includes.room-cards.portrait',['hotel'=>$hotel])
                     </div>
+                    @empty
+
+                @endforelse
                 </div>
+
+
             </div>
-            <div class="location">
+
+            @empty
+
+            @endforelse
+
+
+            {{-- <div class="location">
                 @includeIf('includes.room-cards.room-list-title', ['title' => 'Lagos'])
 
                 <div class="row justify-content-center">
@@ -45,7 +58,7 @@
                         @include('includes.room-cards.portrait')
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
     </section>
