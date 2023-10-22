@@ -8,20 +8,20 @@
                 <div class="col-xl-6 col-lg-6 col-sm-6">
                   <div class="glo-about-thumb revealed" data-reveal="left">
                     <div class="img-hover about-stack overlay mb-6">
-                      <img src="{{ asset('assets/media/hotels/residents/one.png')}}" alt="img-about" >
+                      <img src="{{ asset('hotels/residents/one.png')}}" alt="img-about" >
                     </div>
                     <div class="img-hover about-stack overlay mb-6">
-                      <img src="{{ asset('assets/media/hotels/premier/one.png')}}" alt="img-about">
+                      <img src="{{ asset('hotels/premier/one.png')}}" alt="img-about">
                     </div>
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-sm-6">
                   <div class="glo-about-thumb  revealed" data-reveal="right">
                     <div class="img-hover about-stack overlay mb-6 mt-10">
-                      <img src="{{ asset('assets/media/hotels/catolic/four.png')}}" alt="img-about">
+                      <img src="{{ asset('hotels/catolic/four.png')}}" alt="img-about">
                     </div>
                     <div class="img-hover about-stack overlay mb-6">
-                      <img src="{{ asset('assets/media/hotels/premier/two.png')}}" alt="img-about">
+                      <img src="{{ asset('hotels/premier/two.png')}}" alt="img-about">
                     </div>
                   </div>
                 </div>
@@ -66,6 +66,6 @@
           </div>
         </div>
 
-       
+
       </div>
     </section>
