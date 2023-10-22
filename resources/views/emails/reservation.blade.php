@@ -34,7 +34,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Reservation Confirmation</h1>
+            <h1>Reservation Received</h1>
         </div>
         <div class="content">
             <p>Dear {{ @$booking->user->firstname }},</p>
@@ -42,7 +42,7 @@
                <p><strong>Confirmation Number:</strong> {{ $booking->booking_ref }}</p>
             <p><strong>Hotel Name:</strong> {{ @$booking->hotel->hotel_name }}</p>
 
-               
+
                           @forelse ($booking->room_bookings as $item )
                             <tr>
                                 <p>Check-In Date: <strong> {{ $item->arrival_date }} </strong>   </p>

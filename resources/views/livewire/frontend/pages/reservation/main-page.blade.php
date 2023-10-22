@@ -4,6 +4,12 @@
                                         $sub_total=0;
                                     @endphp
     <livewire:frontend.components.image-breadcrumb title="Rooms" />
+
+      @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+        @endif
     <section id="reservation" class="pt-10 pb-10">
         <div class="container">
             <div class="row g-0 mt-10">

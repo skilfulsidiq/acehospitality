@@ -1,8 +1,9 @@
 <div>
 
-     <livewire:frontend.components.image-breadcrumb title="Ace Hotel Abuja" />
+     <livewire:frontend.components.image-breadcrumb title="{{ $hotel->hotel_name }}" />
     {{-- <livewire:frontend.components.hotel-detail.hero-section /> --}}
-    <livewire:frontend.components.frontend-availability-form  />
+    {{-- <livewire:frontend.components.frontend-availability-form style="margin-top:15rem" /> --}}
+     <livewire:frontend.components.date-picker.dark class="card card-check-room check-room-hero" location_id="{{ $hotel->location_id }}" hotel_id="{{ $hotel->id }}" />
 
     <section class="glo-features-3">
       <div class="container">
@@ -16,7 +17,8 @@
           <div class="col-md-3">
             <div class="glo-features-shape-wrapper mb-70 revealed" data-reveal="right">
               <div class="glo-features-shape text-md-end">
-                <img src="{{ asset('assets/img/features/features-3/shape-2.png') }}" alt="Image not found">
+                {{-- <img src="{{ asset($hotel->hotel_cover_image) }}" alt="Image not found"> --}}
+                <img src="{{ asset('logo/logo.jpeg')}}" alt="batch" style="width:150px;height:150px; border-radius:50%">
               </div>
             </div>
           </div>
@@ -24,28 +26,32 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="glo-features-thumb revealed" data-reveal="">
-              <img src="{{ asset('assets/img/features/features-3/1.jpg') }} alt="Image not found">
+              <img src="{{ asset($hotel->hotel_cover_image) }}" alt="Image not found">
             </div>
           </div>
           <div class="col-lg-8">
             <div class="glo-feature">
               <div class="glo-feature-content revealed" data-reveal="">
-                <p>Our mission at Agoda is to make affordable travel accessible to more people, and to deliver
+                {!!  $hotel->hotel_desc !!}
+                {{-- <p>Our mission at Agoda is to make affordable travel accessible to more people, and to deliver
                   affordable and enjoyable travel experiences that are seamless from end to end. By seamless,
                   we mean hassle-free from the moment you start planning your trip.</p>
                 <p>To get to our goal, we’ve spent the last 16 years building agoda.com and the Agoda app to
-                  make searching and booking travel as easy and stress-free as it ought to be.</p>
+                  make searching and booking travel as easy and stress-free as it ought to be.</p> --}}
               </div>
               <div class="glo-feature-thumb-wrapper revealed" data-reveal="">
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="glo-features-thumb">
-                      <img src="{{ asset('assets/img/features/features-3/2.jpg') }}" alt="Image not found">
+                        @php
+                            $images = explode(",", $hotel->hotel_images);
+                        @endphp
+                      <img src="{{ asset($images[0]) }}" alt="Image not found">
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="glo-features-thumb glo-features-thumb-3">
-                      <img src="{{ asset('assets/img/features/features-3/3.jpg') }}" alt="Image not found">
+                      <img src="{{ asset($images[1])}}" alt="Image not found">
                     </div>
                   </div>
                 </div>

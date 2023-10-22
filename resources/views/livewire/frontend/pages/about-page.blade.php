@@ -1,6 +1,40 @@
 <div>
        <livewire:frontend.components.image-breadcrumb title="About"/>
          <livewire:frontend.components.home-about-section />
+         {{-- <div >
+             <h3 class="text-center"> Our Values</h3>
+
+               <div class="row" data-reveal="">
+                <div class="col-md-6">
+                    <div class="ourvalue-span">We Respect People by putting everyone First.</div>
+                </div>
+                 <div class="col-md-6">
+
+                  <div class="ourvalue-span">We Provide Best GUEST Service experience at all times.</div>
+                 </div>
+                 <div class="col-md-6">
+                  <div class=" ourvalue-span">We invest in Training in pursuance of the Brand Service Excellence standards and
+opportunity for associate’s Career growth.</div>
+                 </div>
+                 <div class="col-md-6">
+                  <div class=" ourvalue-span">We believe in Profitable Standards by getting the “Basics” right all the time.</div>
+                 </div>
+                 <div class="col-md-6">
+                  <div class=" ourvalue-span">We believe in Profitable Standards by getting the “Basics” right all the time.</div>
+                 </div>
+                 <div class="col-md-6">
+                  <div class="ourvalue-span">We act with utmost integrity in our Business by keeping things documented so there are no misunderstandings.</div>
+                 </div>
+                 <div class="col-md-6">
+                  <div class="ourvalue-span">We believe Good Financial Standards (accounting) sustains good business practices and partnerships.</div>
+                 </div>
+                 <div class="col-md-6">
+                  <div class="ourvalue-span">We get involve in the communities we operate and truly become a part of it.</div>
+                 </div>
+                </div>
+        </div> --}}
+
+
          <section class="glo-team-area pt-110 pb-70 bg-grey-4" id="team">
       <div class="container">
         <div class="row">
@@ -27,7 +61,7 @@
               <div class="glo-team-content">
                 <h4 class="glo-team-title">IDRIS AHMED </h4>
                 <span>B.Sc., MBA, MIAD</span>
-                <p> It uses a dictionary of over 200 Latin words, combined with a handful of model.</p>
+                {{-- <p> It uses a dictionary of over 200 Latin words, combined with a handful of model.</p> --}}
               </div>
             </div>
           </div>
@@ -42,7 +76,7 @@
               <div class="glo-team-content">
                 <h4 class="glo-team-title">GERALD AMAECHI ANIAMALU </h4>
                 <span>M.Sc. B.Sc. PMD</span>
-                <p>Sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+                {{-- <p>Sentence structures, to generate Lorem Ipsum which looks reasonable.</p> --}}
               </div>
             </div>
           </div>
@@ -57,7 +91,7 @@
               <div class="glo-team-content">
                 <h4 class="glo-team-title">CHRISTOPHER MEKWUNYE </h4>
                 <span>MIH MBA MA</span>
-                <p>The standard chunk of Lorem Ipsum used since the 1500s is reprod.</p>
+                {{-- <p>The standard chunk of Lorem Ipsum used since the 1500s is reprod.</p> --}}
               </div>
             </div>
           </div>

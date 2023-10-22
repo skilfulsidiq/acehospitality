@@ -3,6 +3,7 @@
 namespace App\Livewire\Frontend\Pages\Hotels;
 
 use App\Models\Location;
+use App\Repositories\GeneralRepository;
 use Livewire\Component;
 
 class HotelListPage extends Component
@@ -15,7 +16,7 @@ class HotelListPage extends Component
 
     public function fetchHotelList(){
 
-        $hotels = Location::with('hotels')->get();
-        return $hotels;
+        $feedback = appService(GeneralRepository::class)->getHotelsByLocation();
+        return $feedback;
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Model\User;
+use App\Models\ConferenceRoom;
 use App\Models\Hotel;
 use App\Models\Location;
 use App\Models\RoomGroup;
@@ -45,14 +46,19 @@ class GeneralRepository extends BaseRepository
 
     public function getAllLocationNameAndId()
     {
-        return DB::table('locations')->get(['id', 'location_name']);
+        return DB::table('locations')->where('is_active',1)->get(['id', 'location_name']);
     }
     public function getHotelByLocationId($location_id){
-        return DB::table('hotels')->select('id','hotel_name')->where('location_id',$location_id)->get();
+        return DB::table('hotels')->select('id','hotel_name')->where('is_active', 1)->where('location_id',$location_id)->get();
     }
     public function getHotelsByLocation()
     {
-        return Location::with('hotels')->get();
+        return Location::with('hotels')->where('is_active', 1)->get();
+    }
+
+    public function getConferenceRoomList()
+    {
+        return ConferenceRoom::where('status', 1)->get();
     }
     public function hotelDetails($slug){
         return Hotel::where('slug',$slug)->first();
@@ -69,7 +75,7 @@ class GeneralRepository extends BaseRepository
         if($hotel){
             $rooms = DB::table('room_groups')->where('hotel_id', $hotel->id)->get();
         }
-      
+
 
         // dd($rooms);
         return ['dates'=>$dates,'rooms'=>$rooms,'hotel'=>$hotel];

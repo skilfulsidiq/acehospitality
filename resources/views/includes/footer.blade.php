@@ -54,14 +54,14 @@
                     <div class="col-12 col-xl-3 col-lg-12 col-md-6">
                         <!-- Brand -->
                         <div class="mb-8">
-                            <a href="index-2.html" class="d-inline-block">
+                            <a href="{{ route('home') }} class="d-inline-block">
                                 <figure>
-                                    <img class="img-fluid" src="assets/img/logos/footer-light.png" srcset="./assets/img/logos/footer-light@2x.png 2x" alt="">
+                                      <x-logo.main-logo type="header-logo" />
                                 </figure>
                             </a>
                             <p>
-                                <em>Sed diam constituam ei, qui erat probo dissentiet ex. Id vim libris volutpat, pri cu errem timeam cotidieque, purto summo has te. An quis eligendi atomorum duo, latine veritus vituperata vim no. Duo errem latine scribentur an.</em>
-                                <a href="about.html" class="text-body link-hover-primary">[+]</a>
+                                <em>We strive for excellence through the believe that effective management and excellent relationships with the business community is undeniably important to a successful operation and profitable growth in our business.</em>
+                                <a href="{{ route('about') }}" class="text-body link-hover-primary">[+]</a>
                             </p>
                         </div>
                         <!-- /Brand -->
@@ -72,17 +72,15 @@
                             <h5 class="h6 mb-3 text-uppercase ff-sub ls-1">Contact Info</h5>
                             <div class="pt-2">
                                 <p>
-                                    <span>610 Placer Loquen, Paris, France.</span>
+                                    <span>{{ $app_settings->address }}</span>
                                 </p>
                                 <p>
-                                    <span>+33 321-654-9876 (Ext: 123).</span>
+                                    <span>{{ $app_settings->phones }}</span>
                                 </p>
                                 <p>
-                                    <a href="#" class="text-body link-hover-primary">Booking@example.com</a>
+                                    <a href="#" class="text-body link-hover-primary">{{ $app_settings->email }}</a>
                                 </p>
-                                <p>
-                                    <a href="#" class="text-body link-hover-primary">www.example.com</a>
-                                </p>
+
                             </div>
                         </div>
                         <!-- /Contact Info -->
@@ -112,7 +110,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-6">
-                                    <ul class="nav flex-column">
+                                    {{-- <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="{{ route('reservation-page') }}">Rooms & Suites</a>
                                         </li>
@@ -128,7 +126,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="airpost-pickup.html">Airpost pickup</a>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </div>
                             </div>
                         </div>

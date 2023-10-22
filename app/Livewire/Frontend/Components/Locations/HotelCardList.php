@@ -2,12 +2,19 @@
 
 namespace App\Livewire\Frontend\Components\Locations;
 
+use App\Services\Hotel\HotelService;
 use Livewire\Component;
 
 class HotelCardList extends Component
 {
     public function render()
     {
-        return view('livewire.frontend.components.locations.hotel-card-list');
+        $hotels = $this->hotels();
+        return view('livewire.frontend.components.locations.hotel-card-list',compact('hotels'));
+    }
+
+    public function hotels(){
+        $feedback = appService(HotelService::class)->getAllHotels();
+        return $feedback['data'];
     }
 }

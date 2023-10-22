@@ -1,8 +1,8 @@
 <div class="glo-reservation">
               <div class="glo-reservation-thumb">
-                <a href="room-details.html">
+                <a href="{{ route('hotel-details',$hotel->slug) }}">
                   <div class="img-hover overlay">
-                    <img src="assets/img/reservation/3.jpg" alt="Image not found">
+                    <img src="{{ asset($hotel->hotel_cover_image) }}" alt="Image not found">
                   </div>
                 </a>
               </div>
@@ -17,7 +17,9 @@
                     <span>1200 sq ft</span>
                   </div>
                 </div> --}}
-                <h3 class="glo-reservation-title"><a href="room-details.html">{{ $hotel->hotel_name }}</a></h3>
+                <h3 class="glo-reservation-title"><a href="{{ route('hotel-details',$hotel->slug) }}">{{ $hotel->hotel_name }}</a><br>
+                    {{ $hotel->location->location_name }}
+                </h3>
                 {{-- <p class="mb-15">You’ll love falling asleep to the waves crashing beyond your private pool.&nbsp;
                 </p> --}}
                 <div class="glo-reservation-price d-flex justify-content-between align-items-center">

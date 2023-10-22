@@ -18,14 +18,18 @@ class Hotel extends Model
         $this->attributes['slug'] = Str::slug($value) . time();
     }
 
-    public function location():BelongsTo
+    public function location()
     {
-        return $this->belongsTo(Location::class,'location_id');
+        return $this->belongsTo(Location::class,'location_id')->withDefault();
     }
 
     public function roomGroup()
     {
         return $this->hasMany(RoomGroup::class, 'hotel_id')->withDefault();
+    }
+    public function conference()
+    {
+        return $this->hasMany(ConferenceRoom::class, 'hotel_id')->withDefault();
     }
     public function rooms()
     {

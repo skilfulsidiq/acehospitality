@@ -20,7 +20,15 @@ class HotelService extends BaseService
     }
 
     public function getAllHotelName(){
-        $hotels = DB::table('hotels')->get(['id','hotel_name']);
+        $hotels = DB::table('hotels')->where('is_active',1)->get(['id','hotel_name']);
+        return $this->success('hotel id and name',$hotels);
+    }
+    public function getAllHotels(){
+        $hotels = Hotel::with('location')->where('is_active',1)->get();
+        return $this->success('hotel id and name',$hotels);
+    }
+    public function getAHotelDetails($slug){
+        $hotels = DB::table('hotels')->where('slug',$slug)->first();
         return $this->success('hotel id and name',$hotels);
     }
 

@@ -10,4 +10,8 @@ class HeroSection extends Component
     {
         return view('livewire.frontend.components.home.hero-section');
     }
+
+    public function getSliders(){
+       
+    }
 }

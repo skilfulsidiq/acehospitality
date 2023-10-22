@@ -1,4 +1,4 @@
-<section class="page-title-area" data-background="{{ asset('assets/img/background/bg7.jpg') }}" style="background-image: url({{ asset('assets/img/background/bg7.jpg') }});">
+<section class="page-title-area" data-background="{{ asset('hotels/premier/one.png') }}" style="background-image: url({{ asset('hotels/premier/one.png') }});">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">

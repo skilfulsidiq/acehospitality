@@ -1,6 +1,7 @@
   <div class="glo-side-info">
     <div class="glo-side-logo-wrapper">
-      <div class="glo-side-logo"><a href="index.html"><img src="assets/img/logo/glorio-logo.svg" alt="glorio"></a>
+      <div class="glo-side-logo app-logo" style="background-image: url({{ asset('logo/logo.jpeg') }});" >
+        {{-- <a href="index.html"><img src="assets/img/logo/glorio-logo.svg" alt="glorio"></a> --}}
       </div>
       <button class="glo-side-info-close"><i class="fal fa-times"></i></button>
     </div>
