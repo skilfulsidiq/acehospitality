@@ -91,7 +91,6 @@
                         topbarPosition: "top",
                         // enableCheckout: true,
                         onSelectRange: function() {
-                                console.log("data selected");
                                 // console.log(this.getValue())
 
                                 @this.set('date', this.getValue());
