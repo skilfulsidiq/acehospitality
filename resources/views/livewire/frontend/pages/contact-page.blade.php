@@ -23,6 +23,7 @@
                     <span class="glo-contact-label">Phone Number</span>
                     <h4 class="glo-contact-title"><a href="#">{{ $app_settings->phones }}</a></h4>
                   </div>
+
                 </div>
 
                 <div class="glo-contact-list">
@@ -48,32 +49,50 @@
               </div>
             </div>
           </div>
+
+
           <div class="col-xl-7 col-lg-7">
+
+
+
             <div class="glo-contact-form mb-50 revealed" data-reveal="">
-              <form action="#">
+              <form wire:submit.prevent="submit">
                 <div class="row">
-                  <div class="col-xl-6 col-lg-6">
-                    <input type="text" placeholder="First Name">
+                  <div class="col-12">
+                    <input type="text" placeholder="Fullname" wire:model="fullname">
+                     @error('fullname')
+                                            <span class="error-booking-form">{{ $message }}</span>
+                                        @enderror
                   </div>
                   <div class="col-xl-6 col-lg-6">
-                    <input type="text" placeholder="Last Name">
+                    <input type="text" placeholder="Phone Number" wire:model="phone">
+                     @error('phone')
+                                            <span class="error-booking-form">{{ $message }}</span>
+                                        @enderror
                   </div>
                   <div class="col-xl-6 col-lg-6">
-                    <input type="text" placeholder="Phone Number">
-                  </div>
-                  <div class="col-xl-6 col-lg-6">
-                    <input type="email" placeholder="Your Email">
+                    <input type="email" placeholder="Your Email" wire:model="email">
+                     @error('email')
+                                            <span class="error-booking-form">{{ $message }}</span>
+                                        @enderror
                   </div>
 
                   <div class="col-xl-12">
-                    <textarea placeholder="Send Message"></textarea>
+                    <textarea placeholder="Send Message" wire:model="message"></textarea>
+                     @error('message')
+                                            <span class="error-booking-form">{{ $message }}</span>
+                                        @enderror
                     <button class="glo-btn-anim" type="submit"><span>Send Message</span></button>
                   </div>
                 </div>
               </form>
             </div>
           </div>
+
         </div>
+         <div class="col-12">
+            <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=1461&amp;height=400&amp;hl=en&amp;q=Okemisi crescent Off Twon Brass Street Area 11 Garki Abuja &amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://connectionsgame.org/">Connections Puzzle</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+          </div>
       </div>
     </div>
 

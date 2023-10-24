@@ -1,6 +1,7 @@
 <?php
 namespace App\Traits;
 
+use App\Mail\ContactMail;
 use App\Mail\ReservationMail;
 use App\Models\Booking;
 use App\Models\Room;
@@ -16,7 +17,19 @@ trait SendMailTrait {
     public function sendReservationMail($email,$booking_id){
         try {
             $booking = Booking::with('hotel','user','room_bookings')->where('id',$booking_id)->first();
-            Mail::to($email)->send(new ReservationMail($booking));
+            Mail::to($email)
+                ->cc('info@acehospitalityng.com')
+            ->send(new ReservationMail($booking));
+        } catch (\Exception $th) {
+            //throw $th;
+            Log::debug($th->getMessage());
+        }
+    }
+
+    public function sendContactEnquiery($arr){
+        $email = 'info@acehospitalityng.com';
+        try {
+            Mail::to($email)->send(new ContactMail($arr));
         } catch (\Exception $th) {
             //throw $th;
             Log::debug($th->getMessage());
