@@ -1,10 +1,10 @@
 <header class="glo-header-area glo-header-3">
     <!-- header top area -->
-
+{{-- glo-header-area --}}
     <!-- header top end area -->
 
     <!--header area starts-->
-    <div class="glo-header-bottom sticky" id="header-sticky">
+    <div class="glo-header-bottom grey-bg sticky" id="header-sticky">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-1 col-6">

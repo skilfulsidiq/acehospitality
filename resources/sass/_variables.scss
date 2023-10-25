@@ -20,3 +20,12 @@ $app_primary:#0d6efd;
     background-color: #0d6efd;
 }
 
+.glo-header-area.glo-header-3 .glo-header-bottom.sticky {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.glo-header-area.glo-header-3 .glo-header-bottom.sticky .main-menu>nav>ul>li>a {
+    color: #111;
+}

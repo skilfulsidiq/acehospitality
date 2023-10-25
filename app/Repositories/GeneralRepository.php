@@ -58,7 +58,11 @@ class GeneralRepository extends BaseRepository
 
     public function getConferenceRoomList()
     {
-        return ConferenceRoom::where('status', 1)->get();
+        return ConferenceRoom::where('status', 1)->inRandomOrder()->get();
+    }
+    public function getConferenceRoomDetails($slug)
+    {
+        return ConferenceRoom::where('slug', $slug)->first();
     }
     public function hotelDetails($slug){
         return Hotel::where('slug',$slug)->first();
