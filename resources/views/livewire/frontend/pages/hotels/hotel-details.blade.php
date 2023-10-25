@@ -63,71 +63,49 @@
     </section>
 
     {{-- PAckges --}}
-    <section class="glo-deals-area pt-115 pb-90">
+    <section class="glo-room3-area pt-75 pb-">
       <div class="container">
         <div class="row">
           <div class="col-12">
-              <div class="intro-title-wrapper text-center mb-60 revealed" data-reveal="">
-                <div class="intro-subtitle">
-                  <span>packages</span>
-                </div>
-                <div class="intro-title">
-                  <h2>Best Deals &amp; Packages</h2>
-                </div>
-              </div>
+            <div class="intro-title-wrapper-2 mb-50 revealed" data-reveal="">
+              <span class="intro-subtitle-3">Rooms</span>
+              <h3 class="intro-title-3">{{ $hotel->hotel_name }} ROOMS</h3>
+            </div>
           </div>
         </div>
-        <!-- 2nd row start here -->
+        <!-- 2nd row start -->
+        <!-- 2nd row start -->
         <div class="row">
-
-          <div class="col-lg-6">
-            <div class="glo-deals-card  mb-10  revealed" data-reveal="left" data-background="{{ asset('assets/img/deals/deal-1.jpg') }}" style="background-image: url(&quot;{{ asset('assets/img/deals/deal-1.jpg') }}&quot;);">
-              <div class="glo-deals-content p-relative">
-                <span class="glo-deals-subtitle">Restaurant</span>
-                <h3 class="glo-deals-title">Service</h3>
-                <div class="glo-deals-btn">
-                    {{-- <a href="event.html" class="glo-btn-anim"><span>See More</span></a> --}}
+            @forelse ($hotel->roomGroup as $room )
+                 <div class="col-xl-3 col-md-6">
+            <div class="glo-room3-item mb-30 revealed" data-reveal="">
+                <div class="glo-room3-thumb" data-background="{{ asset($room->images) }}" style="background-image: url({{ asset($room->images) }});">
+                  <div class="glo-room3-content">
+                    <div class="glo-room3-title-wrapper">
+                      <span class="glo-room3-price">N{{ number_format($room->price )}}/Night</span>
+                      <h3 class="glo-room3-title mt-10">{{ $room->name }}</h3>
+                    </div>
+                  </div>
                 </div>
-              </div>
+
+               <div class="glo-room3-hover-content">
+                  <h3 class="glo-room3-title">{{ $room->name }}</h3>
+                  <p class="glo-room3-desc mb-20">I felt calm and was able to effectively interact.</p>
+                  <ul class="glo-room3-list mb-40">
+                    <li class="glo-room3-list-item"><i class="fal fa-users-crown"></i> 1-2 persons</li>
+                    {{-- <li class="glo-room3-list-item"><i class="far fa-bed"></i> Twin bed</li> --}}
+                    <li class="glo-room3-list-item"><i class="far fa-wifi"></i> Free wifi</li>
+                    <li class="glo-room3-list-item"><i class="far fa-coffee"></i> Breakfast</li>
+                  </ul>
+                  <div class="glo-room3-btn">
+                    <a class="glo-btn-anim" href="#check-availability"><span>Book Now</span></a>
+                  </div>
+                </div>
             </div>
           </div>
+            @empty
 
-          <div class="col-lg-6">
-            <div class="glo-deals-card mb-10 revealed" data-reveal="right" data-background="{{ asset('assets/img/deals/deal-2.jpg') }}" style="background-image: url(&quot;{{ asset('assets/img/deals/deal-2.jpg') }}&quot;);">
-              <div class="glo-deals-content p-relative">
-                <span class="glo-deals-subtitle">Event</span>
-                <h3 class="glo-deals-title">Weeding</h3>
-                <div class="glo-deals-btn">
-                    {{-- <a href="event.html" class="glo-btn-anim"><span>See More</span></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="glo-deals-card  mb-10  revealed" data-reveal="left" data-background="{{ asset('assets/img/deals/deal-3.jpg') }}" style="background-image: url(&quot;{{ asset('assets/img/deals/deal-3.jpg') }}&quot;);">
-              <div class="glo-deals-content p-relative">
-                <span class="glo-deals-subtitle">Meditaion</span>
-                <h3 class="glo-deals-title">Yoga</h3>
-                <div class="glo-deals-btn">
-                    {{-- <a href="event.html" class="glo-btn-anim"><span>See More</span></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="glo-deals-card  mb-10  revealed" data-reveal="right" data-background="assets/img/deals/deal-4.jpg" style="background-image: url(&quot;assets/img/deals/deal-4.jpg&quot;);">
-              <div class="glo-deals-content p-relative">
-                <span class="glo-deals-subtitle">Package</span>
-                <h3 class="glo-deals-title">Spa</h3>
-                <div class="glo-deals-btn">
-                    {{-- <a href="event.html" class="glo-btn-anim"><span>See More</span></a> --}}
-                </div>
-              </div>
-            </div>
-          </div>
-
+            @endforelse
         </div>
       </div>
     </section>
@@ -138,14 +116,10 @@
      <div class="service-features mb-60">
                 <h4 data-reveal="" class="revealed">Core Amenities</h4>
                 <div class="service-feature-list revealed" data-reveal="">
-                  <span>Flower arrangement</span>
-                  <span>Dry cleaning</span>
+                  <span>Restaurant Service</span>
                   <span>Room service</span>
-                  <span>Ticket service</span>
-                  <span>Ironing service</span>
-                  <span>Interaction between</span>
-                  <span>Car rental services</span>
-                  <span>Turndown service</span>
+                  <span>Car Park</span>
+                  {{-- <span>Turndown service</span> --}}
                   <span>Catering services</span>
                 </div>
               </div>

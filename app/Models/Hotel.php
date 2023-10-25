@@ -25,7 +25,7 @@ class Hotel extends Model
 
     public function roomGroup()
     {
-        return $this->hasMany(RoomGroup::class, 'hotel_id')->withDefault();
+        return $this->hasMany(RoomGroup::class, 'hotel_id');
     }
     public function conference()
     {
