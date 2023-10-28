@@ -1,4 +1,4 @@
-   <section id="testimonials" class="pt-14 pb-14">
+   {{-- <section id="testimonials" class="pt-14 pb-14">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -82,4 +82,71 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
+        <section class="glo-testimonial mb-115  pt-105">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="intro-title-wrapper text-center mb-70" data-reveal="">
+              <div class="intro-subtitle">
+                <span>Testimonials</span>
+              </div>
+              <div class="intro-title">
+                <h2>Happy Customer Says</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="glo-testimonial-inner" data-reveal="">
+              <div class="glo-testimonial-active swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+
+                <div class="swiper-wrapper" id="swiper-wrapper-975fe045bc6a327c" aria-live="off" style="transform: translate3d(-1215px, 0px, 0px); transition-duration: 0ms;">
+                    @php
+                        $n = count($list);
+                    @endphp
+
+                   @forelse ($list as $l )
+                         <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="{{ $l->id }}" role="group" aria-label="{{ $l->id }} / {{ $n}}" style="width: 440px;">
+                    <div class="d">
+                      <div class="glo-testimonial-review pb-20 p-relative">
+                        <div class="glo-testimonial-review-icon">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <div class="glo-testimonial-review-quote"><img src="{{ asset('icons/quote.png') }}" alt="quote">
+                        </div>
+                      </div>
+                      <p class="boking-client-text">“ {{ $l->comment }} ”</p>
+                      <div class="line-bg pb-2 pt-2">
+                        {{-- <img src="{{ asset('icons.test-line-bg.png') }}" alt="image not found"> --}}
+                      </div>
+                      <div class="glo-testimonial-user">
+
+                        <div class="glo-testimonial-client-info">
+                          <h3>{{ $l->fullname }}</h3>
+                          <p>{{ $l->position }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   @empty
+
+                   @endforelse
+
+
+
+
+               </div>
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+              <!-- If we need pagination -->
+              <div class="glo-testimonial-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

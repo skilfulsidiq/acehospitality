@@ -1,4 +1,4 @@
- <footer id="footer" class="bg-body text-body-tertiary pt-14 pb-12" data-bs-theme="dark">
+ {{-- <footer id="footer" class="bg-body text-body-tertiary pt-14 pb-12" data-bs-theme="dark">
         <div class="container">
             <!-- Brands system -->
             <div class="border-bottom mb-9 pb-5">
@@ -104,29 +104,10 @@
                                         <li class="nav-item">
                                             <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="{{ route('contact') }}">Contact Us</a>
                                         </li>
-                                        {{-- <li class="nav-item">
-                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="{{ route('rooms') }}">Rooms</a>
-                                        </li> --}}
                                     </ul>
                                 </div>
                                 <div class="col-6">
-                                    {{-- <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="{{ route('reservation-page') }}">Rooms & Suites</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="spa-wellness.html">Spa & Wellness</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="restaurant.html">Restaurant</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="tours-list.html">Booking tours</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link text-body link-hover-primary ps-0 pe-0" href="airpost-pickup.html">Airpost pickup</a>
-                                        </li>
-                                    </ul> --}}
+
                                 </div>
                             </div>
                         </div>
@@ -135,27 +116,7 @@
                     <div class="col-12 col-xl-3 col-lg-4 col-md-6">
                         <div class="mb-8">
                             <!-- Mobile App -->
-                            {{-- <div class="mb-6">
-                                <h5 class="h6 mb-3 text-uppercase ff-sub ls-1">Get the app</h5>
-                                <div class="pt-4">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a href="#">
-                                                <figure>
-                                                    <img src="assets/img/icons/i1.svg" class="img-fluid" alt="">
-                                                </figure>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="#">
-                                                <figure>
-                                                    <img src="assets/img/icons/i2.svg" class="img-fluid" alt="">
-                                                </figure>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> --}}
+
                             <!-- /Mobile App -->
                             <!-- Social -->
                             <div class="mb-6">
@@ -239,4 +200,74 @@
             </div>
             <!-- /Footer Bottom -->
         </div>
-    </footer>
+    </footer> --}}
+<footer class="glo-footer footer-bg">
+    <div class="glo-footer-top pt-100 pb-30">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="glo-footer-widget-wrapper mb-60">
+              <div class="glo-footer-widget-title">
+                <h5>About Us</h5>
+              </div>
+              <div class="glo-footer-link">
+                <ul>
+                  <li><a href="{{ route('reservation-page') }}">Accommodation</a></li>
+                  <li><a href="{{ route('about') }}">About Hotel</a></li>
+                  <li><a href="{{ route('events') }}">Conference</a></li>
+                  <li><a href="{{ route('contact') }}">Get In Touch</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="glo-footer-widget-wrapper glo-footer-contact-wrapper mb-60">
+              <div class="glo-footer-widget-title">
+                <h5>Get in Touch</h5>
+              </div>
+              <div class="glo-footer-contact">
+                <ul>
+                  {{-- <li><i class="fas fa-paper-plane"></i> Reception:<a href="tel:99411123456"> + 99 4 11 123 456</a></li> --}}
+                  <li><i class="fas fa-phone"></i>Office: <a href="tel:{{ $app_settings->phones }}">{{ $app_settings->phones }}</a></li>
+                  <li><i class="fas fa-envelope"></i> E-mail: <a href="mailto: {{ $app_settings->email }}">
+                      {{ $app_settings->email }}</a></li>
+                  <li><i class="fas fa-map-marker-alt"></i> Address: {{ $app_settings->address }}</li>
+                </ul>
+              </div>
+              <div class="glo-footer-btn">
+                <a class="" href="room.html"><span>Reserve Now</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-5 col-lg-4">
+            <div class="glo-footer-widget-wrapper mb-60">
+              <div class="map-widget">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1933.4650531366285!2d90.38339774053988!3d23.822306044718005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1667101349447!5m2!1sen!2sbd"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="glo-footer-bottom d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="glo-footer-copyright">
+              <p>Copyright &amp; ACE Hospitality- {{ date('Y') }}</p>
+            </div>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="glo-footer-social">
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>

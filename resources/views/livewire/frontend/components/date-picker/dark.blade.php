@@ -43,14 +43,14 @@
                                     </div>
 
                                 </div>
-                                <div class="col-12 col-md-4" >
+                                <div class="col-12 col-md-4">
                                     <label for="" class="text-white">Arrival/Departure Date</label>
-                                    {{-- @if(isset($date) && $date != "")
+                                    {{-- @if (isset($date) && $date != '')
                                         <button wire:click class="btn btn-white text-white"> {{ $date }} </button>
                                     @else --}}
                                     <div class="control-icon mt-5 glo-appointment-input" wire:ignore>
                                         <label class="hicon hicon-menu-calendar text-light cursor-pointer"
-                                        for="txtCheckDate"></label>
+                                            for="txtCheckDate"></label>
                                         <input id="hotel-picker" type="text" wire:model.live="date"
                                             class="check-date form-control bg-white text-light bg-opacity-15 border-white border-opacity-20 shadow-sm cursor-pointer"
                                             placeholder="" readonly>
@@ -74,6 +74,9 @@
                                     </div>
                                     <!-- /Button -->
                                 </div>
+
+                                <input type="text" placeholder="{{ __('Check In / Out Date') }}" class="form-control"
+                                    id="date-range" name="daterange"  readonly>
                             </div>
                         </div>
                     </form>
@@ -83,21 +86,51 @@
     </div>
 </section>
 @push('script')
-<script>
-       var input = document.querySelector("#hotel-picker");
+    <script>
 
-                var demo2 = new HotelDatepicker(input,{
-                         inline: false,
-                        topbarPosition: "top",
-                        // enableCheckout: true,
-                        onSelectRange: function() {
-                                // console.log(this.getValue())
+        var input = document.querySelector("#hotel-picker");
 
-                                @this.set('date', this.getValue());
-                            },
+        var demo2 = new HotelDatepicker(input, {
+            inline: false,
+            topbarPosition: "top",
+            // enableCheckout: true,
+            onSelectRange: function() {
+                // console.log(this.getValue())
+
+                @this.set('date', this.getValue());
+            },
+
+        });
+        $(document).ready(function(){
+
+        $('input[name="daterange"]').daterangepicker({
+            opens: 'center',
+            format: 'DD-MM-YYYY',
+            showSelector: false,
+            // autoUpdateInput: false,
+            defaultValue: null,
+
+             },
+             function(start, end, label) {
+            let startDate = start.format('DD-MM-YYYY');
+            let endDate = end.format('DD-MM-YYYY');
+            let s = moment(start).format('DD-MM-YYYY');
+            let e = moment(end).format('DD-MM-YYYY')
+            // if(start != null && end != null){
+            let date = s + "-" + e
+            $('#daterange span').html(date);
+            @this.set('date', date);
+        });
+
+        $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
+        let date = moment(picker.startDate).format('DD-MM-YYYY') + "-" + moment(picker.endDate).format(
+            'DD-MM-YYYY');
+        // $('#daterange span').html(date);
+
+         @this.set('date', date);
+        });
+    });
 
 
-
-                    });
-</script>
+    </script>
 @endpush

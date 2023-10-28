@@ -63,7 +63,7 @@
                         <div class="glo-header-action">
                             <div class="header-humburger">
                                 <button class="glo-sidebar-action"><img
-                                        src="{{ asset('assets/icons/hamburger-white.png') }}"
+                                        src="{{ asset('icons/hamburger.png') }}"
                                         alt="Image not found"></button>
                             </div>
                         </div>

@@ -23,7 +23,11 @@
 
 
     @includeIf('includes.script')
+    <script>
+        
+    </script>
     @stack('script')
+
 </body>
 
 </html>
