@@ -76,8 +76,9 @@ class MainPage extends Component
         if($feedback['status']){
             clearCart();
             session()->flash('message', 'Your booking was sent successfully. We will contact you very soon!');
-            return redirect()->route('home');// this is coming from booking helper
+            return redirect()->route('reservation-success');// this is coming from booking helper
         }
+        return redirect(request()->header('Referer'));
 
         // <section id="reservation" class="pt-10 pb-14">
         //     <div class="container" data-cues="fadeIn" data-disabled="true">

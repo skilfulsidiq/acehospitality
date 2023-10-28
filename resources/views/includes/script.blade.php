@@ -19,9 +19,11 @@
         <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js')}}"></script>
         <script src="{{ asset('assets/js/slick-animation.min.js')}}"></script>
         <script src="{{ asset('assets/js/select2.js')}}"></script>
+         <script src="{{ asset('assets/js/fecha.min.js') }}"></script>
+        <script src="{{ asset('assets/js/hotel-datepicker.min.js') }}"></script>
         <script src="{{ asset('assets/js/main.js')}}"></script>
-        <script src="{{ asset('assets/js/fecha.min.js') }}"></script>
-         <script src="{{ asset('assets/js/hotel-datepicker.min.js') }}"></script>
+       
+         
 
 
 

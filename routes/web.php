@@ -9,6 +9,7 @@ use App\Livewire\Frontend\Pages\Hotels\HotelListPage;
 use App\Livewire\Frontend\Pages\Hotels\HotelDetails;
 use App\Livewire\Frontend\Pages\Reservation\MainPage;
 use App\Livewire\Frontend\Pages\Reservation\StepOne;
+use App\Livewire\Frontend\Pages\Reservation\SuccessPage;
 use App\Livewire\Frontend\Pages\ReservationPage;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +41,7 @@ Route::get("/event-details/{slug}",EventDetailPage::class)->name('event-details'
 Route::get("/hotels",HotelListPage::class)->name('hotel-list');
 Route::get("/hotel-details/{slug}",HotelDetails::class)->name('hotel-details');
 Route::get("/reservation",MainPage::class)->name('reservation-page');
+Route::get("/reservation-success",SuccessPage::class)->name('reservation-success');
 
 // Route::group(['prefix'=>'reservation'],function(){
 //     Route::get("/select-room", StepOne::class)->name('reservation-step-one-page');

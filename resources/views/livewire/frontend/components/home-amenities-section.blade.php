@@ -36,8 +36,7 @@
                 <span>Available: 10 Room</span>
               </div>
               <div class="glo-facility-btn p-relative">
-                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
-                    Availability</span></a>
+                {{-- <a href="#"><i class="far fa-long-arrow-right"></i><span></span></a> --}}
               </div>
             </div>
           </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" role="group" aria-label="6 / 12" data-swiper-slide-index="1" style="width: 265.217px; margin-right: 50px;">
@@ -50,8 +49,7 @@
                 <span>Available 24/7</span>
               </div>
               <div class="glo-facility-btn p-relative">
-                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
-                    Availability</span></a>
+                {{-- <a href="#"><i class="far fa-long-arrow-right"></i><span></span></a> --}}
               </div>
             </div>
           </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" role="group" aria-label="7 / 12" data-swiper-slide-index="2" style="width: 265.217px; margin-right: 50px;">
@@ -61,11 +59,11 @@
               </div>
               <div class="glo-facility-content">
                 <h4 class="glo-facility-title">Pools &amp; Sports Zone</h4>
-                <span>AvaIable In 7AM-10PM</span>
+                {{-- <span>AvaIable In 7AM-10PM</span> --}}
               </div>
               <div class="glo-facility-btn p-relative">
-                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
-                    Availability</span></a>
+                {{-- <a href="#"><i class="far fa-long-arrow-right"></i><span>
+                    </span></a> --}}
               </div>
             </div>
           </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" role="group" aria-label="8 / 12" style="width: 265.217px; margin-right: 50px;" data-swiper-slide-index="3">
@@ -75,11 +73,11 @@
               </div>
               <div class="glo-facility-content">
                 <h4 class="glo-facility-title">Customer Support</h4>
-                <span>Available: 10 Room</span>
+                {{-- <span>Available: 10 Room</span> --}}
+                  <span>Available 24/7</span>
               </div>
               <div class="glo-facility-btn p-relative">
-                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
-                    Availability</span></a>
+                {{-- <a href="#"><i class="far fa-long-arrow-right"></i><span></span></a> --}}
               </div>
             </div>
           </div>
@@ -90,11 +88,10 @@
               </div>
               <div class="glo-facility-content">
                 <h4 class="glo-facility-title">Family Size Room</h4>
-                <span>Available: 10 Room</span>
+                {{-- <span>Available: 10 Room</span> --}}
               </div>
               <div class="glo-facility-btn p-relative">
-                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
-                    Availability</span></a>
+                {{-- <a href="#"><i class="far fa-long-arrow-right"></i><span></span></a> --}}
               </div>
             </div>
           </div>
@@ -108,8 +105,7 @@
                 <span>Available 24/7</span>
               </div>
               <div class="glo-facility-btn p-relative">
-                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
-                    Availability</span></a>
+                {{-- <a href="#"><i class="far fa-long-arrow-right"></i><span></span></a> --}}
               </div>
             </div>
           </div>
@@ -120,11 +116,10 @@
               </div>
               <div class="glo-facility-content">
                 <h4 class="glo-facility-title">Pools &amp; Sports Zone</h4>
-                <span>AvaIable In 7AM-10PM</span>
+                {{-- <span>AvaIable In 7AM-10PM</span> --}}
               </div>
               <div class="glo-facility-btn p-relative">
-                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
-                    Availability</span></a>
+                {{-- <a href="#"><i class="far fa-long-arrow-right"></i><span></span></a> --}}
               </div>
             </div>
           </div>
@@ -135,11 +130,11 @@
               </div>
               <div class="glo-facility-content">
                 <h4 class="glo-facility-title">Customer Support</h4>
-                <span>Available: 10 Room</span>
+                {{-- <span>Available: 10 Room</span> --}}
+                  <span>Available 24/7</span>
               </div>
               <div class="glo-facility-btn p-relative">
-                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
-                    Availability</span></a>
+                {{-- <a href="#"><i class="far fa-long-arrow-right"></i><span></span></a> --}}
               </div>
             </div>
           </div>
@@ -150,11 +145,10 @@
               </div>
               <div class="glo-facility-content">
                 <h4 class="glo-facility-title">Family Size Room</h4>
-                <span>Available: 10 Room</span>
+                {{-- <span>Available: 10 Room</span> --}}
               </div>
               <div class="glo-facility-btn p-relative">
-                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
-                    Availability</span></a>
+                {{-- <a href="#"><i class="far fa-long-arrow-right"></i><span></span></a> --}}
               </div>
             </div>
           </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" role="group" aria-label="6 / 12" data-swiper-slide-index="1" style="width: 265.217px; margin-right: 50px;">
@@ -167,8 +161,7 @@
                 <span>Available 24/7</span>
               </div>
               <div class="glo-facility-btn p-relative">
-                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
-                    Availability</span></a>
+                {{-- <a href="#"><i class="far fa-long-arrow-right"></i><span></span></a> --}}
               </div>
             </div>
           </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" role="group" aria-label="7 / 12" data-swiper-slide-index="2" style="width: 265.217px; margin-right: 50px;">
@@ -178,11 +171,10 @@
               </div>
               <div class="glo-facility-content">
                 <h4 class="glo-facility-title">Pools &amp; Sports Zone</h4>
-                <span>AvaIable In 7AM-10PM</span>
+                {{-- <span>AvaIable In 7AM-10PM</span> --}}
               </div>
               <div class="glo-facility-btn p-relative">
-                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
-                    Availability</span></a>
+                {{-- <a href="#"><i class="far fa-long-arrow-right"></i><span></span></a> --}}
               </div>
             </div>
           </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" role="group" aria-label="8 / 12" style="width: 265.217px; margin-right: 50px;" data-swiper-slide-index="3">
@@ -192,11 +184,10 @@
               </div>
               <div class="glo-facility-content">
                 <h4 class="glo-facility-title">Customer Support</h4>
-                <span>Available: 10 Room</span>
+                {{-- <span>Available: 10 Room</span> --}}
               </div>
               <div class="glo-facility-btn p-relative">
-                <a href="room-details.html"><i class="far fa-long-arrow-right"></i><span>Check
-                    Availability</span></a>
+                <a href="#"><i class="far fa-long-arrow-right"></i><span></span></a>
               </div>
             </div>
           </div></div>

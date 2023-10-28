@@ -28,12 +28,12 @@
                   Integer dignissim dictum odio, in auctor velit mollis et.
                 </p>
               </div>
-              <div class="glo-service3-item" data-reveal="left">
+              {{-- <div class="glo-service3-item" data-reveal="left">
                 <h3><a href="service-details.html">spa and beauty</a></h3>
                 <p>Aenean semper fermentum dui sed lobortis. Curabitur laoreet odio et tempus congue.
                   Integer dignissim dictum odio, in auctor velit mollis et.
                 </p>
-              </div>
+              </div> --}}
               <div class="glo-service3-item" data-reveal="left">
                 <h3><a href="service-details.html">Car parking</a></h3>
                 <p>Aenean semper fermentum dui sed lobortis. Curabitur laoreet odio et tempus congue.
@@ -50,9 +50,9 @@
               <div class="glo-service3-thumb">
                 <img src="assets/img/service/2.jpg" alt="img">
               </div>
-              <div class="glo-service3-thumb">
+              {{-- <div class="glo-service3-thumb">
                 <img src="assets/img/service/3.jpg" alt="img">
-              </div>
+              </div> --}}
               <div class="glo-service3-thumb">
                 <img src="assets/img/service/4.jpg" alt="img">
               </div>
