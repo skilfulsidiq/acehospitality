@@ -15,7 +15,7 @@
             @forelse ($rooms as $room )
            <div class="col-md-4">
              <div class="glo-event-item mb-10 revealed" data-reveal="">
-              <a href="event-details.html">
+              <a  href="{{ route('event-details',$room->slug) }} >
                 <div class="glo-event-thumb img-hover overlay">
                   <img src="{{ asset($room->images) }}" alt="img not found">
                 </div>

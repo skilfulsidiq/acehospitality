@@ -285,136 +285,136 @@ Wow Js
         tp_theme_toggler();
     }
 
-    // color settings
-    function tp_color_settings() {
-        // set color scheme
-        function tp_set_color(tp_color_scheme) {
-            // localStorage.setItem("tp_color_scheme", tp_color_scheme);
-            document
-                .querySelector(":root")
-                .style.setProperty("--clr-theme-1", "#0d6efd");
-            document.getElementById("tp-color-setings-input").value =
-                tp_color_scheme;
-            document.getElementById(
-                "tp-theme-color-label"
-            ).style.backgroundColor = tp_color_scheme;
-        }
+    // // color settings
+    // function tp_color_settings() {
+    //     // set color scheme
+    //     function tp_set_color(tp_color_scheme) {
+    //         // localStorage.setItem("tp_color_scheme", tp_color_scheme);
+    //         document
+    //             .querySelector(":root")
+    //             .style.setProperty("--clr-theme-1", "#0d6efd");
+    //         document.getElementById("tp-color-setings-input").value =
+    //             tp_color_scheme;
+    //         document.getElementById(
+    //             "tp-theme-color-label"
+    //         ).style.backgroundColor = tp_color_scheme;
+    //     }
 
-        // set color
-        function tp_set_input() {
-            var color = localStorage.getItem("tp_color_scheme");
-            document.getElementById("tp-color-setings-input").value = color;
-            document.getElementById(
-                "tp-theme-color-label"
-            ).style.backgroundColor = color;
-        }
-        tp_set_input();
+    //     // set color
+    //     function tp_set_input() {
+    //         var color = localStorage.getItem("tp_color_scheme");
+    //         document.getElementById("tp-color-setings-input").value = color;
+    //         document.getElementById(
+    //             "tp-theme-color-label"
+    //         ).style.backgroundColor = color;
+    //     }
+    //     tp_set_input();
 
-        function tp_init_color() {
-            var defaultColor = $(".tp-color-settings-btn").attr(
-                "data-color-default"
-            );
-            var setColor = localStorage.getItem("tp_color_scheme");
+    //     function tp_init_color() {
+    //         var defaultColor = $(".tp-color-settings-btn").attr(
+    //             "data-color-default"
+    //         );
+    //         var setColor = localStorage.getItem("tp_color_scheme");
 
-            if (setColor != null) {
-            } else {
-                setColor = defaultColor;
-            }
+    //         if (setColor != null) {
+    //         } else {
+    //             setColor = defaultColor;
+    //         }
 
-            if (defaultColor !== setColor) {
-                document
-                    .querySelector(":root")
-                    .style.setProperty("--clr-theme-1", setColor);
-                document.getElementById("tp-color-setings-input").value =
-                    setColor;
-                document.getElementById(
-                    "tp-theme-color-label"
-                ).style.backgroundColor = setColor;
-                tp_set_color(setColor);
-            } else {
-                document
-                    .querySelector(":root")
-                    .style.setProperty("--clr-theme-1", defaultColor);
-                document.getElementById("tp-color-setings-input").value =
-                    defaultColor;
-                document.getElementById(
-                    "tp-theme-color-label"
-                ).style.backgroundColor = defaultColor;
-                tp_set_color(defaultColor);
-            }
-        }
-        tp_init_color();
+    //         if (defaultColor !== setColor) {
+    //             document
+    //                 .querySelector(":root")
+    //                 .style.setProperty("--clr-theme-1", setColor);
+    //             document.getElementById("tp-color-setings-input").value =
+    //                 setColor;
+    //             document.getElementById(
+    //                 "tp-theme-color-label"
+    //             ).style.backgroundColor = setColor;
+    //             tp_set_color(setColor);
+    //         } else {
+    //             document
+    //                 .querySelector(":root")
+    //                 .style.setProperty("--clr-theme-1", defaultColor);
+    //             document.getElementById("tp-color-setings-input").value =
+    //                 defaultColor;
+    //             document.getElementById(
+    //                 "tp-theme-color-label"
+    //             ).style.backgroundColor = defaultColor;
+    //             tp_set_color(defaultColor);
+    //         }
+    //     }
+    //     tp_init_color();
 
-        let themeButtons = document.querySelectorAll(".tp-color-settings-btn");
+    //     let themeButtons = document.querySelectorAll(".tp-color-settings-btn");
 
-        themeButtons.forEach((color) => {
-            color.addEventListener("click", () => {
-                let datacolor = color.getAttribute("data-color");
-                document
-                    .querySelector(":root")
-                    .style.setProperty("--clr-theme-1", datacolor);
-                document.getElementById(
-                    "tp-theme-color-label"
-                ).style.backgroundColor = datacolor;
-                tp_set_color(datacolor);
-            });
-        });
+    //     themeButtons.forEach((color) => {
+    //         color.addEventListener("click", () => {
+    //             let datacolor = color.getAttribute("data-color");
+    //             document
+    //                 .querySelector(":root")
+    //                 .style.setProperty("--clr-theme-1", datacolor);
+    //             document.getElementById(
+    //                 "tp-theme-color-label"
+    //             ).style.backgroundColor = datacolor;
+    //             tp_set_color(datacolor);
+    //         });
+    //     });
 
-        const colorInput = document.querySelector("#tp-color-setings-input");
-        const colorVariable = "--clr-theme-1";
+    //     const colorInput = document.querySelector("#tp-color-setings-input");
+    //     const colorVariable = "--clr-theme-1";
 
-        colorInput.addEventListener("change", function (e) {
-            var clr = e.target.value;
-            document.documentElement.style.setProperty(colorVariable, clr);
-            tp_set_color(clr);
-            tp_set_check(clr);
-        });
+    //     colorInput.addEventListener("change", function (e) {
+    //         var clr = e.target.value;
+    //         document.documentElement.style.setProperty(colorVariable, clr);
+    //         tp_set_color(clr);
+    //         tp_set_check(clr);
+    //     });
 
-        function tp_set_check(clr) {
-            const arr = Array.from(document.querySelectorAll("[data-color]"));
+    //     function tp_set_check(clr) {
+    //         const arr = Array.from(document.querySelectorAll("[data-color]"));
 
-            var a = localStorage.getItem("tp_color_scheme");
+    //         var a = localStorage.getItem("tp_color_scheme");
 
-            let test = arr
-                .map((color) => {
-                    let datacolor = color.getAttribute("data-color");
+    //         let test = arr
+    //             .map((color) => {
+    //                 let datacolor = color.getAttribute("data-color");
 
-                    return datacolor;
-                })
-                .filter((color) => color == a);
+    //                 return datacolor;
+    //             })
+    //             .filter((color) => color == a);
 
-            var arrLength = test.length;
+    //         var arrLength = test.length;
 
-            if (arrLength == 0) {
-                $(".tp-color-active").removeClass("active");
-            } else {
-                $(".tp-color-active").addClass("active");
-            }
-        }
+    //         if (arrLength == 0) {
+    //             $(".tp-color-active").removeClass("active");
+    //         } else {
+    //             $(".tp-color-active").addClass("active");
+    //         }
+    //     }
 
-        function tp_check_color() {
-            var a = localStorage.getItem("tp_color_scheme");
+    //     function tp_check_color() {
+    //         var a = localStorage.getItem("tp_color_scheme");
 
-            var list = $(`[data-color="${a}"]`);
+    //         var list = $(`[data-color="${a}"]`);
 
-            list.parent()
-                .addClass("active")
-                .parent()
-                .siblings()
-                .find(".tp-color-active")
-                .removeClass("active");
-        }
-        tp_check_color();
+    //         list.parent()
+    //             .addClass("active")
+    //             .parent()
+    //             .siblings()
+    //             .find(".tp-color-active")
+    //             .removeClass("active");
+    //     }
+    //     tp_check_color();
 
-        $(".tp-color-active").on("click", function () {
-            $(this)
-                .addClass("active")
-                .parent()
-                .siblings()
-                .find(".tp-color-active")
-                .removeClass("active");
-        });
-    }
+    //     $(".tp-color-active").on("click", function () {
+    //         $(this)
+    //             .addClass("active")
+    //             .parent()
+    //             .siblings()
+    //             .find(".tp-color-active")
+    //             .removeClass("active");
+    //     });
+    // }
     if (
         $(".tp-color-settings-btn").length > 0 &&
         $("#tp-color-setings-input").length > 0 &&
@@ -567,62 +567,62 @@ Wow Js
     /*======================================
 	Masonary Js
 	========================================*/
-    $(".grid").imagesLoaded(function () {
-        // init Isotope
-        var $grid = $(".grid").isotope({
-            itemSelector: ".grid-item",
-            percentPosition: true,
-            masonry: {
-                // use outer width of grid-sizer for columnWidth
-                columnWidth: ".grid-item",
-            },
-        });
+    // $(".grid").imagesLoaded(function () {
+    //     // init Isotope
+    //     var $grid = $(".grid").isotope({
+    //         itemSelector: ".grid-item",
+    //         percentPosition: true,
+    //         masonry: {
+    //             // use outer width of grid-sizer for columnWidth
+    //             columnWidth: ".grid-item",
+    //         },
+    //     });
 
-        // filter items on button click
-        $(".gallery__filter-button").on("click", "button", function () {
-            var filterValue = $(this).attr("data-filter");
-            $grid.isotope({ filter: filterValue });
-        });
+    //     // filter items on button click
+    //     $(".gallery__filter-button").on("click", "button", function () {
+    //         var filterValue = $(this).attr("data-filter");
+    //         $grid.isotope({ filter: filterValue });
+    //     });
 
-        //for menu active class
-        $(".gallery__filter-button button").on("click", function (event) {
-            $(this).siblings(".active").removeClass("active");
-            $(this).addClass("active");
-            event.preventDefault();
-        });
-    });
+    //     //for menu active class
+    //     $(".gallery__filter-button button").on("click", function (event) {
+    //         $(this).siblings(".active").removeClass("active");
+    //         $(this).addClass("active");
+    //         event.preventDefault();
+    //     });
+    // });
     /* magnificPopup img view */
-    $(".image-popups").magnificPopup({
-        type: "image",
-        gallery: {
-            enabled: true,
-        },
-    });
+    // $(".image-popups").magnificPopup({
+    //     type: "image",
+    //     gallery: {
+    //         enabled: true,
+    //     },
+    // });
 
-    /* magnificPopup video view */
-    $(".popup-video, .glo-video-popup").magnificPopup({
-        type: "iframe",
-    });
+    // /* magnificPopup video view */
+    // $(".popup-video, .glo-video-popup").magnificPopup({
+    //     type: "iframe",
+    // });
 
-    // Counter Js
-    $(".glo-counter-number").counterUp({
-        delay: 10,
-        time: 1000,
-    });
+    // // Counter Js
+    // $(".glo-counter-number").counterUp({
+    //     delay: 10,
+    //     time: 1000,
+    // });
 
-    // 12. Wow Js
-    new WOW().init();
+    // // 12. Wow Js
+    // new WOW().init();
 
-    // calender
-    let calendar = new VanillaCalendar({
-        selector: "#myCalendar",
-        settings: {
-            visibility: {
-                weekend: false,
-                today: false,
-            },
-        },
-    });
+    // // calender
+    // let calendar = new VanillaCalendar({
+    //     selector: "#myCalendar",
+    //     settings: {
+    //         visibility: {
+    //             weekend: false,
+    //             today: false,
+    //         },
+    //     },
+    // });
 
     // service 3 slider
     $(".glo-service-image-slide").slick({
