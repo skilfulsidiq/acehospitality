@@ -21,11 +21,11 @@
         <script src="{{ asset('assets/js/vanilla-calendar-min.js')}}"></script>
         <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js')}}"></script>
         <script src="{{ asset('assets/js/slick-animation.min.js')}}"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" ></script>
+          {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" ></script> --}}
         <script src="{{ asset('assets/js/select2.js')}}"></script>
       <script src="{{ asset('js/daterangepicker.min.js')}}"></script>
          <script src="{{ asset('assets/js/fecha.min.js') }}"></script>
-        <script src="{{ asset('assets/js/hotel-datepicker.min.js') }}"></script>
+        {{-- <script src="{{ asset('assets/js/hotel-datepicker.min.js') }}"></script> --}}
         <script src="{{ asset('assets/js/main.js')}}"></script>
 
 

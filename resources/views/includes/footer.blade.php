@@ -202,7 +202,7 @@
         </div>
     </footer> --}}
 <footer class="glo-footer footer-bg">
-    <div class="glo-footer-top pt-100 pb-30">
+    <div class="glo-footer-top pt-100 pb-10">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-xl-3 col-lg-4 col-md-6">
@@ -235,14 +235,15 @@
                 </ul>
               </div>
               <div class="glo-footer-btn">
-                <a class="" href="room.html"><span>Reserve Now</span></a>
+                <a class="" href="{{ route('reservation-page') }}"><span>Reserve Now</span></a>
               </div>
             </div>
           </div>
           <div class="col-xl-5 col-lg-4">
             <div class="glo-footer-widget-wrapper mb-60">
               <div class="map-widget">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1933.4650531366285!2d90.38339774053988!3d23.822306044718005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1667101349447!5m2!1sen!2sbd"></iframe>
+                <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=1461&amp;height=400&amp;hl=en&amp;q=Okemisi crescent Off Twon Brass Street Area 11 Garki Abuja &amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1933.4650531366285!2d90.38339774053988!3d23.822306044718005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1667101349447!5m2!1sen!2sbd"></iframe> --}}
               </div>
             </div>
           </div>

@@ -75,8 +75,6 @@
                                     <!-- /Button -->
                                 </div>
 
-                                <input type="text" placeholder="{{ __('Check In / Out Date') }}" class="form-control"
-                                    id="date-range" name="daterange"  readonly>
                             </div>
                         </div>
                     </form>
@@ -101,35 +99,7 @@
             },
 
         });
-        $(document).ready(function(){
-
-        $('input[name="daterange"]').daterangepicker({
-            opens: 'center',
-            format: 'DD-MM-YYYY',
-            showSelector: false,
-            // autoUpdateInput: false,
-            defaultValue: null,
-
-             },
-             function(start, end, label) {
-            let startDate = start.format('DD-MM-YYYY');
-            let endDate = end.format('DD-MM-YYYY');
-            let s = moment(start).format('DD-MM-YYYY');
-            let e = moment(end).format('DD-MM-YYYY')
-            // if(start != null && end != null){
-            let date = s + "-" + e
-            $('#daterange span').html(date);
-            @this.set('date', date);
-        });
-
-        $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
-        let date = moment(picker.startDate).format('DD-MM-YYYY') + "-" + moment(picker.endDate).format(
-            'DD-MM-YYYY');
-        // $('#daterange span').html(date);
-
-         @this.set('date', date);
-        });
-    });
+  
 
 
     </script>
