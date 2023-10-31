@@ -19,14 +19,14 @@
                               <div class="row d-flex justify-content-center">
                                   <div class="col-md-12">
                                       <div class="glo-banner-content">
-                                          <span class="animate__animated" data-animation="fadeInUp" data-delay=".2s"
+                                          {{-- <span class="animate__animated" data-animation="fadeInUp" data-delay=".2s"
                                               style="animation-delay: 0.2s;">peaceful
-                                              environment</span>
+                                              environment</span> --}}
                                           <h1 class="animate__animated text-white" data-animation="fadeInUp"
                                               data-delay=".4s" style="animation-delay: 0.4s;">
-                                              Enjoy Our Luxury
+                                             Welcome
                                               <br>
-                                              Restaurant
+                                              to Great Ambience
                                           </h1>
                                           <div class="animate__animated" data-animation="fadeInUp" data-delay=".6s"
                                               style="animation-delay: 0.6s;">
@@ -56,14 +56,14 @@
                               <div class="row d-flex justify-content-center">
                                   <div class="col-md-12">
                                       <div class="glo-banner-content">
-                                          <span class="animate__animated" data-animation="fadeInUp" data-delay=".2s"
+                                          {{-- <span class="animate__animated" data-animation="fadeInUp" data-delay=".2s"
                                               style="animation-delay: 0.2s;">peaceful
-                                              environment</span>
+                                              environment</span> --}}
                                           <h1 class="animate__animated text-white" data-animation="fadeInUp"
                                               data-delay=".4s" style="animation-delay: 0.4s;">
-                                              Relaxation never
+                                              Welcome
                                               <br>
-                                              ends here
+                                              to Serenity
                                           </h1>
                                           <div class="animate__animated" data-animation="fadeInUp" data-delay=".6s"
                                               style="animation-delay: 0.6s;">
@@ -93,14 +93,14 @@
                               <div class="row d-flex justify-content-center">
                                   <div class="col-md-12">
                                       <div class="glo-banner-content">
-                                          <span class="animate__animated" data-animation="fadeInUp" data-delay=".2s"
+                                          {{-- <span class="animate__animated" data-animation="fadeInUp" data-delay=".2s"
                                               style="animation-delay: 0.2s;">peaceful
-                                              environment</span>
+                                              environment</span> --}}
                                           <h1 class="animate__animated text-white" data-animation="fadeInUp"
                                               data-delay=".4s" style="animation-delay: 0.4s;">
-                                              We are the best
+                                              Enjoy Our
                                               <br>
-                                              in town
+                                              Luxury Rooms
                                           </h1>
                                           <div class="animate__animated" data-animation="fadeInUp" data-delay=".6s"
                                               style="animation-delay: 0.6s;">

@@ -18,7 +18,7 @@
                 <div class="col-xl-6 col-lg-6 col-sm-6">
                   <div class="glo-about-thumb  revealed" data-reveal="right">
                     <div class="img-hover about-stack overlay mb-6 mt-10">
-                      <img src="{{ asset('hotels/catolic/four.png')}}" alt="img-about">
+                      <img src="{{ asset('hotels/catolic/one.png')}}" alt="img-about">
                     </div>
                     <div class="img-hover about-stack overlay mb-6">
                       <img src="{{ asset('hotels/premier/two.png')}}" alt="img-about">
@@ -42,7 +42,7 @@
                 </div>
               </div>
               <p data-reveal="" class="revealed">
-                Incorporated in Year 2016 Ace Hospitality® is a recognised Hotel Management, Acquisition, and Development Company in Nigeria.
+                Incorporated in Year 2014 Ace Hospitality® is a recognised Hotel Management, Acquisition, and Development Company in Nigeria.
 
 
 
