@@ -21,7 +21,7 @@
                  <div class="pe-0 pe-md-5 mb-5">
                      <a href="single-room-1.html">
                          <figure class="image-hover-scale image-hover-overlay rounded overflow-hidden mb-0">
-                             <img src="assets/img/rooms/r22.jpg" srcset="./assets/img/rooms/r22@2x.jpg 2x"
+                             <img src="{{ asset($room->images) }}" srcset="{{ asset($room->images) }} 2x"
                                  class="img-fluid w-100" alt="">
                              <i class="hicon hicon-plus-thin image-hover-icon fs-4"></i>
                          </figure>
