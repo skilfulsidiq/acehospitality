@@ -17,15 +17,13 @@
           <div class="col-xl-6">
             <div class="glo-service3-content glo-service-content-slide mb-50">
               <div class="glo-service3-item" data-reveal="left">
-                <h3><a href="service-details.html">Restaurant Service</a></h3>
-                <p>Aenean semper fermentum dui sed lobortis. Curabitur laoreet odio et tempus congue.
-                  Integer dignissim dictum odio, in auctor velit mollis et.
+                <h3><a href="#">Restaurant Service</a></h3>
+                <p>Savor a culinary journey at our exquisite restaurants. From gourmet delights to local flavors, our diverse menu caters to every palate. Enjoy a delightful dining experience in a sophisticated ambiance.
                 </p>
               </div>
               <div class="glo-service3-item" data-reveal="left">
-                <h3><a href="service-details.html">Room Service</a></h3>
-                <p>Aenean semper fermentum dui sed lobortis. Curabitur laoreet odio et tempus congue.
-                  Integer dignissim dictum odio, in auctor velit mollis et.
+                <h3><a href="#">Room Service</a></h3>
+                <p>Indulge in the epitome of comfort with our well-appointed rooms and suites. Each space is meticulously designed to provide a tranquil retreat, featuring modern amenities, plush furnishings, and stunning views of the city.
                 </p>
               </div>
               {{-- <div class="glo-service3-item" data-reveal="left">
@@ -35,9 +33,8 @@
                 </p>
               </div> --}}
               <div class="glo-service3-item" data-reveal="left">
-                <h3><a href="service-details.html">Car parking</a></h3>
-                <p>Aenean semper fermentum dui sed lobortis. Curabitur laoreet odio et tempus congue.
-                  Integer dignissim dictum odio, in auctor velit mollis et.
+                <h3><a href="#">Meeting & Event</a></h3>
+                <p>Host your corporate meetings, conferences, or special events in our state-of-the-art venues. Our dedicated event planning team ensures seamless execution, making your gatherings a resounding success.
                 </p>
               </div>
             </div>
@@ -48,13 +45,13 @@
                 <img src="assets/img/service/1.jpg" alt="img">
               </div>
               <div class="glo-service3-thumb">
-                <img src="assets/img/service/2.jpg" alt="img">
+                <img src="{{ asset('hotels/premier/three.png') }}" alt="img">
               </div>
               {{-- <div class="glo-service3-thumb">
                 <img src="assets/img/service/3.jpg" alt="img">
               </div> --}}
               <div class="glo-service3-thumb">
-                <img src="assets/img/service/4.jpg" alt="img">
+                <img src="{{ asset('hotels/premier/five.png') }}" alt="img">
               </div>
             </div>
           </div>
