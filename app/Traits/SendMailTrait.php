@@ -17,7 +17,9 @@ trait SendMailTrait {
     public function sendReservationMail($email,$booking_id){
         try {
             $booking = Booking::with('hotel','user','room_bookings')->where('id',$booking_id)->first();
-            Mail::to($email)
+            $hotel_email = $booking->hotel->hotel_email;
+            
+            Mail::to([$email,$hotel_email])
                 ->cc('info@acehospitalityng.com')
             ->send(new ReservationMail($booking));
         } catch (\Exception $th) {
