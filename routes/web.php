@@ -40,6 +40,7 @@ Route::get("/events",EventPage::class)->name('events');
 Route::get("/event-details/{slug}",EventDetailPage::class)->name('event-details');
 Route::get("/hotels",HotelListPage::class)->name('hotel-list');
 Route::get("/hotel-details/{slug}",HotelDetails::class)->name('hotel-details');
+Route::get("/hotels/{slug}",HotelDetails::class)->name('hotel-details-2');
 Route::get("/reservation",MainPage::class)->name('reservation-page');
 Route::get("/reservation-success",SuccessPage::class)->name('reservation-success');
 
