@@ -23,7 +23,7 @@
                     <!-- /Check date -->
                     <div class="mb-8">
                           @forelse ($available_rooms as $key=> $room )
-                             <livewire:frontend.components.property-cards.version-one :room="$room" :date="$date" wire:key="{{ $key }}"  />
+                             <livewire:frontend.components.property-cards.version-one :show_number="$hasChecked" :room="$room" :date="$date" wire:key="{{ $key }}"  />
                         @empty
 
                         @endforelse

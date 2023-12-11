@@ -24,6 +24,8 @@ class MainPage extends Component
     #[Rule('required')]
     public $phone;
 
+    public $hasChecked=false;
+
 
     public function render()
     {
@@ -37,6 +39,10 @@ class MainPage extends Component
     {
         $hotel_id = request()->hotel_id;
         $date = request()->date;
+
+        $this->hasChecked = true;
+
+        // session()->put('has_checked',true);
 
         $feedback = appService(AvailabilityService::class)->checkForRoomAvailability(compact('hotel_id', 'date'));
         $available = $feedback['data']['availables'];

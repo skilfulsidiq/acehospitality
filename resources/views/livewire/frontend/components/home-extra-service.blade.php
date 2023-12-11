@@ -51,7 +51,7 @@
                 <img src="assets/img/service/3.jpg" alt="img">
               </div> --}}
               <div class="glo-service3-thumb">
-                <img src="{{ asset('hotels/premier/five.png') }}" alt="img">
+                <img src="{{ asset('hotels/premier/halls/2.webp') }}" alt="img">
               </div>
             </div>
           </div>

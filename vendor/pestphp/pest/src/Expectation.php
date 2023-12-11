@@ -34,8 +34,6 @@ use PHPUnit\Architecture\Elements\ObjectDescription;
 use PHPUnit\Framework\ExpectationFailedException;
 
 /**
- * @internal
- *
  * @template TValue
  *
  * @property OppositeExpectation $not Creates the opposite expectation.
@@ -861,5 +859,21 @@ final class Expectation
             "to have attribute '{$attribute}'",
             FileLineFinder::where(fn (string $line): bool => str_contains($line, 'class')),
         );
+    }
+
+    /**
+     * Asserts that the given expectation target has a constructor method.
+     */
+    public function toHaveConstructor(): ArchExpectation
+    {
+        return $this->toHaveMethod('__construct');
+    }
+
+    /**
+     * Asserts that the given expectation target has a destructor method.
+     */
+    public function toHaveDestructor(): ArchExpectation
+    {
+        return $this->toHaveMethod('__destruct');
     }
 }

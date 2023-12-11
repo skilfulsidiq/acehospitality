@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\Backend\Auth\ForgotPage;
+use App\Livewire\Backend\Auth\LoginPage;
 use App\Livewire\Frontend\Pages\AboutPage;
 use App\Livewire\Frontend\Pages\ContactPage;
 use App\Livewire\Frontend\Pages\EventDetailPage;
@@ -28,8 +30,9 @@ Route::get('/welcome', function () {
 
     $t = [ ['title'=>'abe','subtitke'=>"bb","subtitle3"=>'hdjjd']  ];
     dd(json_encode($t));
-    // $r = Hash::make();
-    return view('welcome');
+    $r = Hash::make("");
+    echo $r;
+    // return view('welcome');
 });
 
 
@@ -44,7 +47,8 @@ Route::get("/hotels/{slug}",HotelDetails::class)->name('hotel-details-2');
 Route::get("/reservation",MainPage::class)->name('reservation-page');
 Route::get("/reservation-success",SuccessPage::class)->name('reservation-success');
 
-// Route::group(['prefix'=>'reservation'],function(){
-//     Route::get("/select-room", StepOne::class)->name('reservation-step-one-page');
-//     Route::get("/form", StepTwo::class)->name('reservation-step-two-page');
-// });
+Route::group(['prefix'=>'admin'],function(){
+
+    Route::get('/',LoginPage::class)->name('login');
+    Route::get('forgot',ForgotPage::class)->name('forgot-password');
+});

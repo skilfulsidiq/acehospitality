@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @includeIf('includes.head')
@@ -24,10 +27,11 @@
 
     @includeIf('includes.script')
     <script>
-        
+
     </script>
     @stack('script')
 
 </body>
 
 </html>
+{{-- @endif --}}

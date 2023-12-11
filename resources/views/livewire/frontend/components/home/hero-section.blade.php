@@ -11,7 +11,7 @@
                   <!-- slide 1 -->
                   <div class="swiper-slide">
                       <div class="glo-banner-slider p-relative">
-                          <div class="glo-banner-img" style="background-image: url({{ asset('assets/media/hotels/premier/three.png') }})">
+                          <div class="glo-banner-img" style="background-image: url({{ asset('hotels/premier/three.png') }})">
                               {{-- <img src="assets/img/hero/h1.jpg" alt="image not found"> --}}
 
                           </div>
@@ -49,7 +49,7 @@
                   <!-- slide 2  -->
                   <div class="swiper-slide">
                       <div class="glo-banner-slider p-relative">
-                          <div class="glo-banner-img" style="background-image: url({{ asset('assets/media/hotels/Catolic/one.png') }})">
+                          <div class="glo-banner-img" style="background-image: url({{ asset('hotels/catolic/one.png') }})">
                               {{-- <img src="assets/img/hero/h1.jpg" alt="image not found"> --}}
                           </div>
                           <div class="container">
@@ -86,7 +86,7 @@
                   <!-- slide 3  -->
                   <div class="swiper-slide">
                       <div class="glo-banner-slider p-relative">
-                          <div class="glo-banner-img" style="background-image: url({{ asset('assets/media/hotels/residents/three.png') }})">
+                          <div class="glo-banner-img" style="background-image: url({{ asset('hotels/residents/three.png') }})">
                               {{-- <img src="assets/img/hero/h4.jpg" alt="image not found"> --}}
                           </div>
                           <div class="container">
