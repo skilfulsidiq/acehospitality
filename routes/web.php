@@ -30,8 +30,8 @@ Route::get('/welcome', function () {
 
     $t = [ ['title'=>'abe','subtitke'=>"bb","subtitle3"=>'hdjjd']  ];
     dd(json_encode($t));
-    $r = Hash::make("");
-    echo $r;
+    // $r = Hash::make("");
+    // echo $r;
     // return view('welcome');
 });
 

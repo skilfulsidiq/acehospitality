@@ -26,12 +26,21 @@
                   </div>
                   <div class="glo-appointment-input">
                     <div class="p-relative mb-15">
-                      <input type="date" wire:model="date" placeholder="Date "">
+                      <input type="date" wire:model="start_date" placeholder="Date "">
                       <i class="fas fa-calendar"></i>
                     </div>
-                    @error('date')
-                                            <span class="error-booking-form">{{ $message }}</span>
-                                        @enderror
+                    @error('start_date')
+                        <span class="error-booking-form">{{ $message }}</span>
+                    @enderror
+                  </div>
+                  <div class="glo-appointment-input">
+                    <div class="p-relative mb-15">
+                      <input type="date" wire:model="end_date" placeholder="Date "">
+                      <i class="fas fa-calendar"></i>
+                    </div>
+                    @error('end_date')
+                        <span class="error-booking-form">{{ $message }}</span>
+                    @enderror
                   </div>
 
                   <div class="glo-reservation-details-btn text-center">

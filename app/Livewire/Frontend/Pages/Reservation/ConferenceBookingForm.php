@@ -14,7 +14,9 @@ class ConferenceBookingForm extends Component
     #[Rule('required' )]
     public $phone;
     #[Rule('required' )]
-    public $date;
+    public $start_date;
+    #[Rule('required' )]
+    public $end_date;
     public function render()
     {
         return view('livewire.frontend.pages.reservation.conference-booking-form');
