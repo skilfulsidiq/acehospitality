@@ -49,7 +49,7 @@ trait RoomAvailabilityChecking {
             }
         }
 
-        $availables =  DB::table('room_groups')->whereNotIn('id',$roomIds)->where('is_offline', 0)
+        $availables =  RoomGroup::whereNotIn('id',$roomIds)->where('is_offline', 0)
             ->orderByDesc('room_groups.id')->get() ;
         // $availables = (!empty($roomIds))?   DB::table('room_groups')->whereNotIn('id',$roomIds)->where('is_offline', 0)
         //     ->orderByDesc('room_groups.id')->get() : $rooms ;
