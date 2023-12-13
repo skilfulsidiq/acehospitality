@@ -11,8 +11,11 @@
      <div class="card-body pb-2">
          <!-- Room name -->
          <h3 class="card-title h4">
-             <a href="" target="_blank"
-                 class="text-dark link-hover-primary text-uppercase ff-sub ls-1">{{ $room->name }}</a>
+             <a href="£" target="_blank"
+                 class="text-dark link-hover-primary text-uppercase ff-sub ls-1">{{ $room->name }}
+                    <br>
+                    <span>{{$room->hotel?->hotel_name}}</span>
+                </a>
          </h3>
          <!-- /Room name -->
          <div class="row g-0">

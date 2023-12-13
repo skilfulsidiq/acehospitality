@@ -9,14 +9,15 @@ use Illuminate\Support\Facades\DB;
 trait RoomAvailabilityChecking {
 
 
-    public function checkAvaibility($hotel_id=null, $start, $end)
+    public function checkAvaibility($hotel_id, $start, $end)
     {
 
         $bookedDates = [];
         $roomIds = [];
-        $rooms = DB::table('room_groups')->when($hotel_id,function($query) use($hotel_id){
-            $query->where('hotel_id',$hotel_id);
-        })->get();
+        $rooms = DB::table('room_groups')->where('hotel_id',$hotel_id)->get();
+        // $rooms = DB::table('room_groups')->when($hotel_id,function($query) use($hotel_id){
+        //     $query->where('hotel_id',$hotel_id);
+        // })->get();
         foreach($rooms as $room){
 
             $sum = DB::table('room_bookings')
