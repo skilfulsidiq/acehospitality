@@ -20,7 +20,7 @@ class Dark extends Component
     public $location_id='';
     #[Rule('required', message: 'Select hotel')]
     #[Url]
-    public $hotel_id='';
+    public $hotel_id;
 
     #[Rule('required',)]
     #[Url]

@@ -9,12 +9,14 @@ use Illuminate\Support\Facades\DB;
 trait RoomAvailabilityChecking {
 
 
-    public function checkAvaibility($hotel_id=null, $start, $end)
+    public function checkAvaibility($hotel_id, $start, $end)
     {
 
         $bookedDates = [];
         $roomIds = [];
-        $rooms = DB::table('room_groups')->when($hotel_id,function($query) use($hotel_id){
+        // $rooms = RoomGroup::where('hotel_id',$hotel_id)->get();
+
+        $rooms = RoomGroup::when($hotel_id,function($query) use($hotel_id){
             $query->where('hotel_id',$hotel_id);
         })->inRandomOrder()->get();
         foreach($rooms as $room){
@@ -48,8 +50,15 @@ trait RoomAvailabilityChecking {
             }
         }
 
+<<<<<<< HEAD
         $availables = (!empty($roomIds))?   DB::table('room_groups')->whereNotIn('id',$roomIds)->where('is_offline', 0)
             ->inRandomOrder()->get() : $rooms ;
+=======
+        // $availables =  RoomGroup::whereNotIn('id',$roomIds)->where('is_offline', 0)
+        //     ->orderByDesc('room_groups.id')->get() ;
+        $availables = (count($roomIds) > 0)?   RoomGroup::where('hotel_id', $hotel_id)->whereNotIn('id',$roomIds)->where('is_offline', 0)
+            ->orderByDesc('room_groups.id')->get() : $rooms ;
+>>>>>>> 703de7d3318c38e36753be4337dc4932925ff1b5
         return compact('availables','start','end');
     }
 }

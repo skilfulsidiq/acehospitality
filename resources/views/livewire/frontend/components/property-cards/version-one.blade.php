@@ -11,8 +11,12 @@
      <div class="card-body pb-2">
          <!-- Room name -->
          <h3 class="card-title h4">
-             <a href="" target="_blank"
-                 class="text-dark link-hover-primary text-uppercase ff-sub ls-1">{{ $room->name }}</a>
+             <a href="#" target="_blank"
+                 class="text-dark link-hover-primary text-uppercase ff-sub ls-1">{{ $room->name }}
+                    <br>
+                    <span style="font-size: 0.8rem;
+    color: #6c6c6c;">{{$room->hotel?->hotel_name}}</span>
+                </a>
          </h3>
          <!-- /Room name -->
          <div class="row g-0">
@@ -140,6 +144,7 @@
                          <span class="badge bg-danger">-16%</span>
                      </div> --}}
                  </div>
+                 @if(isset(request()->date))
                      <select class="form-select  mb-3 shadow-sm"
                          data-dselect-position="end" wire:model.live='selectedRoom'>
 
@@ -154,6 +159,13 @@
 
 
                      </select>
+                     @else
+                        <div class="text-center">
+                            <a href="#check-availaility" class="text-warning">
+                                Select date to proceed
+                            </a>
+                        </div>
+                     @endif
                      @endif
                  </div>
                  <!-- /Select/Remove-->

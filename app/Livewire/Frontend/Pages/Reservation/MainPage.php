@@ -26,6 +26,10 @@ class MainPage extends Component
 
     public $hasChecked=false;
 
+    public function mount(){
+        
+    }
+
 
     public function render()
     {

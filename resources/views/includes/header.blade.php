@@ -38,7 +38,7 @@
                                     <li class="menu-item-has-children"><a href="#">Rooms</a>
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('reservation-page') }}">Rooms</a></li>
-                                            <li><a href="{{ route('events') }}">Conference Rooms</a></li>
+                                            <li><a href="{{ route('events') }}">Conference Hall</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{{ route('contact') }}">Contact Us</a></li>

@@ -18,7 +18,7 @@
                             <a href="{{ route('event-details', $room->slug) }}" >
                 <div class="glo-event-thumb
                                 img-hover overlay">
-                                <img src="{{ asset($room->images) }}" alt="img not found">
+                                <img src="{{ asset(explode(",",$room->images)[0]) }}" alt="img not found">
                         </div>
                         </a>
                         <div class="glo-event-content static">

@@ -2,6 +2,7 @@
 use App\Helpers\StringGenerator;
 use App\Services\Cart\CartService;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 if (!function_exists('getStartAndEndDate')) {
     function getStartAndEndDate($v)
