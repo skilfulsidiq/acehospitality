@@ -50,15 +50,9 @@ trait RoomAvailabilityChecking {
             }
         }
 
-<<<<<<< HEAD
+
         $availables = (!empty($roomIds))?   DB::table('room_groups')->whereNotIn('id',$roomIds)->where('is_offline', 0)
             ->inRandomOrder()->get() : $rooms ;
-=======
-        // $availables =  RoomGroup::whereNotIn('id',$roomIds)->where('is_offline', 0)
-        //     ->orderByDesc('room_groups.id')->get() ;
-        $availables = (count($roomIds) > 0)?   RoomGroup::where('hotel_id', $hotel_id)->whereNotIn('id',$roomIds)->where('is_offline', 0)
-            ->orderByDesc('room_groups.id')->get() : $rooms ;
->>>>>>> 703de7d3318c38e36753be4337dc4932925ff1b5
         return compact('availables','start','end');
     }
 }
