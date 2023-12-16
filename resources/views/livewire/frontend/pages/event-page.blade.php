@@ -27,7 +27,7 @@
                                     href="{{ route('event-details', $room->slug) }}">{{ $room->name }}</a></h3>
                             {{-- <p class="glo-event-desc">A beach is a public place where people can play many sports.</p> --}}
                             <div class="glo-event-btn">
-                                <a href="{{ route('event-details', $room->slug) }} class="glo-btn-link">View More</a>
+                                <a href="{{ route('event-details', $room->slug) }}" class="glo-btn-link">View More</a>
                             </div>
                         </div>
                     </div>
