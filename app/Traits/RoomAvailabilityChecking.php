@@ -16,7 +16,7 @@ trait RoomAvailabilityChecking {
         $roomIds = [];
         $rooms = DB::table('room_groups')->when($hotel_id,function($query) use($hotel_id){
             $query->where('hotel_id',$hotel_id);
-        })->get();
+        })->inRandomOrder()->get();
         foreach($rooms as $room){
 
             $sum = DB::table('room_bookings')
@@ -49,7 +49,7 @@ trait RoomAvailabilityChecking {
         }
 
         $availables = (!empty($roomIds))?   DB::table('room_groups')->whereNotIn('id',$roomIds)->where('is_offline', 0)
-            ->orderByDesc('room_groups.id')->get() : $rooms ;
+            ->inRandomOrder()->get() : $rooms ;
         return compact('availables','start','end');
     }
 }

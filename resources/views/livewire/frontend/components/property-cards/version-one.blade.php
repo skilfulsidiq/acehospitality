@@ -19,7 +19,7 @@
              <div class="col-12 col-lg-4 col-md-6">
                  <!-- Room image -->
                  <div class="pe-0 pe-md-5 mb-5">
-                     <a href="single-room-1.html">
+                     <a href="#">
                          <figure class="image-hover-scale image-hover-overlay rounded overflow-hidden mb-0">
                              <img src="{{ asset($room->images) }}" srcset="{{ asset($room->images) }} 2x"
                                  class="img-fluid w-100" alt="">
