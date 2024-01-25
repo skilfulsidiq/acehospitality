@@ -2,9 +2,9 @@
 
 namespace Livewire\Features\SupportComputed;
 
-use function Livewire\invade;
 use function Livewire\on;
 use function Livewire\off;
+use function Livewire\wrap;
 
 use Livewire\Features\SupportAttributes\Attribute;
 use Illuminate\Support\Facades\Cache;
@@ -42,7 +42,7 @@ class BaseComputed extends Attribute
     protected function handleMagicGet($target, $property, $returnValue)
     {
         if ($target !== $this->component) return;
-        if ($property !== $this->getName()) return;
+        if ($this->generatePropertyName($property) !== $this->getName()) return;
 
         if ($this->persist) {
             $returnValue($this->handlePersistedGet());
@@ -133,6 +133,18 @@ class BaseComputed extends Attribute
 
     protected function evaluateComputed()
     {
-        return invade($this->component)->{$this->getName()}();
+        return wrap($this->component)->{parent::getName()}();
     }
+
+    public function getName()
+    {
+        return $this->generatePropertyName(parent::getName());
+    }
+
+    private function generatePropertyName($value)
+    {
+        return str($value)->camel()->toString();
+    }
+
+
 }

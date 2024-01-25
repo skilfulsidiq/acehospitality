@@ -47,8 +47,8 @@ Route::get("/hotels/{slug}",HotelDetails::class)->name('hotel-details-2');
 Route::get("/reservation",MainPage::class)->name('reservation-page');
 Route::get("/reservation-success",SuccessPage::class)->name('reservation-success');
 
-Route::group(['prefix'=>'admin'],function(){
+// Route::group(['prefix'=>'admin'],function(){
 
-    Route::get('/',LoginPage::class)->name('login');
-    Route::get('forgot',ForgotPage::class)->name('forgot-password');
-});
+//     Route::get('/',LoginPage::class)->name('login');
+//     Route::get('forgot',ForgotPage::class)->name('forgot-password');
+// });
