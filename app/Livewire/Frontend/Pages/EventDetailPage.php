@@ -33,6 +33,7 @@ class EventDetailPage extends Component
         $details = $this->fetchDetails();
         $images = explode(",",$details->images);
        
+
         $this->hotel_id = $details->hotel_id;
         $this->confenrence_room_id = $details->id;
         $this->name = $details->name;
