@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\ProfileController;
 use App\Livewire\Backend\Auth\ForgotPage;
 use App\Livewire\Backend\Auth\LoginPage;
 use App\Livewire\Frontend\Pages\AboutPage;
@@ -47,8 +49,17 @@ Route::get("/hotels/{slug}",HotelDetails::class)->name('hotel-details-2');
 Route::get("/reservation",MainPage::class)->name('reservation-page');
 Route::get("/reservation-success",SuccessPage::class)->name('reservation-success');
 
-Route::group(['prefix'=>'admin'],function(){
 
-    Route::get('/',LoginPage::class)->name('login');
-    Route::get('forgot',ForgotPage::class)->name('forgot-password');
-});
+// Route::get('/login', [PageController::class, 'login'])->name('login');
+// Route::get('/forgot', [PageController::class, 'forgot'])->name('forgot');
+
+// Route::group(['middleware'=>'auth'],function(){
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile');
+//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+//       Route::group(['prefix' => 'admin'], function () {
+
+//     Route::get('/', [PageController::class, 'dashboard'])->name('dashboard');
+//       });
+// });

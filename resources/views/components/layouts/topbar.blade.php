@@ -3,7 +3,7 @@
                     <div class="d-flex">
                         <!-- LOGO -->
                         <div class="navbar-brand-box">
-                            <a href="{{ route('welcome') }}" class="logo logo-dark">
+                            <a href="{{ route('dashboard') }}" class="logo logo-dark">
                                 <span class="logo-sm">
                                     <img src="{{ asset('logo/icon.png') }}" alt="" height="24">
                                 </span>
@@ -12,7 +12,7 @@
                                 </span>
                             </a>
 
-                            <a href="{{ route('welcome') }}"class="logo logo-light">
+                            <a href="{{ route('dashboard') }}"class="logo logo-light">
                                 <span class="logo-sm">
                                     <img src="{{ asset('logo/icon.png') }}" alt="" height="24">
                                 </span>
@@ -88,8 +88,8 @@
                                 <!-- item-->
                                 <a class="dropdown-item" href="{{route('profile')}}"><i class="mdi mdi-face-man font-size-16 align-middle me-1"></i> Profile</a>
                                 <div class="dropdown-divider"></div>
-                               
-                                  <livewire:logout />
+
+                                  {{-- <livewire:logout /> --}}
                             </div>
                         </div>
 

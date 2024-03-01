@@ -14,6 +14,9 @@ class RoomGroup extends Model
     'desc','amenities',
      'slug'];
 
+     protected $casts =[
+        'amenities' =>'array'
+     ];
     public function setNameAttribute($value)
     {
         $this->attributes['name'] = $value;

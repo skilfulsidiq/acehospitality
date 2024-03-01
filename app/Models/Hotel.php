@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use Filament\Models\Contracts\HasName;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
 
-class Hotel extends Model
+class Hotel extends Model implements HasName
 {
     use HasFactory;
 
@@ -23,7 +25,7 @@ class Hotel extends Model
         return $this->belongsTo(Location::class,'location_id')->withDefault();
     }
 
-    public function roomGroup()
+    public function roomGroups()
     {
         return $this->hasMany(RoomGroup::class, 'hotel_id');
     }
@@ -34,5 +36,19 @@ class Hotel extends Model
     public function rooms()
     {
         return $this->hasMany(Hotel::class, 'hotel_id')->withDefault();
+    }
+
+    public function users(): BelongsToMany
+    {
+        return $this->belongsToMany(Admin::class);
+    }
+    // public function getTenantName():string
+    // {
+    //     return $this->hotel_name;
+    // }
+
+    public function getFilamentName(): string
+    {
+        return "{$this->hotel_name}";
     }
 }

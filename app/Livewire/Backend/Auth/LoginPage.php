@@ -2,6 +2,8 @@
 
 namespace App\Livewire\Backend\Auth;
 
+use App\Models\Admin;
+use Illuminate\Support\Facades\Auth as AuthFacade;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
@@ -45,17 +47,18 @@ class LoginPage extends Component
 
         $credentials = $this->validate();
 
-        $u = DB::table('admins')->where('email', $this->email)->first();
+        $u = Admin::where('email', $this->email)->first();
         if($u && $u->account_is_locked == 1) {
             abort(403);
             return;
         }
-        if(Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
+
+        if(AuthFacade::attempt(['email' => $this->email, 'password' => $this->password])) {
             // if (auth()->attempt(['email' => $this->email, 'password' => $this->password], $this->remember_me)) {
             $user = Admin::where(['email' => $this->email])->first();
 
             auth()->login($user, $this->remember_me);
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/admin');
 
 
         } else {
