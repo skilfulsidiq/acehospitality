@@ -63,5 +63,5 @@ class Admin extends Authenticatable implements FilamentUser, HasName, HasTenants
         return $this->hotels->contains($tenant);
     }
 
-    
+
 }
