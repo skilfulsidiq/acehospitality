@@ -5,10 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class RoomGroup extends Model
+class RoomGroup extends Model implements HasMedia
 {
-    use HasFactory;
+    use HasFactory,InteractsWithMedia;
 
     protected $fillable = ['hotel_id', 'name', 'slider_images', 'price', 'bed', 'bath', 'guest', 'status', 'no_of_rooms', 'no_of_reserved',
     'desc','amenities',

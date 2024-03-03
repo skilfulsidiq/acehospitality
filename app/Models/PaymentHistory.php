@@ -9,9 +9,9 @@ use Illuminate\Support\Str;
 class PaymentHistory extends Model
 {
     use HasFactory;
-    protected $fillable = [ 'hotel_id', 'user_id', 'payment_method', 'payment_ref', 'payment_date', 'amount','is_confirmed','confirmed_by',];
+    protected $fillable = [ 'hotel_id', 'user_id', 'booking_id',  'payment_method', 'payment_ref', 'payment_date', 'amount','is_confirmed','confirmed_by',];
 
-   
+
     public function hotel()
     {
         return $this->belongsTo(Hotel::class, 'hotel_id')->withDefault();

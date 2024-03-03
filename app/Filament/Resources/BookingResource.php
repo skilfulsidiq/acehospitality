@@ -11,6 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BookingResource extends Resource
@@ -61,24 +62,17 @@ class BookingResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('hotel.id')
-                    ->numeric()
+                 Tables\Columns\TextColumn::make('created_at')->label('Date')
+                    ->dateTime()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('user_id')
-                    ->numeric()
-                    ->sortable(),
+
                 Tables\Columns\TextColumn::make('booking_ref')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('user.firstname')
+                    ->numeric()
+                    ->sortable(),
+
                 Tables\Columns\TextColumn::make('grand_total')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('total_payment')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('tax')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('vat')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('item_count')
@@ -89,21 +83,16 @@ class BookingResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('payment_status')
                     ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
+                    // ->url(fn(Model $record): string => static::getUrl('view', ['record' => $record->booking_ref])),
+                Tables\Actions\EditAction::make()
+                // ->url(fn(Model $record): string => static::getUrl('view', ['record' => $record->booking_ref])),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -125,6 +114,7 @@ class BookingResource extends Resource
             'index' => Pages\ListBookings::route('/'),
             'create' => Pages\CreateBooking::route('/create'),
             'edit' => Pages\EditBooking::route('/{record}/edit'),
+            'view' =>Pages\BookingDetails::route('{record}/details')
         ];
     }
 }

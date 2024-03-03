@@ -13,6 +13,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 
 class RoomGroupResource extends Resource
 {
@@ -31,7 +32,7 @@ class RoomGroupResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('images'),
+                SpatieMediaLibraryFileUpload::make('images'),
                 Forms\Components\TextInput::make('price')
                     ->required()
                     ->numeric()
@@ -54,10 +55,13 @@ class RoomGroupResource extends Resource
                     ->numeric()
                     ->default(1),
 
-                Forms\Components\Toggle::make('status'),
+                Forms\Components\Select::make('status')->options([
+                    '0'=>'Inactive',
+                    '1'=>'Active'
+                ]),
                 Forms\Components\Toggle::make('is_offline'),
-                Forms\Components\CheckboxList::make('amenities')
-                ->options(Amenities::all()->pluck('name','id'))
+                Forms\Components\Select::make('amenities')->multiple()
+                ->options(Amenities::all()->pluck('name','name'))
                 ->columns(2),
                 Forms\Components\Textarea::make('desc')
                     ->maxLength(150),
@@ -71,8 +75,8 @@ class RoomGroupResource extends Resource
         return $table
             ->columns([
 
-                Tables\Columns\ImageColumn::make('images')->square()
-                    ->label('Image')->defaultImageUrl(url('/hotels')),
+                Tables\Columns\SpatieMediaLibraryImageColumn::make('images')->square()
+                    ->label('Image'),
 
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
@@ -114,7 +118,7 @@ class RoomGroupResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
                 // Tables\Columns\TextColumn::make('desc')
                 //     ->searchable(),
-                Tables\Columns\TextColumn::make('amenities')
+                Tables\Columns\BadgeColumn::make('amenities')
                     ->searchable(),
             ])
             ->filters([
